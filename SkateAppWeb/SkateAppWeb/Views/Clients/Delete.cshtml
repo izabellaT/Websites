@@ -1,0 +1,45 @@
+﻿@model SkateAppWeb.Models.Clients.ClientDeleteVM
+@{
+    ViewData["Title"] = "Delete";
+}
+<head>
+    <link rel="stylesheet" href="~/css/clientsDelete.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="clientsDelete-container">
+        <h2 class="clientsDelete-title">Are you sure you want to <span style="color:dodgerblue; font-weight:bold; font-size:30px;">delete</span> this user?</h2>
+
+        <div class="clientsDelete-picture">
+            <img src="https://th.bing.com/th/id/OIP.mrfb_atnkblnmsDiAbLNKwHaHa?rs=1&pid=ImgDetMain" alt="Client Image">
+        </div>
+
+        <div class="clientsDelete-info-container">
+            <div class="clientsDelete-info">
+                <dl class="row">
+                    <dd class="col-sm-10">
+                        <strong>@Html.DisplayFor(model => model.UserName)</strong>
+                    </dd>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.FirstName)
+                    </dd>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.LastName)
+                    </dd>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Address)
+                    </dd>
+                    <dd class="col-sm-10">
+                        <strong>@Html.DisplayFor(model => model.Email)</strong>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <form class="clientsDelete-form" asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="buttonDelete"><img class="buttonDelete" src="https://dryhouserestoration.com/wp-content/uploads/2020/08/6.png"></button>
+
+		</form><a asp-action="Index" class="buttonBack">Back to List</a>
+    </div>
+
+</body>

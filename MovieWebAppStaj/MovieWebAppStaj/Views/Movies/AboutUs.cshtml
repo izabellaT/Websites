@@ -1,0 +1,152 @@
+﻿
+<h1 class="text-center" style="color: goldenrod; background-color: maroon; padding: 5px;">About us!</h1>
+
+<img style=" display: block; margin-left: auto; margin-right: auto; width: 70%;" src="~/images/b67f407f7243b192354f979bdc557a14.jpg" alt="cinema aes" />
+
+<div class="text-center" style="color:maroon;">
+    <p>
+        <h4 style="color: goldenrod; background-color:maroon; padding:5px">Our website</h4>
+        Welcome to our movies website, a captivating virtual realm where the magic of cinema comes to life. Step into a world where stories unfold, emotions stir, and imagination knows no bounds. Here, we invite you on a cinematic journey filled with wonder, excitement, and endless possibilities.
+
+        Our website is a treasure trove of cinematic experiences, carefully curated to cater to every taste and preference. Whether you're a passionate film buff or a casual moviegoer, we have something special in store for you. Immerse yourself in a vast collection of movies spanning a multitude of genres, eras, and cultures, from the timeless classics to the latest blockbusters.
+    </p>
+</div>
+
+<br />
+
+<div class="slideshow-container text-center" style="width:300px; height:400px; display: block; margin-left: auto; margin-right: auto; width: 50%;">
+    <div class="mySlides1">
+        <img src="https://th.bing.com/th/id/R.43a6a354ccd14301810b15f30d63a97d?rik=bBToBQDfw%2bBAzA&riu=http%3a%2f%2fa3.mzstatic.com%2fus%2fr30%2fVideo4%2fv4%2f47%2f46%2f19%2f47461913-4e8d-5166-b1b7-2100c60ef5ca%2fmza_8767750722594355264.jpg&ehk=czhRzObRPOOwzqrrYPp99%2fEbJr4GfQaoTDC0bfMmL%2fk%3d&risl=&pid=ImgRaw&r=0" style="width:300px; height:400px;">
+    </div>
+
+    <div class="mySlides1">
+        <img src="https://th.bing.com/th/id/R.6ff86bb42ca692d9c41acaf072955101?rik=cE7t1NVqhj9PZA&pid=ImgRaw&r=0" style="width:300px; height:400px;">
+    </div>
+
+    <div class="mySlides1">
+        <img src="https://i.pinimg.com/originals/85/f2/cc/85f2cc977b995160c8acbe8f3f966982.jpg" style="width:300px; height:400px;">
+    </div>
+
+    <div class="mySlides1">
+        <img src="https://artworks.thetvdb.com/banners/v4/movie/294/posters/607b6a79b56bb.jpg" style="width:300px; height:400px;">
+    </div>
+
+    <div class="mySlides1">
+        <img src="https://th.bing.com/th/id/R.b4cf50c4d7c6ea297807f7ea68f816ba?rik=2aAfSkrHBrFYSA&riu=http%3a%2f%2fwaytooindie.com%2fwp-content%2fuploads%2f2015%2f09%2fjurassic-park-movie-cover.jpg&ehk=XAxdmvspy%2fCklRQ4Rzcz2xBr6ukfoTciNjYYKbBLjMQ%3d&risl=&pid=ImgRaw&r=0" style="width:300px; height:400px;">
+    </div>
+
+    <a class=".prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+    <a class=".next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+<script>
+    let slideIndex = [1, 1];
+    let slideId = ["mySlides1"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+
+    function plusSlides(n, no) {
+        showSlides(slideIndex[no] += n, no);
+    }
+
+    function showSlides(n, no) {
+        let i;
+        let x = document.getElementsByClassName(slideId[no]);
+        if (n > x.length) { slideIndex[no] = 1 }
+        if (n < 1) { slideIndex[no] = x.length }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex[no] - 1].style.display = "block";
+    }
+</script>
+<br />
+<br />
+<div class="text-center" style="color:maroon;">
+    <h4 style="color: goldenrod; background-color:maroon; padding:5px">Our story</h4>
+    <p>
+        Once upon a time in the vast realm of the internet, a group of passionate film enthusiasts came together with a shared dream of creating the ultimate movie website. They believed in the power of cinema to inspire, entertain, and provoke meaningful conversations. With unwavering determination, they set out on a journey to craft a platform that would be a cinephile's haven and a casual moviegoer's delight.
+
+        Their vision was to design a website that would serve as a comprehensive hub for all things related to movies. The website aimed to provide a vast collection of information, from the latest blockbusters to obscure indie gems, catering to diverse tastes and interests. They wanted to foster a community where film lovers could connect, share their thoughts, and discover new cinematic treasures.
+    </p>
+</div>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+    }
+
+        #myBtn:hover {
+            background-color: #555;
+        }
+</style>
+<body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top" style="background-color:goldenrod; outline-color:goldenrod; color:maroon">Top</button>
+
+    <script>
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+
+<br />
+<div class="text-center">
+    <img style="width: 200px; height:300px;" src="~/images/140776.jpg" alt="cinema aes" />
+    <img style="width: 200px; height:300px;" src="~/images/the-lion-king-movie-cover.jpg" alt="cinema aes" />
+    <img style="width: 200px; height:300px;" src="~/images/ih64em743HBjcYIJXXZ5fZu4Qr1.jpg" alt="cinema aes" />
+    <img style="width: 200px; height:300px;" src="~/images/350089.jpg" alt="cinema aes" />
+    <img style="width: 200px; height:300px;" src="~/images/39490297.jpg" alt="cinema aes" />
+</div>
+<br />
+<hr / style="color:maroon">
+<div style="color:goldenrod;" class="float-left">
+    <p style="color:maroon;"><b>About</b></p>
+    <p>+08888888888</p>
+    <p>test@test.com</p>
+    <p>assure_movies.com</p>
+    <p>10:00-18:30</p>
+    <p>ул. „8-ми март“ 232, 2306 Монте Карло, Перник, България</p>
+</div>
+
+<div class="float-right text-center">
+    <p style="color:maroon"><b>Categories</b></p>
+    <p style="color:goldenrod"><a href="/Movies/Index" style="color:goldenrod">Movies</a></p>
+    <p style="color:goldenrod"><a href="/Actors/Index" style="color:goldenrod">Actors</a></p>
+    <p style="color:goldenrod"><a href="/Genres/Index" style="color:goldenrod">Genres</a></p>
+    <p style="color:goldenrod"><a href="/MovieActors/Index" style="color:goldenrod">Movie actors</a></p>
+</div>
+
+
+
+

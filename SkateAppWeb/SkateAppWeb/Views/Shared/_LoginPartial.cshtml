@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using SkateWebApp.Infrastructure.Data.Domain;
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<ul class="navbar-nav">
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item">
+            <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><img class="buttonsImage" style="height:25px; width:30px" src="~/images/phongnha-private-cars-contact.png"></a>
+    </li>
+    <li class="nav-item">
+        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="nav-link btn btn-link"><img class="navElementImage buttonsImage" src="~/images/7380529.png"></button>
+        </form>
+    </li>
+}
+else
+{
+            <a asp-area="" asp-controller="Home" asp-action="Welcome"><img class="buttonsImage" style="height:25px; width:30px" src="~/images/phongnha-private-cars-contact.png"></a>
+}
+</ul>

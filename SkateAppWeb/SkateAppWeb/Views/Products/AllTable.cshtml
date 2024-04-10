@@ -1,0 +1,169 @@
+﻿@model IEnumerable<SkateAppWeb.Models.Products.ProductAllTableVM>
+
+@{
+    ViewData["Title"] = "Products";
+}
+<head>
+    <link rel="stylesheet" href="~/css/allTableProducts.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <div class="products-banner">
+        <h2 class="banner-text">Products - @Model.Count()</h2>
+    </div>
+
+    <div class="text-center" style="margin-bottom: 20px; padding:10px; border-radius:5px;">
+        <a asp-action="CreateSkateboard" asp-controller="Skateboards" class="btn aa" style="color:white; background-color:midnightblue; padding:10px; border-radius:3px; font-weight:bold;">Create Skateboard</a>
+        <a asp-action="CreateCompleteSkateboard" asp-controller="CompleteSkateboards" class="btn aa" style="color:white; background-color:midnightblue; padding:10px; border-radius:3px; font-weight:bold;">Create Complete Skateboard</a>
+        <a asp-action="CreateAccessory" asp-controller="Accessories" class="btn aa" style="color:white; background-color:midnightblue; padding:10px; border-radius:3px; font-weight:bold;">Create Accessory</a>
+
+        <div class="dropdown" style="display: inline-block;">
+            <button class="btn btn-secondary dropdown-toggle aa" type="button" id="dropdownMenuButton1" aria-expanded="false" onmouseover="showDropdownMenu()" onmouseleave="hideDropdownMenu()" style="color:white; background-color:midnightblue; padding:10px; border-radius:3px; font-weight:bold;">
+                Create component
+            </button>
+            <ul class="dropdown-menu " id="dropdownMenu" aria-labelledby="dropdownMenuButton1" >
+                <li><a class="dropdown-item" href="/Components/CreateTruck">Create Trucks</a></li>
+                <li><a class="dropdown-item" href="/Components/CreateGriptape">Create Griptape</a></li>
+                <li><a class="dropdown-item" href="/Components/CreateWheel">Create Wheels</a></li>
+                <li><a class="dropdown-item" href="/Components/CreateBearing">Create Bearings</a></li>
+                <li><a class="dropdown-item" href="/Components/CreateDeck">Create Deck</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="table-responsive">
+        <table class="table table-hover text-center">
+            <thead class="table-header">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BrandName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CategoryName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Quantity)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Picture)
+                    </th>
+
+                    <th></th>
+                    <th> Actions </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    var controller = string.Empty;
+
+                    if (item.CategoryName != "Complete Skateboard" && item.CategoryName != "Skateboard" && item.CategoryName != "Accessory")
+                    {
+                        controller = "Components";
+                    }
+                    else if (item.CategoryName == "Accessory")
+                    {
+                        controller = "Accessories";
+                    }
+                    else if (item.CategoryName == "Complete Skateboard")
+                    {
+                        controller = "CompleteSkateboards";
+                    }
+                    else if (item.CategoryName == "Skateboard")
+                    {
+                        controller = "Skateboards";
+                    }
+                    var edit = $"Edit{item.CategoryName}";
+
+                    <tr>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.BrandName)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.CategoryName)
+                        </td>
+                        <td class="align-middle price" data-original-price="@item.Price">
+                            @Html.DisplayFor(modelItem => item.Price)lv
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>
+                        <td class="align-middle">
+                            <img src="@item.Picture" width="50" height="50" />
+                        </td>
+
+                        @if (item.CategoryName == "Complete Skateboard")
+                        {
+                            <td class="align-middle">
+
+                                <a class="butOn" asp-action="EditCompleteSkateboard" asp-controller="CompleteSkateboards" asp-route-id="@item.Id">Edit</a>
+                            </td>
+                        }
+                        else
+                        {
+                            <td class="align-middle">
+                                <a class=" butOn" asp-action="@edit" asp-controller="@controller" asp-route-id="@item.Id">Edit</a>
+                            </td>
+                        }
+                        @if (User.Identity.IsAuthenticated && this.User.IsInRole("Administrator"))
+                        {
+                            <td class="align-middle">
+                                <a class=" butOn" asp-action="Delete" asp-controller="Products" asp-route-id="@item.Id">Delete</a>
+                            </td>
+                        }
+                        <td class="align-middle">
+                            <a class="butOn" asp-action="Details" asp-controller="Products" asp-route-id="@item.Id">Details</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <button onclick="scrollToTop()" id="topButton" title="Go to top">Top</button>
+
+</body>
+
+<script>
+	function showDropdownMenu() {
+		document.getElementById("dropdownMenu").classList.add("show");
+	}
+
+	function hideDropdownMenu() {
+		document.getElementById("dropdownMenu").classList.remove("show");
+	}
+</script>
+
+<script>
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        var topButton = document.getElementById("topButton");
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>

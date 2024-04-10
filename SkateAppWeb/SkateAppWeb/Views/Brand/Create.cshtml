@@ -1,0 +1,39 @@
+﻿@model SkateAppWeb.Models.Brands.BrandCreateVM
+@{
+    ViewData["Title"] = "Create brand";
+}
+<head>
+    <link rel="stylesheet" href="~/css/brand.css" asp-append-version="true" />
+</head>
+<h1 class="brandH">Create Brand</h1>
+<div class="row" style="text-align:center">
+    <div class="col-md-4" style="text-align:center">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>  <div class="form-group">
+                <label asp-for="BrandName" class="control-label brandName"></label> 
+                <input asp-for="BrandName" class="form-control brandInput" placeholder="Enter Brand name..."/> 
+                <span asp-validation-for="BrandName" class="text-danger"></span>
+            </div>
+      
+            <div class="form-group">
+                <input type="submit" value="Create" class="brandButoon" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <img class="blogImage" src="https://pbs.twimg.com/profile_images/1523782190/CCS-Logo-TWITTER-SKATE.jpg" />
+    <img class="blogImage" src="https://th.bing.com/th/id/OIP.mCjQZuby7CpQk8PE0cv8MwHaHa?w=900&h=900&rs=1&pid=ImgDetMain" />
+    <img class="blogImage" src="https://cdn.wallpapersafari.com/37/11/xDpAGY.jpg" />
+    <img class="blogImage" src="https://www.logolynx.com/images/logolynx/82/828a85e19bc141469b7e62a39456eeac.jpeg" />
+    <img class="blogImage" src="https://i.pinimg.com/originals/59/d1/8e/59d18e1636483bbc5b065315dbcd3393.jpg" />
+    <img class="blogImage" src="https://www.nativeskatestore.co.uk/images/slant-b-logo-skateboard-sticker-3-5-p53667-127011_image.jpg" />
+    <img class="blogImage" src="https://i.pinimg.com/originals/40/b2/6c/40b26cd98e3431a95e5aaededb1f203e.jpg" />
+
+    <a asp-action="Index" class="brandLink">Back to List</a>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

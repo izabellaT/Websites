@@ -1,0 +1,47 @@
+﻿@model MovieWebAppStaj.Domain.Actor
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class=" text-center " style="color:maroon">Create a new actor</h1>
+
+<hr />
+<div class="row text-center font-weight-bold" style="color:goldenrod; margin: auto; width: 100%; padding-left: 450px;">
+    <div class="col-md-4">
+        <form asp-action="Create" style="background-color:wheat; border-radius:20px; padding:10px;">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" placeholder="First name..." />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" placeholder="Last name..." />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nationality" class="control-label"></label>
+                <input asp-for="Nationality" class="form-control" placeholder="Nationality..." />
+                <span asp-validation-for="Nationality" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" placeholder="Image..."/>
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" style="color:white; background-color:maroon; border-color:maroon"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="text-center">
+    <a asp-action="Index"  style="color:maroon">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

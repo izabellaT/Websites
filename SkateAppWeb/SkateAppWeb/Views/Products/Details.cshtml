@@ -1,0 +1,188 @@
+﻿@model SkateAppWeb.Models.Products.ProductDetailsVM
+
+@{
+    ViewData["Title"] = "Details";
+}
+<head>
+    <link rel="stylesheet" href="~/css/productsDetails.css" asp-append-version="true" />
+</head>
+
+<div class="short-banner">
+    <h1>Get your dream product today</h1>
+</div>
+
+<div class="product-details-container">
+    <div class="row">
+        <div class="col-md-6 product-details-col">
+            <img src="@Html.DisplayFor(model => model.Picture)" alt="Product Image" class="product-details-img" />
+        </div>
+        <div class="col-md-6 product-details-col">
+            <div class="product-details-info-container">
+                <h2 class="product-details-brand">@Html.DisplayFor(model => model.BrandName)</h2>
+                <h4 class="product-details-name">@Html.DisplayFor(model => model.Name)</h4>
+                <p class="product-details-info"><strong class="product-details-strong">Price:</strong> @Html.DisplayFor(model => model.Price)</p>
+                <p class="product-details-info"><strong class="product-details-strong">Category:</strong> @Html.DisplayFor(model => model.CategoryName)</p>
+                <p class="product-details-info"><strong class="product-details-strong">In Stock:</strong> @Model.Quantity</p>
+                <p class="product-details-info"><strong class="product-details-strong">Discount:</strong> @Html.DisplayFor(model => model.Discount)</p>
+
+
+                <div class="buttonsDiv">
+                <div class="order-partial-container">
+                    @await Html.PartialAsync("~/Views/Products/_OrderPartialView.cshtml", new SkateAppWeb.Models.Orders.OrderCreateVM
+                    {
+                    ProductId = Model.Id
+                    })
+                </div>
+
+
+                <div class="favorite-partial-container">
+                    @await Html.PartialAsync("~/Views/Products/_FavoritePartialView.cshtml", new SkateAppWeb.Models.Favorites.FavoriteCreateVM
+                    {
+                    ProductId = Model.Id
+                    })
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1 class="h1Promocode">Get 15% off of every purchase</h1>
+<p class="pPromocode">Make at least 5 orders out of the website to get our special 15% off promo code to use every time you shop here</p>
+
+<div class="technical-details-container">
+    <h2 class="text-center">Technical Details</h2>
+
+    <div class="technical-details-content">
+        <table>
+            <tbody>
+                @foreach (var item in Model.Description)
+                {
+                    var line = item.Split(':');
+					<tr>
+                        <td>
+                            <strong>@line[0]</strong>
+                        </td>
+                        <td>
+                            @line[1]
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <p class="pPromocode">Got any questions? Check our handy pages out to get some clarity!</p>
+    <div class="button-container">
+        <a href="https://localhost:7138/Products/Information" class="navigation-button">&#187;Information</a>
+        <a href="https://localhost:7138/Products/Guide" class="navigation-button">&#187;Guide</a>
+        <a href="https://localhost:7138/Products/MostAsked" class="navigation-button">&#187;Most asked</a>
+    </div>
+</div>
+
+
+<div class="reviews-container">
+    <div class="reviews-header">
+        <h3 class="reviews-heading">Reviews</h3>
+        <p class="reviews-count">@Model.Reviews.Count() Reviews</p>
+    </div>
+
+    @if (Model.Reviews != null && Model.Reviews.Any())
+    {
+        double totalRating = 0;
+
+        @foreach (var item in Model.Reviews)
+        {
+            <div class="review-item" >
+                <div>
+                    <p><img src="https://cdn-icons-png.flaticon.com/512/3593/3593805.png" alt="User Image" class="user-image" /> @item.User</p>
+                </div>
+                <div class="row justify-content-between m-0">
+                    <p><strong>Posted on:</strong> @item.Posted</p>
+                    <p class="order-price-p price" data-original-price="@item.Content"><strong>Content:</strong> @item.Content</p>
+                    <p class="order-price-p"><strong>Rating:</strong> @Html.Raw(GetStarRating(item.Rating))</p>
+                </div>
+            </div>
+            totalRating += item.Rating;
+        }
+
+        double averageRating = totalRating / Model.Reviews.Count();
+        <h2 class="average-rating"><strong>Average Rating:</strong> @averageRating/5&#11088</h2>
+    }
+    else
+    {
+        <p>No reviews available.</p>
+    }
+</div>
+<button id="toggleReviewsButton" onclick="toggleReviews()" class="buttonwrite">Write review</button>
+
+<div id="reviewsContainer" style="display: none; margin-top: 20px;">
+
+    @await Html.PartialAsync("~/Views/Products/_ReviewPartialView.cshtml", new SkateAppWeb.Models.Reviews.ReviewCreateVM {
+    ProductId = Model.Id
+    })
+    <br>
+    <br>
+</div>
+
+<button onclick="scrollToTop()" id="topButton" title="Go to top">Top</button>
+
+    <script>
+    @functions {
+        public string GetStarRating(double rating)
+        {
+            int numberOfStars = (int)Math.Round(rating);
+            return string.Concat(Enumerable.Repeat("<span class='star'>&#9733;</span>", numberOfStars));
+        }
+    }
+    </script>
+
+<script>
+        let slideIndex = 0;
+
+    function showSlides() {
+        let slides = document.querySelectorAll('.details-slide');
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = 'block';
+
+        setTimeout(showSlides, 2000); 
+    }
+
+    showSlides();
+</script>
+
+<script>
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        var topButton = document.getElementById("topButton");
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0; 
+    }
+</script>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+

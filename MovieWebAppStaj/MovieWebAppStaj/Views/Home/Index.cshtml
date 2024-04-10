@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (this.User.Identity.IsAuthenticated)
+{
+    <div class="text-center">
+        <h1 class="display-4 font-weight-bold" style="color:goldenrod">Welcome to Assure movies, @this.User.Identity.Name!</h1>
+        <h3 class="text-center" style="color:maroon">Enjoy the show!</h3>
+    </div>
+    <br />
+
+    <div class="text-center">
+        <a href="https://th.bing.com/th/id/OIP.zWLBSck6xXa4J4Vx9o9WTgHaKh?pid=ImgDet&rs=1" target="_blank">
+            <img src="https://th.bing.com/th/id/OIP.zWLBSck6xXa4J4Vx9o9WTgHaKh?pid=ImgDet&rs=1" width="200" height="300">
+        </a>
+        <a href="https://www.themoviedb.org/t/p/original/vrFVPBprPlKKmIcpuLVu8SluI9j.jpg" target="_blank">
+            <img src="https://www.themoviedb.org/t/p/original/vrFVPBprPlKKmIcpuLVu8SluI9j.jpg" width="200" height="300">
+        </a>
+        <a href="https://th.bing.com/th/id/OIP.NNDzj9c4s1ntnvDOwTDNagAAAA?pid=ImgDet&rs=1" target="_blank">
+            <img src="https://th.bing.com/th/id/OIP.NNDzj9c4s1ntnvDOwTDNagAAAA?pid=ImgDet&rs=1" width="200" height="300">
+        </a>
+        <a href="https://th.bing.com/th/id/R.f878225486b81f6f5f8fa04024a0516c?rik=Yq2SeRot632ucw&riu=http%3a%2f%2fcollider.com%2fwp-content%2fuploads%2fpuss-in-boots-movie-poster-01.jpg&ehk=OuQRl%2fPHhntwEQxbwzY6QmsG9s4EM2rC7J21TD8ZVJs%3d&risl=&pid=ImgRaw&r=0" target="_blank">
+            <img src="https://th.bing.com/th/id/R.f878225486b81f6f5f8fa04024a0516c?rik=Yq2SeRot632ucw&riu=http%3a%2f%2fcollider.com%2fwp-content%2fuploads%2fpuss-in-boots-movie-poster-01.jpg&ehk=OuQRl%2fPHhntwEQxbwzY6QmsG9s4EM2rC7J21TD8ZVJs%3d&risl=&pid=ImgRaw&r=0" width="200" height="300">
+        </a>
+        <a href="https://th.bing.com/th/id/OIP.Ub2S4Xrmg1VJ9Q1G7rPcXQAAAA?pid=ImgDet&rs=1" target="_blank">
+            <img src="https://th.bing.com/th/id/OIP.Ub2S4Xrmg1VJ9Q1G7rPcXQAAAA?pid=ImgDet&rs=1" width="200" height="300">
+        </a>
+    </div>
+    <br />
+    <div class="text-center">
+        <a href="https://www.themoviedb.org/t/p/original/gmU7P3FzGFsl2wiSDhx9znZCNub.jpg" target="_blank">
+            <img src="https://www.themoviedb.org/t/p/original/gmU7P3FzGFsl2wiSDhx9znZCNub.jpg" width="200" height="300">
+        </a>
+        <a href="https://th.bing.com/th/id/OIP.w_elHIymmGKrctylPvyI0gHaLH?pid=ImgDet&rs=1" target="_blank">
+            <img src="https://th.bing.com/th/id/OIP.w_elHIymmGKrctylPvyI0gHaLH?pid=ImgDet&rs=1" width="200" height="300">
+        </a>
+        <a href="https://th.bing.com/th/id/R.42763b0d604ccd1b4c15ccca47e5cd8b?rik=dPTxfdgOIHp2Tw&pid=ImgRaw&r=0" target="_blank">
+            <img src="https://th.bing.com/th/id/R.42763b0d604ccd1b4c15ccca47e5cd8b?rik=dPTxfdgOIHp2Tw&pid=ImgRaw&r=0" width="200" height="300">
+        </a>
+        <a href="https://vignette.wikia.nocookie.net/screamfanon/images/1/13/Tumblr_lllsfwhFA71qdm9llo1_1280.jpg/revision/latest?cb=20110622190823" target="_blank">
+            <img src="https://vignette.wikia.nocookie.net/screamfanon/images/1/13/Tumblr_lllsfwhFA71qdm9llo1_1280.jpg/revision/latest?cb=20110622190823" width="200" height="300">
+        </a>
+        <a href="https://th.bing.com/th/id/R.b19abeeaa6f94d864b3dccc4a5ae5a20?rik=abgr3tiaVh%2b%2fjw&pid=ImgRaw&r=0" target="_blank">
+            <img src="https://th.bing.com/th/id/R.b19abeeaa6f94d864b3dccc4a5ae5a20?rik=abgr3tiaVh%2b%2fjw&pid=ImgRaw&r=0" width="200" height="300">
+        </a>
+    </div>
+
+    <br />
+    <div class="text-center">
+        <a class=" btn btn-primary text-center" asp-controller="Movies" asp-action="Index" style="color: navajowhite; border-color: maroon; background-color: maroon">Check our movies out</a>
+    </div>
+
+    <hr />
+    <div style="float:left; margin:10px; width: 300px">
+        <p><a href="/Movies/Index" style="color:goldenrod">Movies</a></p>
+    </div>
+
+    <div style="float:left; margin:10px; width: 300px">
+        <p><a href="/Actors/Index" style="color:goldenrod">Actors</a></p>
+    </div>
+
+    <div style="float: left; margin: 10px; width: 300px">
+        <p><a href="/Genres/Index" style="color:goldenrod">Genres</a></p>
+    </div>
+
+    <div style="float: left; margin: 10px">
+        <p><a href="/MovieActors/Index" style="color:goldenrod">Movie-Actor</a></p>
+    </div>
+
+}
+else
+{
+    <div>
+        <h1 style="color:maroon" class="text-center">Welcome to Assure movies!</h1>
+        <hr style="color:goldenrod" />
+        <h3 class="mt-4 text-center" style="color:goldenrod"><a href="/Identity/Account/Login" style="color:maroon">Login </a>to start the show</h3>
+        <h3 class="mt-4 text-center" style="color:goldenrod"><a href="/Identity/Account/Register" style="color:maroon">Register </a>if you dont have an account</h3>
+    </div>
+
+
+    <div class="slideshow-container text-center" style="width:300px; height:400px; display: block; margin-left: auto; margin-right: auto; width: 50%;">
+        <div class="mySlides1">
+            <img src="https://www.tfw2005.com/boards/attachments/a56782626a65f8c3a784efc7cf9ed81c-1-jpg.28585173/" style="width:300px; height:400px;">
+        </div>
+
+        <div class="mySlides1">
+            <img src="https://i.pinimg.com/originals/2e/cd/1b/2ecd1b2e1944957e583e41d8b4598167.jpg" style="width:300px; height:400px;">
+        </div>
+
+        <div class="mySlides1">
+            <img src="https://th.bing.com/th/id/R.ca3a8b8b700efd1e5d36d7fd9025d135?rik=sRgP8sBAhHsrJw&riu=http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fzXaXVpDGYGyvWy4A62HCW1suPMm.jpg&ehk=jTK3ZWo9ztVVh1P5TX6cqdkb6D0Mj4pgyfB2rwu4FeM%3d&risl=&pid=ImgRaw&r=0" style="width:300px; height:400px;">
+        </div>
+
+        <div class="mySlides1">
+            <img src="https://th.bing.com/th/id/R.1f2a20cd8495b6b8771d0b971563d4bf?rik=o6oG8NuMlbEC9Q&pid=ImgRaw&r=0" style="width:300px; height:400px;">
+        </div>
+
+        <div class="mySlides1">
+            <img src="https://th.bing.com/th/id/R.d918c1cd724ec45376d14f52c1e6ff0c?rik=2pDiBNzKDyBA8Q&riu=http%3a%2f%2f3.bp.blogspot.com%2f-EE54YhZatu4%2fT-6Z3afptqI%2fAAAAAAAAAMc%2fJIN8UdkAVZ8%2fs1600%2fIT%2bmovie%2bcover.png&ehk=TumwcMPbUatnmR5pN%2fE9ag53J3TuGZ9jYFnsSL1sVJE%3d&risl=&pid=ImgRaw&r=0" style="width:300px; height:400px;">
+        </div>
+
+        <a class=".prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class=".next" onclick="plusSlides(1, 0)">&#10095;</a>
+    </div>
+
+    <script>
+        let slideIndex = [1, 1];
+        let slideId = ["mySlides1"]
+        showSlides(1, 0);
+        showSlides(1, 1);
+
+        function plusSlides(n, no) {
+            showSlides(slideIndex[no] += n, no);
+        }
+
+        function showSlides(n, no) {
+            let i;
+            let x = document.getElementsByClassName(slideId[no]);
+            if (n > x.length) { slideIndex[no] = 1 }
+            if (n < 1) { slideIndex[no] = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex[no] - 1].style.display = "block";
+        }
+    </script>
+}

@@ -1,0 +1,383 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgoldenrodyellow;
+}
+
+#banner {
+    width: 100%;
+    height: 300px;
+    background-image: url('/images/Dave_Kickflip2_DublinFR.jpg');
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top:10px;
+}
+
+#banner-text {
+    margin-bottom: 10px;
+    margin-top:60px;
+    color:midnightblue;
+    font-weight:bold;
+    font-size:larger;
+}
+
+    #banner-button {
+        margin-bottom: 20px;
+    }
+        #banner-button button:hover{
+            background-color:lightgoldenrodyellow;
+            color:midnightblue;
+            transition:0.1s;
+        }
+        #features {
+            padding: 20px;
+            text-align: center;
+        }
+.banner-button{
+    background-color:midnightblue;
+    color:lightgoldenrodyellow;
+    padding:10px;
+    border-radius:5px;
+    text-decoration:none;
+}
+    .banner-button:hover {
+        background-color: lightgoldenrodyellow;
+        color: midnightblue;
+        transition: 0.1s;
+    }
+    .feature {
+        background-color: white;
+        padding: 20px;
+        margin: 10px;
+        display: inline-block;
+        height: 270px;
+        color: midnightblue;
+        width: 300px;
+    }
+    .feature img {
+        height: 100px;
+        width: 100px;
+
+    }
+    .feature img:hover{
+        opacity:0.8;
+    }
+#centered-image {
+    text-align: center;
+    margin: 20px;
+}
+#centered-image img {
+    width: 100px;
+    height: 100px;
+}
+    #centered-image img:hover{
+        opacity:0.8;
+    }
+    #offer {
+        text-align: center;
+        margin: 20px;
+        color: midnightblue;
+    }
+
+.offer-col {
+    display: inline-block;
+    margin: 10px;
+
+}
+    .offer-col p {
+        width:100px; 
+        height: 200px;
+    }
+.offer-image {
+    width: 100px; 
+    height: 200px; 
+}
+    .offer-image:hover{
+        opacity:0.8;
+    }
+    #at-fast-wheels {
+        text-align: center;
+        margin: 20px;
+        color: midnightblue;
+    }
+
+.services-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.service {
+    display: inline-block;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    color: midnightblue;
+    width:330px;
+}
+
+.service-text {
+    margin-bottom: 10px;
+}
+
+.service-image {
+    width: 60px; 
+    height: 60px; 
+}
+
+#second-banner {
+    display: flex;
+    background-color: lightgoldenrodyellow; 
+    margin:0;
+    padding:0;
+}
+
+.banner-image {
+    width: 430px;
+    height: 300px; 
+    margin-left:10px;
+}
+    .banner-image:hover{
+        opacity:0.8;
+    }
+    #product-types {
+        text-align: center;
+        margin: 20px;
+        color: midnightblue;
+    }
+
+.product-type {
+    display: inline-block;
+    background-color: white; 
+    padding: 20px;
+    color: midnightblue;
+    margin: 10px;
+}
+    .product-type a {
+        text-decoration: none;
+        font-weight:bold;
+        font-size:large;
+    }
+        .product-type a:hover {
+            color:yellow;
+        }
+        .product-type-image {
+    width: 50px; 
+    height: 50px;
+    margin-right: 10px;
+}
+
+#skateboard-completes {
+    text-align: center;
+    margin: 20px;
+    color: midnightblue;
+}
+
+.slideshow-container {
+    width: 1200px;
+    margin: auto;
+    position: relative;
+    color:midnightblue;
+    margin-top:20px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.slideshow-image {
+    width: 100%;
+    height: 500px;
+}
+
+#slideshow-prev, #slideshow-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    background-color: midnightblue;
+    margin-left:10px;
+
+}
+    #slideshow-prev, #slideshow-next:hover{
+        background-color:lightgoldenrodyellow;
+        color:midnightblue;
+        transition:0.1s;
+    }
+    #slideshow-prev {
+        left: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    #slideshow-prev:hover{
+        background-color:midnightblue;
+        color:lightgoldenrodyellow;
+    }
+#slideshow-next {
+    right: 0;
+    margin-right: 10px;
+}
+#image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom:20px;
+    
+}
+
+.image-wrapper {
+    text-align: center;
+}
+
+    .image-wrapper img {
+        width: 100px; 
+        height: auto;
+    }
+        .image-wrapper img:hover{
+            opacity:0.8;
+        }
+        .image-caption {
+            margin-top: 10px;
+            color: midnightblue;
+        }
+            .h2Offer {
+                text-align: center;
+                display: block;
+                color: midnightblue;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+    #topButton:hover {
+        background-color: gold;
+        color: midnightblue;
+        transition: 0.1s;
+    }
+
+
+
+@media screen and (max-width: 768px) {
+    #banner {
+        height: 200px;
+    }
+
+    #banner-text {
+        font-size: medium;
+    }
+
+    .feature {
+        width: 90%;
+    }
+
+    .offer-col {
+        width: 90%;
+    }
+
+    .service {
+        width: 90%;
+    }
+
+    .banner-image {
+        width: 90%;
+    }
+
+    .product-type {
+        width: 90%;
+    }
+
+    #slideshow-prev, #slideshow-next {
+        font-size: 14px;
+    }
+
+    .image-wrapper img {
+        width: 80px;
+    }
+
+    .image-caption {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #banner {
+        height: 150px;
+    }
+
+    #banner-text {
+        font-size: small;
+    }
+
+    .feature {
+        width: 95%;
+    }
+
+    .offer-col {
+        width: 95%;
+    }
+
+    .service {
+        width: 95%;
+    }
+
+    .banner-image {
+        width: 95%;
+    }
+
+    .product-type {
+        width: 95%;
+    }
+
+    #slideshow-prev, #slideshow-next {
+        font-size: 12px;
+    }
+
+    .image-wrapper img {
+        width: 60px;
+    }
+
+    .image-caption {
+        font-size: x-small;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .slideshow-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #second-banner {
+        flex-direction: column;
+    }
+
+    .banner-image {
+        width: 90%;
+        margin: 10px auto;
+    }
+}

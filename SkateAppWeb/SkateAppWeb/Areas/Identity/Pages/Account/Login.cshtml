@@ -1,0 +1,40 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+<head>
+    <link rel="stylesheet" href="~/css/accountPages.css" asp-append-version="true" />
+</head>
+<body>
+<div class="row divLogin1">
+    <div class="col-md-4">
+        <section>
+            <form id="account" method="post">
+                    <h2 class="loginH">Log in to experience the ride</h2>
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-floating loginInput">
+                    <input asp-for="Input.UserName" class="form-control" autocomplete="username" aria-required="true"/>
+                    <label asp-for="Input.UserName" class="form-label"></label>
+                    <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                </div>
+                    <div class="form-floating loginInput">
+                        <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true"/>
+                    <label asp-for="Input.Password" class="form-label"></label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div>
+                        <button id="login-submit" type="submit" class="loginButton">Log in</button>
+                </div>
+                    <a class="loginA" asp-area="Identity" asp-page="/Account/Register">Don't have an account? Create one!</a>
+            </form>
+        </section>
+		</div>
+        <img class="imageLogin" src="~/images/chanyencinitas1996brittain.jpg" />
+	</div>
+</body>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

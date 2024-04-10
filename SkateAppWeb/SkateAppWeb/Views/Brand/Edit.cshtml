@@ -1,0 +1,43 @@
+﻿@model SkateAppWeb.Models.Brands.BrandEditVM
+@{
+    ViewData["Title"] = "Edit";
+}
+<head>
+    <link rel="stylesheet" href="~/css/brand.css" asp-append-version="true" />
+</head>
+<h1 class="brandH">Edit Brand</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger">
+
+            </div>  <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="BrandName" class="control-label brandName"></label>
+                <input asp-for="BrandName" class="form-control brandInput" />
+                <span asp-validation-for="BrandName" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="Edit" class="brandButoon" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <img class="blogImage" src="https://cdn.shopify.com/s/files/1/0910/7312/products/krooked_skateboards_1024x1024.jpg?v=1556319240" />
+    <img class="blogImage" src="https://logodix.com/logo/24326.jpg" />
+    <img class="blogImage" src="https://www.logotypes101.com/logos/574/450CC268893664D904B5E7638AA196C3/Almost_Skate.png" />
+    <img class="blogImage" src="https://external-preview.redd.it/ObuBK_WcX-5gakRAU5Ydw99xFDwvDAUWlUAGXHN2JoA.jpg?auto=webp&s=d6a6ebf56218b00799614be299c5cde8925af00c" />
+    <img class="blogImage" src="https://th.bing.com/th/id/OIP.DE_kcIK6e0fjnLjeS60WlwHaHa?rs=1&pid=ImgDetMain" />
+    <img class="blogImage" src="https://media.cdnws.com/_i/46016/5418/670/22/stickers-toy-machine-ref2-skate-skateboard-sport-extreme-autocollant-sticker-auto-planche-autocollants-decals-sponsors-logo.jpeg" />
+    <img class="blogImage" src="https://th.bing.com/th/id/OIP.YjprolZh1nyAiT8Fm7w9TQHaHa?rs=1&pid=ImgDetMain" />
+
+    <a asp-action="Index" class="brandLink">Back to List</a>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,944 @@
+/* Nav bar */
+
+nav{
+    background-color: white;
+    padding: 15px;
+}
+nav a:hover {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    background-color: navy;
+    color: rgb(237, 202, 237);
+    transition: 0.6s ease;
+  }
+nav a{
+color: navy;
+margin-left: 10px;
+font-size: larger;
+text-decoration: none;
+}
+
+.navigation{
+    text-align: center;
+    display: inline-block;
+    margin-right: 250px;
+    margin-left: 400px;
+}
+
+.searchNav{
+    color: navy; 
+    background-color: rgb(248, 226, 248);
+     border-radius: 5px;
+      padding: 6px;
+      border: none;
+}
+
+.searchNav:hover{
+    color:rgb(248, 226, 248);
+    background-color: rgb(68, 68, 172);
+}
+
+::placeholder{
+    color:navy;
+    opacity: 1;
+}
+
+header img{
+    width: 3%;
+    height: 3%;
+}
+
+a.active{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    text-decoration: none;
+    color: purple;
+    }
+
+div h1{
+    text-align: center;
+    color: navy;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif
+}
+
+nav span{
+    color: navy;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+
+  .homeAs {
+    border-color: white;
+    background-color: #fff;
+    border-width: 5px;
+    width: 27%;
+    border-style: solid;
+    padding: 10px;
+    justify-content: center;
+    display: inline-block;
+    height: 500px;
+    justify-content: space-evenly;
+    margin-left: 50px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* BODY */
+body{
+    background-color: whitesmoke;
+}
+/* MAIN */
+
+/* Slideshow */
+.slideshow-container {
+    max-width: 2000px;
+    position: relative;
+    
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(237, 202, 237);;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: navy;
+    color: rgb(237, 202, 237);
+  }
+
+/* Products */
+ .divInfo {
+    color: navy;
+    text-align: center;
+    font-size: larger;
+  }
+.divInfo a{
+    color: navy;
+    font-size: large;
+}
+
+.homeAs h3{
+color: navy;
+}
+
+.homeAs a{
+    text-align: center;
+    color: navy;
+}
+
+.homeAs img{
+    width: 400px;
+    height: 300px;
+}
+
+.homeProd {
+    border-color:  white;
+    background-color:  #fff;
+    border-width: 2px;
+    width: 15%;
+    border-style: solid;
+    padding: 10px;
+    display: inline-block;
+    height: 300px;
+    justify-content: space-evenly;
+    margin-left: 5px;
+    border-radius: 20px;
+}
+
+.homeProd1 {
+    border-color:  white;
+    background-color:  #fff;
+    border-width: 2px;
+    width: 15%;
+    border-style: solid;
+    padding: 10px;
+    display: inline-block;
+    height: 350px;
+    justify-content: space-evenly;
+    margin-left: 5px;
+    border-radius: 20px;
+}
+
+.homeProd3{
+    border-color:  white;
+    background-color:  #fff;
+    border-width: 2px;
+    width: 10%;
+    border-style: solid;
+    padding: 10px;
+    display: inline-block;
+    height: 200px;
+    justify-content: space-evenly;
+    margin-left: 5px;
+    border-radius: 20px;
+}
+
+.homeProd1 img{
+    width: 130px;
+    height: 250px;
+    margin-left: 20px;
+}
+
+.homeProd3 img{
+    width: 80px;
+    height: 150px;
+}
+
+.homeProd3:hover{
+    color:rgb(243, 100, 243);
+    transition: 0.6s ease;
+}
+
+.homeProd3:hover .image {
+    opacity: 0.3;
+  }
+.homeProd1:hover{
+    color:rgb(243, 100, 243);
+    transition: 0.6s ease;
+}
+
+.homeProd1:hover .image {
+    opacity: 0.3;
+  }
+
+div h2{
+    text-align: center;
+}
+
+.button{
+background-color: navy;
+border-radius: 8px;
+padding: 10px;
+color: rgb(237, 202, 237);
+text-decoration: none;
+
+}
+.button:hover{
+    background-color: rgb(245, 183, 245);
+    transition: 0.6s ease;
+}
+
+.homeProd img{
+    width: 130px;
+    height: 250px;
+}
+
+.homeProd:hover{
+    color:rgb(243, 100, 243);
+    transition: 0.6s ease;
+}
+
+.homeProd .divCena{
+    color: rgb(243, 100, 243);
+}
+
+  
+.image {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+  .homeProd:hover .image {
+    opacity: 0.3;
+  }
+
+  .homeAs img{
+    height: 400px;
+    width: 250px;
+  }
+
+
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: navy;
+    color:  rgb(245, 183, 245);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 40%;
+  }
+  
+  #myBtn:hover {
+    background-color:rgb(245, 183, 245);
+    color: navy;
+  }
+
+  .divAvalable{
+    color: purple;
+    font-size: medium;
+}
+
+/*color options products*/
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: purple;
+    display: inline-block;
+    justify-content: space-evenly;
+    margin-left: 5px;
+}
+
+.circle2 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: navy;
+    display: inline-block;
+    justify-content: space-evenly;
+    margin-left: 5px;
+}
+
+.circle3 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-block;
+    justify-content: space-evenly;
+    margin-left: 5px;
+}
+
+.circle4 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: yellow;
+    display: inline-block;
+    justify-content: space-evenly;
+    margin-left: 5px;
+}
+
+.circle5 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    display: inline-block;
+    justify-content: space-evenly;
+    margin-left: 5px;
+}
+
+/*Heart products*/
+.inputHeart {
+    display: none;
+  }
+
+  .inputHeart:checked ~ label {
+    color: purple;
+  }
+
+
+  .labelHeart {
+    font-size: x-large;
+    float: right;
+  }
+
+  /*Footer*/
+  .footerDiv{
+    border-color:  whitesmoke;
+    background-color:  whitesmoke;
+    width: 15%;
+    display: inline-block;
+    height: 200px;
+    justify-content: space-evenly;
+    margin-left: 80px;
+    margin-right: 240px;
+    border-radius: 20px;
+    text-align: center;
+    color:  navy;
+  }
+
+  .footerDiv h3{
+    color: navy;
+  }
+  .footerDiv a{
+    color: navy;
+    text-decoration: none;
+    
+  }
+  .footerDiv2{
+    border-color:  whitesmoke;
+    background-color:  whitesmoke;
+    width: 15%;
+    display: inline-block;
+    height: 200px;
+    justify-content: space-evenly;
+    margin-left: 60px;
+    border-radius: 20px;
+    text-align: center;
+    color: navy;
+  }
+  .footerDiv2 h3{
+    color: navy;
+  }
+  
+  footer{
+    background-color: whitesmoke;
+  }
+
+  .formHome{
+    background-color: navy; 
+    border-color: navy;
+    border-radius: 6px; 
+    color:white;
+    padding: 6px;
+  }
+.formHome:hover{
+    background-color:  rgb(245, 183, 245); 
+    border-color: rgb(245, 183, 245);
+    color: navy;
+}
+  .formEnter{
+    border-radius: 10px; 
+    border-color: navy;
+    padding: 5px;
+  }
+
+  .footerDiv p:hover{
+    color: rgb(243, 100, 243);
+  }
+
+  .footerDiv a:hover{
+    color: rgb(243, 100, 243);
+  }
+
+/*Products page diff elements*/
+.results{
+    margin-left: 900px;
+    font-size: smaller;
+}
+
+.results2{
+    font-size: large;
+    float: left;
+    margin-left: 200px;
+}
+
+/*Next previous buttons*/
+.previous {
+    background-color: #f1f1f1;
+    color: mavy;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .nextt {
+    background-color: navy;
+    color: rgb(245, 183, 245);
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .nextt:hover{
+    background-color: rgb(245, 183, 245);
+    color: navy;
+  }
+
+  .previous:hover{
+    background-color: rgb(245, 183, 245);
+    color: navy;
+  }
+
+  /*Products dropdown filter and sort*/
+  .dropdown-content {
+    display: none;
+    position: static;
+    background-color: #f9f9f9;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-decoration: none;
+  }
+  .dropdown-content a{
+    text-decoration: none;
+    color: navy;
+  }
+
+  .dropdown {
+    overflow: hidden;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }  
+
+  .dropbtn {
+  background-color: whitesmoke;
+  border-color: whitesmoke;
+  width: 60px;
+  color: navy;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.dropbtn:hover{
+    background-color:navy;
+    color: rgb(245, 183, 245);
+    border-color: navy;
+}
+
+.dropdown a:hover{
+    color: rgb(245, 183, 245);
+  }
+
+  .filterColors:hover{
+    color: rgb(245, 183, 245);
+    
+  }
+  .filterColors{
+    font-size: small;
+  }
+
+  .filterDiv{
+    border-color:  white;
+    background-color:  #fff;
+    border-width: 2px;
+    width: 7%;
+    border-style: solid;
+    padding: 10px;
+    height: 2320px;
+    justify-content: space-evenly;
+    margin-left: 5px;
+    border-radius: 20px;
+    float:left;
+  }
+
+  .sortingDropdown{
+    background-color: whitesmoke;
+  border-color: whitesmoke;
+  width: 100px;
+  color: navy;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  }
+  .sortingButton{
+    border-radius: 150px;
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+    width: 80px;
+    color: navy;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .sortingButton:hover{
+    background-color:navy;
+    color: rgb(245, 183, 245);
+    border-color: navy;
+  }
+
+  .sortingDropdown:hover{
+    background-color:navy;
+    color: rgb(245, 183, 245);
+    border-color: navy;
+  }
+
+  .dropdownDiv{
+    font-size: smaller;
+     margin-bottom: 7px;
+   }
+ 
+   .navDiv{
+     display: inline-block;
+   }
+ 
+   .sortingStrong{
+     display: inline-block;
+   }
+
+  /*Story Home*/
+.storyDiv{
+    background-image: url('images/story2.jpg'); 
+    padding: 50px; 
+    color: black;
+     border-radius: 5px;
+}
+
+  .storyP{
+    background-color: white; 
+    opacity: 0.7;
+     color: navy;
+      border-radius: 10px;
+  }
+
+  /*Informaciq*/
+  .informationDiv{
+    background-color: white;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .informationDivSmall{
+    width: 30%;
+    padding: 10px;
+    height: 500px;
+    justify-content: space-evenly;
+    display: inline-block;
+  }
+
+  .informationDivBig{
+    width: 65%;
+    padding: 10px;
+    height: 550px;
+    justify-content: space-evenly;
+    display: inline-block;
+  }
+
+  .informationHs{
+    background-color: navy;
+    border-radius: 5px;
+    padding: 3px;
+  }
+
+  .informationPs{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    height:585px;
+    color: navy;
+    width: 90%;
+    margin-left: 5%;
+    padding: 3px;
+  }
+
+  .informationPss{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    height:400px;
+    color: navy;
+    width: 90%;
+    margin-left: 5%;
+    padding: 3px;
+  }
+
+  .informationPsss{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    height:100px;
+    color: navy;
+    width: 90%;
+    margin-left: 5%;
+    padding: 3px;
+  }
+
+  .ulInfo{
+    color: navy;
+    width: 90%;
+    height:auto;
+    background-color: whitesmoke;
+    margin-right: 10%;
+    text-align: left;
+  }
+
+  .info{
+    background-color: white;
+    width: 10%;
+    padding: 10px;
+    display: inline-block;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    border-radius: 20px;
+    color: navy;
+    margin-right: 5%;
+  }
+
+  /*Contacts*/
+  .contactsDiv{
+    background-color: rgb(88, 88, 255);
+    color: white;
+    text-decoration: none;
+  }
+
+  .contactsDiv a{
+
+    color: white;
+    text-decoration: none;
+  }
+
+  .contactsDiv a:hover{
+
+    color:  rgb(250, 209, 250);
+    text-decoration: none;
+  }
+
+  .contactForm{
+    width: 65%;
+    padding: 10px;
+    height: 550px;
+    justify-content: space-evenly;
+    display: inline-block;
+  }
+
+  .contactFormSmall{
+    width: 30%;
+    padding: 10px;
+    height: 500px;
+    justify-content: space-evenly;
+    display: inline-block;
+  }
+
+  .footerDivContacts{
+
+    width: 50%;
+    display: inline-block;
+    height: 200px;
+    justify-content: space-evenly;
+    margin-left: 80px;
+    margin-right: 240px;
+    border-radius: 20px;
+    text-align: left;
+    color:  white;
+  }
+
+  .formEnterContact{
+    height: 30px;
+    width: 700px;
+    padding: 3px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .formEnterContact:hover{
+    background-color:  rgb(250, 209, 250);
+  }
+  
+  .formEnterContactMess:hover{
+    background-color:  rgb(250, 209, 250);
+  }
+
+  .formEnterContactMess{
+    height: 50px;
+    width: 700px;
+    padding: 3px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .formContact{
+    background-color: white; 
+    border-color: white;
+    border-radius: 10px; 
+    color:navy;
+    font-size: smaller;
+    padding: 6px;
+  }
+
+.formContact:hover{
+    background-color:  rgb(245, 183, 245); 
+    border-color: rgb(245, 183, 245);
+    color: navy;
+}
+
+.fa {
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 2px 2px 2px;
+  color: white;
+}
+
+.fa:hover {
+    color: rgb(245, 183, 245);
+}
+
+.fa-facebook {
+  color: white;
+}
+
+.fa-instagram {
+  color: white;
+}
+
+.fa-google {
+  color: white;
+}
+
+  /*Proud*/
+  .proud{
+    margin-left: 400px;
+  }
+  /*Responsive*/
+
+@media screen and (max-width:800px){
+    .homeProd1{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .homeProd{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .homeProd3{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .navigation{
+        width: 100%;
+        height: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+        text-align: left;
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+}
+@media screen and (max-width:800px){
+    .dropdown{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .dropdownDiv{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .dropbtn{
+        width: 100%;
+
+    }
+}
+
+@media screen and (max-width:800px){
+    .sortingDropdown{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .filterDiv{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:800px){
+    .sortingButton{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .results{
+        width: 100%;
+        margin-left: 0%;
+    }
+
+}
+@media screen and (max-width:800px){
+    .results2{
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .navDiv{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .slideshow-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .storyDiv{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .storyP{     
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .divInfo{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+  .proud{
+    width: 100%;
+      margin-left: 0%;
+  }
+}
+
+@media screen and (max-width:800px){
+  .contactForm{
+      width: 100%;
+  }
+}
+
+@media screen and (max-width:800px){
+  .contactFormSmall{
+      width: 100%;
+  }
+}
+
+@media screen and (max-width:800px){
+  .formEnterContact{
+      width: 100%;
+
+  }
+}
+
+@media screen and (max-width:800px){
+  .formEnterContactMess{
+      width: 100%;
+  }
+}
+
+
+

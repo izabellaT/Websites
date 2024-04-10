@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Contacts</title>
+        <link rel="stylesheet" type="text/css" href="css.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+        function goToNewPage()
+        {
+            var url = "https://stackoverflow.com/questions/19843373/linking-to-other-pages-in-html-via-drop-down-menu"
+            if(url != 'none') {
+                window.location = url;
+            }
+        }
+        </script>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top" >Top</button>
+        <script> let mybutton = document.getElementById("myBtn");
+         window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         mybutton.style.display = "block";
+         } else {
+          mybutton.style.display = "none";
+         }
+        }
+         function topFunction() {
+         document.body.scrollTop = 0;
+         document.documentElement.scrollTop = 0;
+        }
+        </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+     const menu = document.getElementById("menu");
+     const links = menu.getElementsByTagName("a");
+     
+     // Get the current page URL
+     const currentUrl = window.location.href;
+ 
+     // Loop through the links and check if the link's href matches the current URL
+     for (const link of links) {
+         if (link.href === currentUrl) {
+             link.classList.add("active");
+             break; // Stop after the first match
+         }
+     }
+ });
+</script>
+
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div style="display: inline-block;">
+                    <a href="home.html"><strong>Fast Wheels</strong></a> 
+                     </div>
+    
+                    <div class="navDiv">
+                        <div id="menu" class="navigation">
+                                <a href="home.html"><strong>Начало</strong></a>
+                                <a href="products.html"><strong>Продукти</strong></a>
+                                <a href="information.html"><strong>Информация</strong></a>
+                                <a href="contacts.html"><strong>Контакти</strong></a>
+                            <script src="script.js"></script>
+                        </div>
+    
+                        <div style="display: inline-block; ">
+                            <form action="home.html">
+                              <input type="text" placeholder="Search.." name="search" class="searchNav">
+                              <button type="submit" class="searchNav">Submit</button>
+                            </form>
+                        </div>
+                      </div>
+                      </div>
+           </nav> 
+</header>
+        <main>
+            <div class="divInfo"> 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2936.550679690272!2d23.03033367604037!3d42.60727577117104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14aacac3bbc30045%3A0x1282864432d70ccb!2z0J_QnNCTICLQpdGA0LjRgdGC0L4g0KHQvNC40YDQvdC10L3RgdC60Lgi!5e0!3m2!1sbg!2sbg!4v1697469889278!5m2!1sbg!2sbg" 
+                width="1500" height="250" 
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div>
+                <br>
+                <div class="contactsDiv">
+                    <div class="contactFormSmall">
+                        <br>
+                        <br>
+                        <br>
+                        <h2>Станeтe социални</h2>
+                        <a href="working.html" class="fa fa-facebook"></a>
+                        <a href="working.html" class="fa fa-instagram"></a>
+                        <a href="working.html" class="fa fa-google"></a>
+
+                        <h2>Относно</h2>
+                        <p>+08888888888</p>
+                        <p>test@test.com</p>
+                        <p>fast_wheels.com</p>
+                        <p>10:00-18:30</p>
+                        <p><a href="https://maps.app.goo.gl/VYyWuPKzJgtVRXef7"> „8-ми март“ 232, 2306 Монте Карло, Перник, България</a></p>
+                        <br>
+                        <br>
+                        <br>
+                        
+                    </div>
+
+                    <div class="contactForm">
+                    <h2>Свържете се с нас</h2>
+
+                    <div class="footerDivContacts"> 
+                    <form action="working.html">
+                        <label for="fname" >Име</label><br>
+                        <input type="text" id="fname" name="fname" class="formEnterContact" placeholder="Име..."><br><br>
+                        <label for="lname">Фамилия</label><br>
+                        <input type="text" id="lname" name="lname" class="formEnterContact" placeholder="Фамилия..."><br><br>
+                        <label for="fname" >Имейл</label><br>
+                        <input type="text" id="fname" name="fname" class="formEnterContact" placeholder="Имейл..."><br><br>
+                        <label for="fname" >Тема</label><br>
+                        <input type="text" id="fname" name="fname" class="formEnterContact" placeholder="Тема..."><br><br>
+                        <label for="fname" >Съобщение</label><br>
+                        <input type="text" id="fname" name="fname" class="formEnterContactMess" placeholder="Съобщение..."><br><br>
+                        <input type="submit" value="Предай" class="formContact">
+                      </form> 
+                    </div>
+                    </div>
+                </div>
+            </main>
+
+            
+            <footer>
+                <br>
+                <hr style="color: navy;">
+                <div>
+                <div class="footerDiv" style="margin-left: 570px;"> 
+                    <h3>Страници</h3>
+                    <p ><a href="home.html" >Fast Wheels</a></p>
+                    <p ><a href="products.html" >Продукти</a></p>
+                    <p ><a href="information.html">Информация</a></p>
+                    <p ><a href="contacts.html">Конкакти</a></p>
+                    <br>
+                    <br>
+                </div>
+                
+            <br>
+            </footer>

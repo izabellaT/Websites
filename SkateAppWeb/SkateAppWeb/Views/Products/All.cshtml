@@ -1,0 +1,195 @@
+﻿@model IEnumerable<SkateAppWeb.Models.Products.ProductAllVM>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/productsAll.css" asp-append-version="true" />
+</head>
+
+
+<div class="products-all-banner">
+
+    <h1>Shop</h1>
+</div>
+
+<div class="recommended-container">
+    <h3 class="recommended-title">For ultimate experience: </h3>
+    <div class="recommended-buttons">
+        <a href="https://localhost:7138/Products/Information" class="recommended-button">	&#187;Information</a>
+        <a href="https://localhost:7138/Products/Guide" class="recommended-button">	&#187;Guide</a>
+        <a href="https://localhost:7138/Products/MostAsked" class="recommended-button">	&#187;Most Asked</a>
+        <a href="https://localhost:7138/Skateboards/CreateSkateboard" class="recommended-button">	&#187;Configurator</a>
+    </div>
+    <div class="products-all-count">
+        <h2>@Model.Count() products</h2>
+    </div>
+</div>
+
+
+<div class="products-all-main">
+
+                <div class="products-all-filters">
+
+                    <div class="sort-by-section">
+           
+                        <h4>Sort by</h4>
+
+                        <div class="dropdown products-all-sort-dropdown">
+                            <button class="sortingButton2" type="button" id="sortDropdownButton" data-bs-toggle="dropdown" aria-expanded="false"> Sort by </button>
+                            <ul class="dropdownMenu dropdown-menu" aria-labelledby="sortDropdownButton">
+                                <li><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=&SearchIntSize=&SearchIntPrice=&SortingLowestPrice=1&SortingHighestPrice=">Priciest</a></li>
+                                <li><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=&SearchIntSize=&SearchIntPrice=&SortingLowestPrice=&SortingHighestPrice=1">Cheapest</a></li>
+                                <li><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=&SearchIntSize=&SearchIntPrice=&SortingLowestPrice=&SortingHighestPrice=&SortingAtoZName=&SortingZtoAName=a">A-Z</a></li>
+                                <li><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=&SearchIntSize=&SearchIntPrice=&SortingLowestPrice=&SortingHighestPrice=&SortingAtoZName=a&SortingZtoAName=">Z-A</a></li>
+                            </ul>
+                        </div>
+                    </div>
+        <div class="filter-image-container">
+            <img src="~/images/1300225.png" class="filter-image-containermimi" alt="Filter Image" />
+        </div>
+
+                    <div class="filters-section">
+                        <h4>Filter by</h4>
+
+
+                        <div class="dropdown products-all-filter-dropdown">
+                <button class="sortingButton" type="button" id="sortDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">Color </button>
+                            <ul class="dropdown-menu" aria-labelledby="colorDropdownButton">
+                    <li><button class="colorButton" style="background-color:darkred;"></button><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=red&SearchIntSize=&SearchIntPrice=">Red</a></li>
+                    <li><button class="colorButton" style="background-color:darkblue;"></button><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=blue&SearchIntSize=&SearchIntPrice=">Blue</a></li>
+                    <li><button class="colorButton" style="background-color:limegreen;"></button><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=green&SearchIntSize=&SearchIntPrice=">Green</a></li>
+                    <li><button class="colorButton" style="background-color:mediumpurple;"></button><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=purple&SearchIntSize=&SearchIntPrice=">Purple</a></li>
+                    <li><button class="colorButton" style="background-color:hotpink;"></button><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=pink&SearchIntSize=&SearchIntPrice=">Pink</a></li>
+                    <li><button class="colorButton" style="background-color:orangered;"></button><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=orange&SearchIntSize=&SearchIntPrice=">Orange</a></li>
+                    <li><button class="colorButton" style="background-color:yellow;"></button><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=yellow&SearchIntSize=&SearchIntPrice=">Yellow</a></li>
+                    <li><button class="colorButton" style="background-color:saddlebrown;"></button><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=brown&SearchIntSize=&SearchIntPrice=">Brown</a></li>
+                    <li><button class="colorButton" style="background-color:purple;"></button><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=multicolor&SearchIntSize=&SearchIntPrice=">Multicolor</a></li>
+                    <li><button class="colorButton" style="background-color:white;"></button><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=white&SearchIntSize=&SearchIntPrice=">White</a></li>
+                    <li><button class="colorButton" style="background-color:black;"></button><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=black&SearchIntSize=&SearchIntPrice=">Black</a></li>
+
+                            </ul>
+                        </div>
+
+
+                        <div class="dropdown products-all-filter-dropdown">
+                <button class="sortingButton" type="button" id="sortDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">Size </button>
+                            <ul class="dropdown-menu" aria-labelledby="sizeDropdownButton">
+                                <li><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=&SearchIntSize=52&SearchIntPrice=">Street: 52-54mm</a></li>
+                                <li><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=&SearchIntSize=55&SearchIntPrice=">Park: 55-58mm</a></li>
+                                <li><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=&SearchIntSize=59&SearchIntPrice=">Center: 59mm+</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown products-all-filter-dropdown">
+                <button class="sortingButton" type="button" id="sortDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">Price </button>
+                            <ul class="dropdown-menu" aria-labelledby="priceDropdownButton">
+                                <li><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=&SearchIntSize=&SearchIntPrice=1">Under 25lv</a></li>
+                                <li><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=&SearchIntSize=&SearchIntPrice=50">25-50lv</a></li>
+                                <li><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=&SearchIntSize=&SearchIntPrice=75">50-75lv</a></li>
+                                <li><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=&SearchIntSize=&SearchIntPrice=100">75-100lv</a></li>
+                                <li><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=&SearchIntSize=&SearchIntPrice=150">100-150lv</a></li>
+                                <li><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=&SearchIntSize=&SearchIntPrice=200">150-200lv</a></li>
+                                <li><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=&SearchIntSize=&SearchIntPrice=300">200-300lv</a></li>
+                                <li><a href="https://localhost:7138/Products/Search?SearchStringCategoryName=&SearchStringBrandName=&SearchStringProductName=&SearchStringColor=&SearchIntSize=&SearchIntPrice=301">300lv+</a></li>
+
+                            </ul>
+                        </div>
+            <div class="filter-image-container">
+                <img src="~/images/200941.png" class="filter-image-containermimi" alt="Filter Image" />
+            </div>
+
+            <form class="products-all-search-bars" asp-controller="Products" asp-action="Search" method="get">
+                <p style="font-weight:bold">
+					Category: <input type="text" name="SearchStringCategoryName"/>
+                    Brand: <input type="text" name="SearchStringBrandName"/>
+                    Product name: <input type="text" name="SearchStringProductName" />
+                    <input type="submit" value="Search" />
+                </p>
+            </form>
+            <div class="filter-image-container">
+                <img src="~/images/2-01_cbfa49d8-c0d5-47b2-9d8f-40da6a6606c2_480x480.webp" class="filter-image-containermimi" alt="Filter Image" />
+            </div>
+            <form class="products-all-clear-filters" action="https://localhost:7138/Products/All" method="get">
+                <input type="submit" value="Clear all" />
+            </form>
+                    </div>
+                </div>
+
+
+    <div class="products-all-products">
+        <div class="products-container">
+            @foreach (var item in Model)
+            {
+				<div class="product-item">	
+                    <a class="see-more-btn" asp-action="Details" asp-controller="Products" asp-route-id="@item.Id">
+                    <img src="@item.Picture" alt="@item.Name" class="product-image" />
+                    </a>
+					@if (item.Discount >= 50 && item.Quantity > 0)
+					{
+						<span class="on-sale-ribbon">On Sale</span>
+					}
+                    <div class="favorite-btn">
+                        @await Html.PartialAsync("~/Views/Products/_FavoritePartialView.cshtml", new SkateAppWeb.Models.Favorites.FavoriteCreateVM { ProductId = item.Id })
+                    </div>
+
+                    <div class="product-details">
+                        <span class="brand-name">@item.BrandName</span>
+                        <span class="product-name">@item.Name</span>
+                        @if (item.Quantity > 0)
+                        {
+                            @if (item.Discount < 50)
+                            {
+                                <span class="order-price-p price" data-original-price="@item.Price">@string.Format($"{item.Price:f2}") lv</span>
+                               
+                            }
+                            else
+                            {
+                                <span class="order-price-p price" data-original-price="@item.Price" style="color:gold"> @string.Format($"{item.Price * (100 - item.Discount) / 100 :f2}") lv</span>
+                            }
+                        }
+                        else
+                        {
+                            <span class="not-available" style="color:gold;">Not Available</span>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="bottom-container">
+    <p class="bottom-text">
+        Thanks for checking out Fast Wheels! Find the perfect gear to elevate your skate game with our top-notch collection of decks, trucks, wheels, and apparel. Whether you're a pro or just starting, we've got you covered. Ride in style, push your limits, and enjoy the journey with Fast Wheels – your ultimate skateboarding companion. Skate on!
+    </p>
+</div>
+<div class="bottom-banner">
+    <img src="~/images/sustainable-transportation-modes-1068x712.jpg" alt="Image 1" class="bottom-banner-image">
+    <img src="~/images/istockphoto-1440221456-170667a.jpg" alt="Image 2" class="bottom-banner-image">
+    <img src="~/images/skater-dropping-in.jpg" alt="Image 3" class="bottom-banner-image">
+</div>
+
+<button onclick="scrollToTop()" id="topButton" title="Go to top">Top</button>
+
+<script>
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        var topButton = document.getElementById("topButton");
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0; 
+    }
+</script>

@@ -1,0 +1,40 @@
+﻿@model SkateAppWeb.Models.Blogs.BlogCreateVM
+
+@{
+    ViewData["Title"] = "EditBlog";
+}
+<head>
+    <link rel="stylesheet" href="~/css/blog.css" asp-append-version="true" />
+</head>
+
+<h1 class="text-center blogH">Edit Blog</h1>
+
+<div style="float:left; display:inline">
+    <form asp-action="Edit" asp-controller="Blogs" method="post">
+        <div class="mb-3" >
+            <div class="form-group">
+                <label asp-for="Content" class="control-label editLabelName"></label>
+				<input asp-for="Content" class="form-control editInputCreate" />
+                <span asp-validation-for="Content" class="text-danger"></span>
+			</div> 
+            <div class="form-group">
+                <label asp-for="Picture" class="control-label editLabelName"></label>
+				<input asp-for="Picture" class="form-control editInputCreate" />
+				<span asp-validation-for="Picture" class="text-danger"></span>
+			</div>
+            <div class="form-group">
+                <label asp-for="VideoLink" class="control-label editLabelName"></label>
+				<input asp-for="VideoLink" class="form-control editInputCreate" />
+                <span asp-validation-for="VideoLink" class="text-danger"></span>
+            </div>
+        </div>
+        <div style="text-align:center">
+            @if (User.IsInRole("Administrator"))
+            {
+                <button type="submit" class="editBlogButton">Edit</button>
+            }
+        </div> 
+    </form>
+</div>
+<img class="editImage" src="https://th.bing.com/th/id/R.716095c832dc49b9567a1499439e57c1?rik=lOtGnIzn1QWZxg&pid=ImgRaw&r=0" />
+<img class="editImage" src="https://th.bing.com/th/id/OIP.hXo6p89n0QYZ8bHH0SC6swHaHa?w=626&h=626&rs=1&pid=ImgDetMain" />

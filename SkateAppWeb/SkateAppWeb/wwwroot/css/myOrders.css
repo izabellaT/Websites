@@ -1,0 +1,148 @@
+body {
+    color: midnightblue;
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+}
+
+.myOrdersBanner {
+    padding: 20px;
+    height: 250px;
+    margin-top: 20px;
+    background-image: url('/images/20_02_23_Elise_Skateboard-0353.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.myOrdersH1 {
+    color: midnightblue;
+    margin-top:80px;
+    margin-bottom:40px;
+    font-weight:bold;
+}
+.myOrdersH4{
+    margin-top:90px;
+    font-weight:bold;
+
+}
+.myOrdersPromocode {
+    color: midnightblue;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.myOrdersTable {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom:20px;
+}
+
+.myOrdersTh, .myOrdersTd {
+    padding: 10px;
+    border: 1px solid white;
+    
+}
+.buttonOrders{
+    text-decoration:none;
+    padding:10px;
+    background-color:midnightblue;
+    border-radius:5px;
+    color:white;
+}
+    .buttonOrders:hover{
+        background-color:dodgerblue;
+        color:white;
+        transition:0.1s;
+    }
+    .myOrdersTh {
+        font-weight: bold;
+        font-size: 20px;
+        background-color: midnightblue;
+        color: white;
+        border-radius: 5px;
+    }
+.myOrdersTd {
+    font-size: 18px;
+    font-weight:bold;
+}
+.myOrdersP {
+    color: dodgerblue;
+}
+.myOrdersHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-top:30px;
+}
+
+.myOrdersHeaderText {
+    color: midnightblue;
+    font-weight:bold;
+    font-size:18px;
+
+}
+
+.noOrdersImage{
+    width:300px;
+    height:300px;
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .myOrdersBanner {
+        height: 150px;
+    }
+
+    .myOrdersH1 {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .myOrdersH4 {
+        margin-top: 60px;
+        font-size: 14px;
+    }
+
+    .myOrdersPromocode {
+        margin-top: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .myOrdersTable {
+        margin-bottom: 10px;
+    }
+
+    .myOrdersTh, .myOrdersTd {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .myOrdersTh {
+        font-size: 16px;
+    }
+
+    .myOrdersTd {
+        font-size: 14px;
+    }
+
+    .myOrdersHeader {
+        margin-top: 20px;
+    }
+
+    .myOrdersHeaderText {
+        font-size: 14px;
+    }
+
+    .noOrdersImage {
+        width: 200px;
+        height: 200px;
+    }
+}

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Products</title>
+        <link rel="stylesheet" type="text/css" href="css.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script>
+        function goToNewPage()
+        {
+            var url = "https://stackoverflow.com/questions/19843373/linking-to-other-pages-in-html-via-drop-down-menu"
+            if(url != 'none') {
+                window.location = url;
+            }
+        }
+        </script>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top" >Top</button>
+        <script> let mybutton = document.getElementById("myBtn");
+         window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         mybutton.style.display = "block";
+         } else {
+          mybutton.style.display = "none";
+         }
+        }
+         function topFunction() {
+         document.body.scrollTop = 0;
+         document.documentElement.scrollTop = 0;
+        }
+        </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+     const menu = document.getElementById("menu");
+     const links = menu.getElementsByTagName("a");
+     
+     // Get the current page URL
+     const currentUrl = window.location.href;
+ 
+     // Loop through the links and check if the link's href matches the current URL
+     for (const link of links) {
+         if (link.href === currentUrl) {
+             link.classList.add("active");
+             break; // Stop after the first match
+         }
+     }
+ });
+</script>
+
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div style="display: inline-block;">
+                    <a href="home.html"><strong>Fast Wheels</strong></a> 
+                     </div>
+    
+                    <div class="navDiv">
+                        <div id="menu" class="navigation">
+                                <a href="home.html"><strong>Начало</strong></a>
+                                <a href="products.html"><strong>Продукти</strong></a>
+                                <a href="information.html"><strong>Информация</strong></a>
+                                <a href="contacts.html"><strong>Контакти</strong></a>
+                        </div>
+    
+                        <div style="display: inline-block;">
+                            <form action="working.html">
+                              <input type="text" placeholder="Search.." name="search" class="searchNav">
+                              <button type="submit" class="searchNav">Submit</button>
+                            </form>
+                        </div>
+                      </div>
+                      </div>
+           </nav> 
+</header>
+        <main>
+        <div class="divInfo"> 
+            <h2 style="background-image: url('images/products.jpg'); padding: 90px; color: white;">Цели скейтбордове</h2>
+            <span class="results2"><strong>Цели бордове</strong></span><span class="results">(30 резултата)</span>
+          <div>
+            <br>
+
+           <div class="filterDiv">
+            <div class="dropdownDiv"><strong>Сортиране по:</strong></div>
+            <div>
+                   
+                        <form name="dropdown">
+                            <select name="list" accesskey="target" class="sortingDropdown">
+                            <option selected>Най-популярни</option>
+                            <option value="newest">Най-нови</option>
+                            <option value="oldest">Най-стари</option>
+                            <option value="a">А-Я</option>
+                            <option value="q">Я-А</option>
+                            <select>
+                            <input type=button value="Сортирай" onclick="window.location.href='working.html'" class="sortingButton">
+        </div>
+            <br>
+            <div class="dropdownDiv"><strong>Филтриране по:</strong></div>
+            <div>
+                <div class="dropdown">
+                    <button class="dropbtn"><strong>Марка</strong> 
+                    </button>
+                    <div class="dropdown-content">
+                        <input type="checkbox" onchange="window.location.href='working.html'" id="brand1" name="brand1" value="Brand1">
+                        <label for="brand1"><a href="#" style="font-size: smaller;">Марка1</a></label><br>
+                        <input type="checkbox" onchange="window.location.href='working.html'" id="brand2" name="brand2" value="Brand2">
+                        <label for="brand2"><a href="#" style="font-size: smaller;">Марка2</a></label><br>
+                        <input type="checkbox" onchange="window.location.href='working.html'" id="brand3" name="brand3" value="Brand3">
+                        <label for="brand3"><a href="#" style="font-size: smaller;">Марка3</a></label><br>
+                    </div>
+                  </div> 
+            </div>
+
+                  <div>
+                    <div class="dropdown" >
+                        <button class="dropbtn"><strong>Цвят</strong>
+                        </button>
+                        <div class="dropdown-content">
+                         <div> <a href="working.html"><div class="circle3"></div></a></div>
+                         <div class="filterColors">Червен</div>
+                          <div><a href="working.html"><div class="circle2"></div></a></div>
+                          <div class="filterColors">Син</div>
+                          <div><a href="working.html"><div class="circle5"></div></a></div>
+                          <div class="filterColors">Черен</div>
+                          <div><a href="working.html"><div class="circle"></div></a></div>
+                          <div class="filterColors">Лилав</div>
+                          <div><a href="working.html"><div class="circle4"></div></a></div>
+                          <div class="filterColors">Жълт</div>
+                        </div>
+                      </div> 
+                  </div>
+                      <div >
+                        <div class="dropdown">
+                            <button class="dropbtn"><strong>Цена</strong> 
+                            </button>
+                            <div class="dropdown-content">
+                             <div> <a href="working.html" style="font-size: smaller;">10-50лв.</a></div>
+                              <div><a href="working.html" style="font-size: smaller;">50-100лв.</a></div>
+                              <div><a href="working.html" style="font-size: smaller;">100-150лв.</a></div>
+                              <div><a href="working.html" style="font-size: smaller;">150-200лв.</a></div>
+                              <div><a href="working.html" style="font-size: smaller;">200лв+</a></div>
+                            </div>
+                          </div> 
+            </div>
+           </div>
+
+           
+            <div>  
+                
+                <div class="homeProd1">
+                    
+                    <div class="divHeart"> 
+                    <input type="checkbox" id="heart" class="inputHeart">
+                    <label for="heart" class="labelHeart">&#9829</label>
+                    </div>
+                    
+               <a href="#"><img src="https://shop.ccs.com/cdn/shop/files/193172446254-c.jpg?v=1688597851" alt="product" class="image"></a>
+              <div><strong>Santa Cruz </strong></div>
+               <div style="font-size: medium;">Delfino Devil VX 8.25
+               </div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>149.95</strong></div>
+               <div class="divAvalable">avalable or not</div>   
+        </div>
+                    <div class="homeProd1">
+
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+
+                        <a href="#">  <img src="https://shop.ccs.com/cdn/shop/files/888560310520-c.jpg?v=1694558054" alt="product" class="image"></a>
+                        <div><strong>Real</strong></div>
+                        <div style="font-size: medium;"> Ishod Comix Wheel Wells </div>
+                        <div class="circle"></div>
+                        <div class="circle3"></div>
+                        <div class="circle5"></div>
+                        <div><strong>134.95</strong></div>
+                        <div class="divAvalable">avalable or not</div> 
+                </div>
+                    <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#"><img src="https://shop.ccs.com/cdn/shop/files/842357182769-c.jpg?v=1692226181" alt="product" class="image"></a>
+                        <div><strong>Powell-Peralta</strong></div>
+                        <div style="font-size: medium;"> Flight Sakura Yosozumi Samurai</div>
+                        <div class="circle"></div>
+                        <div class="circle3"></div>
+                        <div class="circle5"></div>
+                        <div><strong>157.95</strong></div>
+                        <div class="divAvalable">avalable or not</div>   
+                    </div>
+                    <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">   <img src="https://shop.ccs.com/cdn/shop/files/193172446339-c.jpg?v=1691623274" alt="product" class="image"></a>
+                        <div><strong>Santa Cruz</strong></div>
+               <div style="font-size: medium;"> Delfino Loves Me Not Pro</div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>126.95</strong></div>
+               <div class="divAvalable">avalable or not</div>   
+                    </div>
+                     <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">    <img src="https://shop.ccs.com/cdn/shop/files/5056336673093-c.jpg?v=1692226171" alt="product" class="image"></a>
+                        <div><strong>Polar Hjalte Halberg</strong></div>
+               <div style="font-size: medium;"> It Will Pass </div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>134.95</strong></div>
+               <div class="divAvalable">avalable or not</div> 
+                    </div>
+                        </div>
+                        <br>
+                        <div>
+                    <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">   <img src="https://shop.ccs.com/cdn/shop/files/BQ69D66-c.jpg?v=1689891740" alt="product" class="image"></a>
+                        <div><strong>WKND</strong></div>
+               <div style="font-size: medium;"> No Angel Filip Almquist 2 </div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>127.95</strong></div>
+               <div class="divAvalable">avalable or not</div>  
+                    </div>
+                    <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">  <img src="https://shop.ccs.com/cdn/shop/products/LUCAS-BEAUFORT-COMPLETE_0ecf20c6-8cd8-4cc5-9b66-26bc99d5c257.jpg?v=1638405925" alt="product" class="image"> </a>
+                        <div><strong>Lucas Beaufort</strong></div>
+               <div style="font-size: medium;"> Color-Up Customs X </div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>121.95</strong></div>
+               <div class="divAvalable">avalable or not</div>      
+                    </div>
+                    <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">   <img src="https://shop.ccs.com/cdn/shop/files/BQ69711-c.jpg?v=1688774204" alt="product" class="image"> </a>
+                        <div><strong>Alltimers</strong></div>
+               <div style="font-size: medium;"> Noelle for Zered</div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>124.95</strong></div>
+               <div class="divAvalable">avalable or not</div>        
+                    </div>
+                    <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">    <img src="https://shop.ccs.com/cdn/shop/products/827059427394-c.jpg?v=1685748689" alt="product" class="image">  </a>
+                        <div><strong>Toy Machine </strong></div>
+               <div style="font-size: medium;">Hoban Mind Control</div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>134.95</strong></div>
+               <div class="divAvalable">avalable or not</div>  
+                    </div>
+                    <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">   <img src="https://shop.ccs.com/cdn/shop/products/193172413348-c.jpg?v=1680306425" alt="product" class="image"> </a>
+                        <div><strong>Lockwood</strong></div>
+               <div style="font-size: medium;"> Voodoo Isle 2 VX Everslick</div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>157.95</strong></div>
+               <div class="divAvalable">avalable or not</div>    
+                    </div>
+                        </div>
+                        <br>
+                        <div>
+                            <div class="homeProd1" >
+                                <div class="divHeart"> 
+                                    <input type="checkbox" id="heart" class="inputHeart">
+                                    <label for="heart" class="labelHeart">&#9829</label>
+                                    </div>
+                           <a href="#"><img src="https://shop.ccs.com/cdn/shop/products/888560296862-c.jpg?v=1680654654" alt="product" class="image"></a>
+                          <div><strong>Anti-Hero</strong></div>
+                           <div style="font-size: medium;">Big Bord 2 Raney Shape</div>
+                           <div class="circle"></div>
+                           <div class="circle3"></div>
+                           <div class="circle5"></div>
+                           <div><strong>133.95</strong></div>
+                           <div class="divAvalable">avalable or not</div>   
+                    </div>
+                                <div class="homeProd1">
+                                    <div class="divHeart"> 
+                                        <input type="checkbox" id="heart" class="inputHeart">
+                                        <label for="heart" class="labelHeart">&#9829</label>
+                                        </div>
+                                    <a href="#">  <img src="https://shop.ccs.com/cdn/shop/products/BQ5F792-c.jpg?v=1680306422" alt="product" class="image"></a>
+                                    <div><strong>Baker Rowan</strong></div>
+                                    <div style="font-size: medium;"> Piggy Back</div>
+                                    <div class="circle"></div>
+                                    <div class="circle3"></div>
+                                    <div class="circle5"></div>
+                                    <div><strong>136.95</strong></div>
+                                    <div class="divAvalable">avalable or not</div> 
+                            </div>
+                                <div class="homeProd1">
+                                    <div class="divHeart"> 
+                                        <input type="checkbox" id="heart" class="inputHeart">
+                                        <label for="heart" class="labelHeart">&#9829</label>
+                                        </div>
+                                    <a href="#">   <img src="https://shop.ccs.com/cdn/shop/products/193172413560-c.jpg?v=1680306436" alt="product" class="image"></a>
+                                    <div><strong>Santa Cruz</strong></div>
+                                    <div style="font-size: medium;"> Braun Snack Everslick</div>
+                                    <div class="circle"></div>
+                                    <div class="circle3"></div>
+                                    <div class="circle5"></div>
+                                    <div><strong>138.95</strong></div>
+                                    <div class="divAvalable">avalable or not</div>   
+                                </div>
+                                <div class="homeProd1">
+                                    <div class="divHeart"> 
+                                        <input type="checkbox" id="heart" class="inputHeart">
+                                        <label for="heart" class="labelHeart">&#9829</label>
+                                        </div>
+                                    <a href="#">   <img src="https://shop.ccs.com/cdn/shop/products/yusukes-picks-complete_eb20ab18-1b6a-4fdf-8253-990f3f084502_1280x.jpg?v=1643763699" alt="product" class="image"></a>
+                                    <div><strong>Yusuke Hanai</strong></div>
+                           <div style="font-size: medium;"> Friends Customs X</div>
+                           <div class="circle"></div>
+                           <div class="circle3"></div>
+                           <div class="circle5"></div>
+                           <div><strong>121.95</strong></div>
+                           <div class="divAvalable">avalable or not</div>   
+                                </div>
+                                 <div class="homeProd1">
+                                    <div class="divHeart"> 
+                                        <input type="checkbox" id="heart" class="inputHeart">
+                                        <label for="heart" class="labelHeart">&#9829</label>
+                                        </div>
+                                    <a href="#">    <img src="https://shop.ccs.com/cdn/shop/products/193172413584-c.jpg?v=1680306436" alt="product" class="image"></a>
+                                    <div><strong>Santa Cruz</strong></div>
+                           <div style="font-size: medium;"> Delfino Tarot Pro</div>
+                           <div class="circle"></div>
+                           <div class="circle3"></div>
+                           <div class="circle5"></div>
+                           <div><strong>125.95</strong></div>
+                           <div class="divAvalable">avalable or not</div> 
+                                </div>
+                                    </div>
+                                    <br>
+                                    <div>
+                                <div class="homeProd1">
+                                    <div class="divHeart"> 
+                                        <input type="checkbox" id="heart" class="inputHeart">
+                                        <label for="heart" class="labelHeart">&#9829</label>
+                                        </div>
+                                    <a href="#">   <img src="https://shop.ccs.com/cdn/shop/products/BQ5F635-c.jpg?v=1677895606" alt="product" class="image"></a>
+                                    <div><strong>Transportation</strong></div>
+                           <div style="font-size: medium;"> Unit Umbrella</div>
+                           <div class="circle"></div>
+                           <div class="circle3"></div>
+                           <div class="circle5"></div>
+                           <div><strong>124.95</strong></div>
+                           <div class="divAvalable">avalable or not</div>  
+                                </div>
+                                <div class="homeProd1">
+                                    <div class="divHeart"> 
+                                        <input type="checkbox" id="heart" class="inputHeart">
+                                        <label for="heart" class="labelHeart">&#9829</label>
+                                        </div>
+                                    <a href="#">  <img src="https://shop.ccs.com/cdn/shop/products/Spooky-Scary-Skeleton-Black-c_87f7d3a9-e62c-436e-81d1-cca334152089.jpg?v=1650586764" alt="product" class="image"> </a>
+                                    <div><strong>CCS</strong></div>
+                           <div style="font-size: medium;"> Vine Skeleton Mini</div>
+                           <div class="circle"></div>
+                           <div class="circle3"></div>
+                           <div class="circle5"></div>
+                           <div><strong>79.95</strong></div>
+                           <div class="divAvalable">avalable or not</div>      
+                                </div>
+                                <div class="homeProd1">
+                                    <div class="divHeart"> 
+                                        <input type="checkbox" id="heart" class="inputHeart">
+                                        <label for="heart" class="labelHeart">&#9829</label>
+                                        </div>
+                                    <a href="#">   <img src="https://shop.ccs.com/cdn/shop/products/jay-howell-skateboard-complete-1_c98c22be-2796-4ec3-9b8e-9509f48fb31f.jpg?v=1635461246" alt="product" class="image"> </a>
+                                    <div><strong>Jay Howell</strong></div>
+                           <div style="font-size: medium;"> Flash Sheet Customs X</div>
+                           <div class="circle"></div>
+                           <div class="circle3"></div>
+                           <div class="circle5"></div>
+                           <div><strong>121.95</strong></div>
+                           <div class="divAvalable">avalable or not</div>        
+                                </div>
+                                <div class="homeProd1">
+                                    <div class="divHeart"> 
+                                        <input type="checkbox" id="heart" class="inputHeart">
+                                        <label for="heart" class="labelHeart">&#9829</label>
+                                        </div>
+                                    <a href="#">    <img src="https://shop.ccs.com/cdn/shop/products/888560295025-c.jpg?v=1675215654" alt="product" class="image">  </a>
+                                    <div><strong>There</strong></div>
+                           <div style="font-size: medium;"> James Sleepy</div>
+                           <div class="circle"></div>
+                           <div class="circle3"></div>
+                           <div class="circle5"></div>
+                           <div><strong>131.95</strong></div>
+                           <div class="divAvalable">avalable or not</div>  
+                                </div>
+                                <div class="homeProd1">
+                                    <div class="divHeart"> 
+                                        <input type="checkbox" id="heart" class="inputHeart">
+                                        <label for="heart" class="labelHeart">&#9829</label>
+                                        </div>
+                                    <a href="#">   <img src="https://shop.ccs.com/cdn/shop/products/BQ5C1A5-c.jpg?v=1675215635" alt="product" class="image"> </a>
+                                    <div><strong>Deathwish</strong></div>
+                           <div style="font-size: medium;"> Dickson Macabre</div>
+                           <div class="circle"></div>
+                           <div class="circle3"></div>
+                           <div class="circle5"></div>
+                           <div><strong>132.95</strong></div>
+                           <div class="divAvalable">avalable or not</div>    
+                                </div>
+                                    </div>
+                                </div>
+                                <br>
+            <div>
+                <div class="homeProd1">
+                    <div class="divHeart"> 
+                        <input type="checkbox" id="heart" class="inputHeart">
+                        <label for="heart" class="labelHeart">&#9829</label>
+                        </div>
+               <a href="#"><img src="https://shop.ccs.com/cdn/shop/products/kitaq91ec9-c.jpg?v=1643924073" alt="product" class="image"></a>
+              <div><strong>CCS</strong></div>
+               <div style="font-size: medium;"> Ghost Mini</div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>79.95</strong></div>
+               <div class="divAvalable">avalable or not</div>   
+        </div>
+                    <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">  <img src="https://shop.ccs.com/cdn/shop/products/BQ5C1DF-c.jpg?v=1672967969" alt="product" class="image"></a>
+                        <div><strong>Foundation </strong></div>
+                        <div style="font-size: medium;">Witkin Rad!</div>
+                        <div class="circle"></div>
+                        <div class="circle3"></div>
+                        <div class="circle5"></div>
+                        <div><strong>131.95</strong></div>
+                        <div class="divAvalable">avalable or not</div> 
+                </div>
+                    <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">   <img src="https://shop.ccs.com/cdn/shop/products/5056336646332-c.jpg?v=1665794293" alt="product" class="image"></a>
+                        <div><strong>Nathan McKee</strong></div>
+                        <div style="font-size: medium;"> Street Scene</div>
+                        <div class="circle"></div>
+                        <div class="circle3"></div>
+                        <div class="circle5"></div>
+                        <div><strong>121.95</strong></div>
+                        <div class="divAvalable">avalable or not</div>   
+                    </div>
+                    <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">   <img src="https://shop.ccs.com/cdn/shop/products/AQ9091F-c.jpg?v=1621816154" alt="product" class="image"></a>
+                        <div><strong>Toy</strong></div>
+               <div style="font-size: medium;"> Machine Monster</div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>111.95</strong></div>
+               <div class="divAvalable">avalable or not</div>   
+                    </div>
+                     <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">    <img src="https://shop.ccs.com/cdn/shop/products/BQ4F155-c.jpg?v=1653525980" alt="product" class="image"></a>
+                        <div><strong>DGK</strong></div>
+               <div style="font-size: medium;"> Lurk Shanahan</div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>122.95</strong></div>
+               <div class="divAvalable">avalable or not</div> 
+                    </div>
+                        </div>
+                        <br>
+                        <div>
+                    <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">   <img src="https://shop.ccs.com/cdn/shop/products/ccs-odd-birds-shoebill-skateboard-deck-c_b343d3d3-80b8-4a69-903f-2c08cfc51582.jpg?v=1637698259" alt="product" class="image"></a>
+                        <div><strong>CCS</strong></div>
+               <div style="font-size: medium;"> Odd Birds Shoebill</div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>79.95</strong></div>
+               <div class="divAvalable">avalable or not</div>  
+                    </div>
+                    <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">  <img src="https://shop.ccs.com/cdn/shop/products/BQ4F849-c.jpg?v=1654298525" alt="product" class="image"> </a>
+                        <div><strong>Transportation Unit</strong></div>
+               <div style="font-size: medium;"> Rainy Day</div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>121.95</strong></div>
+               <div class="divAvalable">avalable or not</div>      
+                    </div>
+                    <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">   <img src="https://shop.ccs.com/cdn/shop/products/888560094673-1.jpg?v=1621319732" alt="product" class="image"> </a>
+                        <div><strong>Anti-Hero</strong></div>
+               <div style="font-size: medium;"> Classic Eagle</div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>80.95</strong></div>
+               <div class="divAvalable">avalable or not</div>        
+                    </div>
+                    <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">    <img src="https://shop.ccs.com/cdn/shop/products/BQ25FC3-c.jpg?v=1621820542" alt="product" class="image">  </a>
+                        <div><strong>Deathwish</strong></div>
+               <div style="font-size: medium;"> Deathspray</div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>122.95</strong></div>
+               <div class="divAvalable">avalable or not</div>  
+                    </div>
+                    <div class="homeProd1">
+                        <div class="divHeart"> 
+                            <input type="checkbox" id="heart" class="inputHeart">
+                            <label for="heart" class="labelHeart">&#9829</label>
+                            </div>
+                        <a href="#">   <img src="https://shop.ccs.com/cdn/shop/products/193172413522-c.jpg?v=1675474496" alt="product" class="image"> </a>
+                        <div><strong>Santa Cruz</strong></div>
+               <div style="font-size: medium;"> Delfino Fortune Teller Glow VX</div>
+               <div class="circle"></div>
+               <div class="circle3"></div>
+               <div class="circle5"></div>
+               <div><strong>149.95</strong></div>
+               <div class="divAvalable">avalable or not</div>    
+                    </div>
+                        </div>
+                        <br>
+    </div>
+    </div>
+<br>
+<div style="text-align: center;">
+    <a href="working.html" class="previous">&laquo; Предишна</a>
+    <a href="working.html" class="nextt">Следваща &raquo;</a>
+    </div>
+</main>
+<br>
+<hr style="color: navy;">
+
+        <footer>
+            <div>
+            <div class="footerDiv"> 
+                <h3>Относно</h3>
+                <p>+08888888888</p>
+                <p>test@test.com</p>
+                <p>fast_wheels.com</p>
+                <p>10:00-18:30</p>
+                <p><a href="https://maps.app.goo.gl/VYyWuPKzJgtVRXef7"> „8-ми март“ 232, 2306 Монте Карло, Перник, България</a></p>  
+            </div>
+            <div class="footerDiv"> 
+                <h3>Страници</h3>
+                <p ><a href="home.html" >Fast Wheels</a></p>
+                <p ><a href="products.html" >Продукти</a></p>
+                <p ><a href="information.html">Информация</a></p>
+                <p ><a href="contacts.html">Конкакти</a></p>
+                <br>
+                <br>
+            </div>
+            <div class="footerDiv2"> 
+                <h3>Свържете се с нас</h3>
+                <form action="working.html">
+                    <label for="fname" >Име</label><br>
+                    <input type="text" id="fname" name="fname" class="formEnter" placeholder="Име..."><br>
+                    <label for="lname">Фамилия</label><br>
+                    <input type="text" id="lname" name="lname" class="formEnter" placeholder="Фамилия..."><br><br>
+                    <input type="submit" value="Предай" class="formHome">
+                  </form> 
+                  <br>
+                  <br>
+            </div>
+        </div>
+        <br>
+        </footer>
+    </body>
+</html>
+    </body>
+</html>

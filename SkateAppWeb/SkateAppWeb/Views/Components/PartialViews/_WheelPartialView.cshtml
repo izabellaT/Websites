@@ -1,0 +1,94 @@
+﻿@model SkateAppWeb.Models.Products.WheelCreateVM
+<head>
+    <link rel="stylesheet" href="~/css/createPages.css" asp-append-version="true" />
+</head>
+<div class="row" style="float:left; display:inline;">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Name" class="control-label labelName"></label>
+            <input asp-for="Name" class="form-control inputCreate" placeholder="Enter name..." />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="BrandId" class="control-label labelName"></label>
+            <select asp-for="BrandId" class="form-control text-center inputCreate">
+                @foreach (var brand in Model.Brands)
+                {
+                    <option value="@brand.Id">@brand.Name</option>
+                }
+            </select>
+            <span asp-validation-for="BrandId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CategoryId" class="control-label labelName"></label>
+            <input class="form-control inputCreate" placeholder="Wheel" readonly />
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Color" class="control-label labelName"></label>
+            <input asp-for="Color" class="form-control inputCreate" placeholder="Enter color..." />
+            <span asp-validation-for="Color" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Size" class="control-label labelName"></label>
+            <input asp-for="Size" class="form-control inputCreate" placeholder="Enter size..." />
+            <span asp-validation-for="Size" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Count" class="control-label labelName"></label>
+            <input asp-for="Count" class="form-control inputCreate" placeholder="Enter count..." />
+            <span asp-validation-for="Count" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Quantity" class="control-label labelName"></label>
+            <input asp-for="Quantity" class="form-control inputCreate" placeholder="Enter quantity..." />
+            <span asp-validation-for="Quantity" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Material" class="control-label labelName"></label>
+            <input asp-for="Material" class="form-control inputCreate" placeholder="Enter material..." />
+            <span asp-validation-for="Material" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Price" class="control-label labelName"></label>
+            <input asp-for="Price" class="form-control inputCreate" placeholder="Enter price..." />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Discount" class="control-label labelName"></label>
+            <input asp-for="Discount" class="form-control inputCreate" placeholder="Enter discount..." />
+            <span asp-validation-for="Discount" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="control-label labelName"></label>
+            <input asp-for="Description" class="form-control inputCreate" placeholder="Enter description..." />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Picture" class="control-label labelName"></label>
+            <input asp-for="Picture" class="form-control inputCreate" placeholder="Enter picture link..." />
+            <span asp-validation-for="Picture" class="text-danger"></span>
+        </div>
+    </div>
+</div>
+<div class="brandAndPic">
+    <img class="imageCreate" src="https://cdn.shopify.com/s/files/1/1503/7616/products/enuff-hologram-pre-built-complete-blue-8-0-skateboard-rollersnakes_520.jpg?v=1576803461" />
+    <img class="imageCreate" src="https://skate.fr/wp-content/uploads/2021/03/toy-machine-american-monster-skateboard-complet-7-75-roues.jpg" />
+    <img class="imageCreate" src="https://cdn.shopify.com/s/files/1/1619/8105/products/AH-Grimple-Glue-8-Complete-4_530x.jpg?v=1623939029" />
+</div>
+<div class="brandAndPic">
+    <p class="pCreate">Street skating  is the most popular style of skateboarding. Obviously there’s not one wheel that rules them all and it really depends on the surface you ride. For rough asphalt, you need softer wheels that are more forgiving and for smooth concrete, you want something hard and grippy.</p>
+    <p class="pCreate" style="margin-left:10px;">In the long run, premium wheels are a better investment but you can always upgrade when you’re ready. </p>
+    <p class="pCreate">Keep in mind that cheap wheels flat spot and wear fast!</p>
+</div>
+<div class="brandAndPic">
+    <img class="imageCreate" src="https://i.pinimg.com/originals/af/a8/3f/afa83f9eb8e406c0cc397b30c5a26625.jpg" />
+    <img class="imageCreate" src="https://d2or613lp2h38m.cloudfront.net/assets/boneswheels/productimage/size/524x524/method/padding/v/5f85/WSCAB116203W4.jpg" />
+    <img class="imageCreate" src="https://quickbutik.imgix.net/8494k/products/5de8c93795ea2.jpeg" />
+</div>
+<div class="brandAndPic">
+    <p class="pCreate">1. Spitfire Formula Four 101A</p>
+    <p class="pCreate" style="margin-left:10px;">2. Bones Skatepark Formula</p>
+    <p class="pCreate">3. Bones SPF P1</p>
+</div>

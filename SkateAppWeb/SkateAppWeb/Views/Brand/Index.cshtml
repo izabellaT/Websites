@@ -1,0 +1,41 @@
+﻿@model IEnumerable<SkateAppWeb.Models.Brands.BrandIndexVM>
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <link rel="stylesheet" href="~/css/brandsIndex.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <div class="brand-banner">
+        <h1>Brands</h1>
+    </div>
+
+    <div class="brand-info">
+        <p>Brands</p>
+        <p>Count:@Model.Count()</p>
+    </div>
+
+    <div class="brand-container">
+        @foreach (var item in Model)
+        {
+            <div class="brand-div">
+                <p class="brand-name">@Html.DisplayFor(modelItem => item.BrandName)</p>
+                @if (User.Identity.IsAuthenticated && User.IsInRole("Administrator") && item.BrandName != "Brandless")
+                {
+                    <div class="brand-buttons">
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="buttonBrands"><i class="fas fa-trash-alt"></i></a>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="buttonBrands"><i class="fas fa-edit"></i></a>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+</body>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

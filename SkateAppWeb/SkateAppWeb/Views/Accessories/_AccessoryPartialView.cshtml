@@ -1,0 +1,84 @@
+﻿@model SkateAppWeb.Models.Products.AccessoryCreateVM
+<head>
+    <link rel="stylesheet" href="~/css/createPages.css" asp-append-version="true" />
+</head>
+<div class="row" style="float:left; display:inline;">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Name" class="control-label labelName"></label>
+            <input asp-for="Name" class="form-control inputCreate" placeholder="Enter name...."/>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="BrandId" class="control-label labelName"></label>
+            <select asp-for="BrandId" class="form-control text-center inputCreate">
+                @foreach (var brand in Model.Brands)
+                {
+                    <option value=" @brand.Id">@brand.Name</option>
+                }
+            </select>
+            <span asp-validation-for="BrandId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CategoryId" class="control-label labelName"></label>
+            <input class="form-control inputCreate" placeholder="Accessory" readonly />
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Color" class="control-label labelName"></label>
+            <input asp-for="Color" class="form-control inputCreate" placeholder="Enter color..." />
+            <span asp-validation-for="Color" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Quantity" class="control-label labelName"></label>
+            <input asp-for="Quantity" class="form-control inputCreate" placeholder="Enter quantity..." />
+            <span asp-validation-for="Quantity" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Material" class="control-label labelName"></label>
+            <input asp-for="Material" class="form-control inputCreate" placeholder="Enter material..." />
+            <span asp-validation-for="Material" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Price" class="control-label labelName"></label>
+            <input asp-for="Price" class="form-control inputCreate" placeholder="Enter price..." />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Discount" class="control-label labelName"></label>
+            <input asp-for="Discount" class="form-control inputCreate" placeholder="Enter discount..." />
+            <span asp-validation-for="Discount" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="control-label labelName"></label>
+            <input asp-for="Description" class="form-control inputCreate" placeholder="Enter description..." />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Picture" class="control-label labelName"></label>
+            <input asp-for="Picture" class="form-control inputCreate" placeholder="Enter picture link..." />
+            <span asp-validation-for="Picture" class="text-danger"></span>
+        </div>
+    </div>
+</div>
+<div class="brandAndPic">
+    <img class="imageCreate" src="https://www.pproreviews.com/wp-content/uploads/2019/12/10.-Newbona-Multi-Function-10-in-1-Skateboard-Tools-1024x1024.jpg" />
+    <img class="imageCreate" src="https://www.longboarderlabs.com/wp-content/uploads/2020/02/Silver-Skate-Tool-Neon-Yellow-Blue.jpg" />
+    <img class="imageCreate" src="https://www.pproreviews.com/wp-content/uploads/2019/12/Skateboard-Tools.jpg" />
+</div>
+<div class="brandAndPic">
+    <p class="pCreate">Does anyone have a skate tool? Bro, you have a skate tool?” Bringing a skate tool will certainly get you some appreciation even if you skateboarding is trash.</p>
+    <p class="pCreate" style="margin-left:10px;">From a budget perspective a cheap skate tool will do the job just fine. </p>
+    <p class="pCreate">Weaking the tightness of your trucks or hardware doesn’t take long. </p>
+</div>
+<div class="brandAndPic">
+    <img class="imageCreate" src="https://www.consortium.co.uk/media/catalog/product/cache/1/image/040ec09b1e35df139433887a97daa66f/a/c/ace-trucks-af1-skate-tool-ace-af1-tool-cat.jpg" />
+    <img class="imageCreate" src="https://scene7.zumiez.com/is/image/zumiez/image/Prime8-Sky-Blue-Ratchet-Skate-Tool-_350981.jpg" />
+    <img class="imageCreate" src="https://bonafidesupplystore.com/wp-content/uploads/2021/04/silvergoldtool.jpg" />
+</div>
+<div class="brandAndPic">
+    <p class="pCreate">1.Ace AF1 Skate Tool</p>
+    <p class="pCreate" style="margin-left:10px;">2.Prime8 Skate ToolGirl</p>
+    <p class="pCreate">3.Silver Skate Tool</p>
+</div>

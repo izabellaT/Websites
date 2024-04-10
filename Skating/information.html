@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Information</title>
+        <link rel="stylesheet" type="text/css" href="css.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <script>
+        function goToNewPage()
+        {
+            var url = "https://stackoverflow.com/questions/19843373/linking-to-other-pages-in-html-via-drop-down-menu"
+            if(url != 'none') {
+                window.location = url;
+            }
+        }
+        </script>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top" >Top</button>
+        <script> let mybutton = document.getElementById("myBtn");
+         window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         mybutton.style.display = "block";
+         } else {
+          mybutton.style.display = "none";
+         }
+        }
+         function topFunction() {
+         document.body.scrollTop = 0;
+         document.documentElement.scrollTop = 0;
+        }
+        </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+     const menu = document.getElementById("menu");
+     const links = menu.getElementsByTagName("a");
+     
+     // Get the current page URL
+     const currentUrl = window.location.href;
+ 
+     // Loop through the links and check if the link's href matches the current URL
+     for (const link of links) {
+         if (link.href === currentUrl) {
+             link.classList.add("active");
+             break; // Stop after the first match
+         }
+     }
+ });
+</script>
+
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div style="display: inline-block;">
+                    <a href="home.html"><strong>Fast Wheels</strong></a> 
+                     </div>
+    
+                    <div class="navDiv">
+                        <div id="menu" class="navigation">
+                                <a href="home.html"><strong>Начало</strong></a>
+                                <a href="products.html"><strong>Продукти</strong></a>
+                                <a href="information.html"><strong>Информация</strong></a>
+                                <a href="contacts.html"><strong>Контакти</strong></a>
+                            <script src="script.js"></script>
+                        </div>
+    
+                        <div style="display: inline-block; ">
+                            <form action="home.html">
+                              <input type="text" placeholder="Search.." name="search" class="searchNav">
+                              <button type="submit" class="searchNav">Submit</button>
+                            </form>
+                        </div>
+                      </div>
+                      </div>
+           </nav> 
+</header>
+<main>
+    <div class="divInfo"> 
+        <div class="divInfo"> 
+            <h2 style="background-image: url('images/information.jpg'); padding: 90px; color: white;">Информация</h2>
+          <div>
+      <div>
+
+<div class="informationDiv">
+    
+    <div class="informationDivBig"> 
+        <h2 class="informationHs">Сглабяне</h2>
+             <p class="informationPs">
+                 Имате първия си скейтборд, но не знаете как да го сглобите? 
+                 Имате ли проблеми с поставянето на гриптейпа за захващане или монтирането на лагерите? 
+                 Не се притеснявайте,  с нашето видео и инструкции ще сглобите скейтборда си за нула време.
+                 <br>
+                <br>
+                 <iframe width="70%" height="70%"
+                  src="https://www.youtube.com/embed/CJFXIzSGnAw?si=wI3GsBeNIlqYU0a1" title="YouTube video player" 
+                  frameborder="0"
+                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                 allowfullscreen></iframe>
+             </p>
+             <br>
+         </div>
+
+            <div class="informationDivSmall">
+                
+                <h2 class="informationHs">Инструкции</h2>
+               
+                    <ul class="ulInfo">
+
+                         <ol style="color: navy; text-align: left; margin-left: 5%;">
+                            <li>Поставяне на Griptape</li>
+
+                         <ul>
+                         <li style="margin-right: 20%;">Подравняване & свързване</li>
+                         <li style="margin-right: 20%;">Файл &; изрязване на Griptape-a</li>
+                         <li style="margin-right: 20%;">Съвет: Нанесете тесен Griptape на широки дъсдки</li>
+                         </ul>
+                         <br>
+
+                        <li>Завинтване на части</li>
+
+                    <br>
+
+                        <li>Поставете лагери в колелата</li>
+
+                    <ul>
+                        <li style="margin-right: 20%;">Съвет: Отстранете лагерите от колелата</li>
+                    </ul>
+                    <br>
+
+                        <li>Завинтете колелата към частите</li>
+                    <br>
+                        <li>Регулирайте частите</li>
+                    <br>
+                        <li>По избор: Прикрепете палубни релси</li>
+                    <br>
+                    </ul>
+
+            <br>
+            </div>
+           
+</div>
+            <br>
+
+        <div class="informationDiv">
+                <h2 class="informationHs">Необходими инструменти</h2>
+
+                <div>
+                    <div class="homeProd3">
+                   <a href="#"><img src="images/OIP.jpg" alt="product" class="image" style="width: 80%;"></a>  
+                </div>
+                        <div class="homeProd3">
+                            <a href="#">  <img src="images/R.png" alt="product" class="image" style="width: 80%; height: 80%;"></a>
+                    </div>
+                        <div class="homeProd3" style="width: 20%;">
+                            <a href="#"><img src="images/249086-200.png" alt="product" class="image" style="width: 50%;"></a>
+ 
+                        </div>
+                        <div class="homeProd3">
+                            <a href="#">   <img src="images/nuts-bolts-icon-flat-vector-template-design-trendy-nuts-bolts-icon-flat-vector-simple-isolated-illustration-signage-178695261.webp" alt="product" class="image" style="width: 100%;"></a>
+                        </div>
+                        <div class="homeProd3">
+                            <a href="#">   <img src="images/bearing-outline-icon-black-and-white-item-from-set-dedicated-to-science-and-technology-vector.jpg" alt="product" class="image" style="width: 80%;"></a>
+                        </div>
+                        <div class="homeProd3">
+                            <a href="#">   <img src="images/1103762-200.png" alt="product" class="image" style="width: 80%;"></a>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <h3>Индивидуалните части</h3>
+                        <ul>
+                            <li style="padding-bottom: 5px;">1x Дек</li>
+                            <li style="padding-bottom: 5px;">1x Griptape</li>
+                            <li style="padding-bottom: 5px;">2x Части</li>
+                            <li style="padding-bottom: 5px;">4x Колела</li>
+                            <li style="padding-bottom: 5px;">8x Bearings</li>
+                            <li style="padding-bottom: 5px;">инструмент с 8 болта и 8 части</li>
+                        </ul>
+                    </div>
+
+                    <div class="info">
+                        <h3>Инструменти и части</h3>
+                        <ul>
+                            <li>Макетен нож</li>
+                            <li>Скейт инструмент</li>
+                            <li>По избор: файл, отвертка или нещо подобно</li>
+                        </ul>
+                    </div>
+
+                    <div class="info">
+                        <h3>По избор</h3>
+                        <ul style="padding-bottom: 15px;">
+                            <li style="padding-bottom: 5px;">Дистанционери (между лагерите)</li>
+                            <li style="padding-bottom: 5px;">Шокови подложки / щрангови подложки</li>
+                            <li style="padding-bottom: 15px;">Палубни релси</li>
+                        </ul>
+
+                    </div>
+                <p class="informationPsss" style="background-color: white;">
+                    Съвет: Най-лесният и най-добрият начин да сглобите скейтборда си е с инструмент за скейт.
+                     Това има всички необходими части, комбинирани в един инструмент. Ако нямате удобен инструмент за скейт,
+                      можете също да завиете скейтборда си заедно с конвенционалните инструменти. 
+                    Информация за правилните размери на ключовете можете да намерите тук.
+                </p>
+            </div>
+            </div>
+        </div>
+        <br>
+        <div class="informationDiv">
+            <div class="informationDivSmall">
+                <h2 class="informationHs">Завинтете частите</h2>
+                <p class="informationPss">
+                    Преди да завиете камионите си към палубата, трябва да пробиете дупки в лентата за захващане в отворите на камиона, така че да можете да поставите болтовете. Вземете болт от монтажния си комплект и го натиснете леко през отворите на камиона отдолу. Това ще накара лентата за захващане да се открои малко от палубата ви.
+                    <br>
+                    <br>
+                    Можете да пробиете малки дупки в тези точки с ножа. С отвертката Phillips на вашия инструмент или болтовете можете леко да увеличите дупките.
+                </p>
+            </div>
+
+            <div class="informationDivBig"> 
+           <h2 class="informationHs"> Поставяне на Griptape към дъската</h2>
+                <p class="informationPss">Поставете палубата си пред вас с графиките, обърнати надолу и намерете носа (отпред) и опашката (отзад). Ако имате лента за захващане с лого или графика, уверете се, че сте я поставили в правилната посока.
+                  <br>
+                  <br>
+                    Графиката на вашата палуба и релефът на върха могат да ви помогнат да разграничите носа и опашката. Графиките обикновено са ориентирани "нагоре или надясно" или сочат към носа. Релефът в горната част на палубата е ориентиран така, че да може да се чете, когато носът е обърнат нагоре или напред. В допълнение, носът обикновено е малко по-широк и по-стръмен от опашката.
+                   <br>
+                   <br>
+                    Сега издърпайте лентата за захващане от фолиото и се уверете, че не залепва за нищо. Оставете фолиото настрана, защото ще ви потрябва след малко.
+               <br>
+               <br>
+               <br>
+                </p>
+            </div>
+            
+            </div>
+
+    </main>
+<br>
+    <hr style="color: navy;">
+
+        <footer>
+            <div>
+            <div class="footerDiv"> 
+                <h3>Относно</h3>
+                <p>+08888888888</p>
+                <p>test@test.com</p>
+                <p>fast_wheels.com</p>
+                <p>10:00-18:30</p>
+                <p><a href="https://maps.app.goo.gl/VYyWuPKzJgtVRXef7"> „8-ми март“ 232, 2306 Монте Карло, Перник, България</a></p>  
+            </div>
+            <div class="footerDiv"> 
+                <h3>Страници</h3>
+                <p ><a href="home.html" >Fast Wheels</a></p>
+                <p ><a href="products.html" >Продукти</a></p>
+                <p ><a href="information.html">Информация</a></p>
+                <p ><a href="contacts.html">Конкакти</a></p>
+                <br>
+                <br>
+            </div>
+            <div class="footerDiv2"> 
+                <h3>Свържете се с нас</h3>
+                <form action="working.html">
+                    <label for="fname" >Име</label><br>
+                    <input type="text" id="fname" name="fname" class="formEnter" placeholder="Име..."><br>
+                    <label for="lname">Фамилия</label><br>
+                    <input type="text" id="lname" name="lname" class="formEnter" placeholder="Фамилия..."><br><br>
+                    <input type="submit" value="Предай" class="formHome">
+                  </form> 
+                  <br>
+                  <br>
+            </div>
+        </div>
+        <br>
+        
+        </footer>
+    </body>
+    </html>
+        </body>
+    </html>

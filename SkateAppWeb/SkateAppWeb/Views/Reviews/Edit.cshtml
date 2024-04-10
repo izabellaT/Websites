@@ -1,0 +1,84 @@
+﻿@model SkateAppWeb.Models.Reviews.ReviewCreateVM
+
+@{
+    ViewData["Title"] = "EditReview";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/createPages.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-GLhlTQ8iS6F7LFq+JzgB+AA8l6BPyVEujMAeA6A9dFfN7tAVB2mtK8F86F5MghJg" crossorigin="anonymous">
+</head>
+<h1 class="text-center createH">Edit Review</h1>
+
+
+<div>
+    <form asp-action="Edit" asp-controller="Reviews" class="text-center">
+        <div class="row" style="float:left; display:inline;">
+            <div class="col-md-4">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="User" class="control-label labelName"></label>
+                    <input asp-for="User" class="form-control inputCreate" readonly />
+                    <span asp-validation-for="User" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Content" class="control-label labelName"></label>
+                    <input asp-for="Content" class="form-control inputCreate" />
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Rating" class="control-label labelName">Rating</label>
+                    <div class="rating">
+                        <i class="far fa-star" data-rating="1"></i>
+                        <i class="far fa-star" data-rating="2"></i>
+                        <i class="far fa-star" data-rating="3"></i>
+                        <i class="far fa-star" data-rating="4"></i>
+                        <i class="far fa-star" data-rating="5"></i>
+                        <input type="hidden" name="Rating" id="rating" value="1">
+                    </div>
+                    <span asp-validation-for="Rating" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="brandAndPic">
+            <img class="imageCreate" src="https://media.istockphoto.com/vectors/rating-review-bubble-reviewers-texting-on-cellphone-app-choice-bad-or-vector-id1128519027?b=1&k=20&m=1128519027&s=170667a&w=0&h=fhA_EjhjxnFEiAnjv1n5RfUlejyhfw00JVP-YN_D5QM=" />
+            <img class="imageCreate" src="https://www.smallbizdaily.com/wp-content/uploads/2015/12/ThinkstockPhotos-486345944.jpg" />
+            <img class="imageCreate" src="https://boomerssocialmediatutor.com/wp-content/uploads/2021/07/reviews.jpg" />
+        </div>
+        <div class="form-group mt-4">
+            <button type="submit" class="buttonCreate">Edit</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const ratingContainer = document.querySelector('.rating');
+        const ratingInput = document.getElementById('rating');
+
+        // Set the initial rating value
+        const initialRating = @Model.Rating ?? 1;
+        ratingInput.value = initialRating;
+
+        // Update the star icons based on the initial rating
+        for (const star of ratingContainer.querySelectorAll('i')) {
+            const starRating = parseInt(star.getAttribute('data-rating'));
+            star.classList.toggle('fas', starRating <= initialRating);
+            star.classList.toggle('far', starRating > initialRating);
+        }
+
+        ratingContainer.addEventListener('click', function (e) {
+            if (e.target.tagName === 'I') {
+                const selectedRating = parseInt(e.target.getAttribute('data-rating'));
+                ratingInput.value = selectedRating;
+
+                // Update the star icons based on the selected rating
+                for (const star of ratingContainer.querySelectorAll('i')) {
+                    const starRating = parseInt(star.getAttribute('data-rating'));
+                    star.classList.toggle('fas', starRating <= selectedRating);
+                    star.classList.toggle('far', starRating > selectedRating);
+                }
+            }
+        });
+    });
+</script>

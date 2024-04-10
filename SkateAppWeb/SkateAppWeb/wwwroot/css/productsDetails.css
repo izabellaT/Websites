@@ -1,0 +1,398 @@
+body{
+    background-color:lightgoldenrodyellow;
+}
+.product-details-container {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    color:midnightblue;
+}
+
+.product-details-img {
+    width: 400px;
+    height: 400px;
+    margin-left:100px;
+}
+    .product-details-img:hover{
+        opacity:0.8;
+    }
+    .product-details-col {
+        padding: 15px;
+    }
+
+.product-details-info-container {
+    display: flex;
+    flex-direction: column;
+    margin-left:20px;
+    background-color:lightgoldenrodyellow;
+    padding:30px;
+    border-radius:5px;
+}
+
+.product-details-brand {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product-details-name {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.product-details-info {
+    margin-bottom: 10px;
+}
+
+.product-details-strong {
+    font-weight: bold;
+}
+
+
+
+
+
+.order-partial-container {
+    margin-top: 10px;
+    display:inline;
+    float:left;
+}
+
+.order-form {
+    display: flex;
+    align-items: center;
+}
+
+.form-group {
+    margin-right: 10px;
+    color:midnightblue;
+    font-weight:bold;
+}
+    .form-group input{
+        width:150px;
+        margin-bottom:20px;
+    }
+        .form-group input:hover{
+            background-color:midnightblue;
+            color:lightgoldenrodyellow;
+        }
+        .form-group:last-child {
+            margin-right: 0; 
+        }
+
+.btn-primary {
+    margin-top: 5px;
+    background-color: midnightblue;
+    border: none;
+    color: yellow;
+    animation: pulse 1s infinite alternate; 
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+    .form-control {
+        width: 70px;
+    }
+
+.favorite-partial-container {
+    margin-top: 37px;
+    display: inline;
+    float:left;
+
+}
+    .favorite-partial-container:hover{
+        opacity:0.5;
+    }
+    .buttonsDiv {
+        display: inline;
+    }
+
+
+.technical-details-container {
+    background-color: white; 
+    padding: 20px; 
+    margin-top: 20px; 
+    text-align:center;
+    border-radius:5px;
+    color:midnightblue; 
+    margin-bottom:20px;
+}
+
+.technical-details-content {
+    margin-top: 10px; 
+    background-color:lightgoldenrodyellow;
+    padding:20px;
+    border-radius:5px;
+}
+
+table {
+    width: 100%;
+   
+}
+
+td {
+    padding: 8px; 
+}
+
+.text-center {
+    text-align: center;
+    background-color:midnightblue;
+    color:lightgoldenrodyellow;
+    padding:20px;
+    border-radius:5px;
+}
+
+
+.reviews-container {
+   background-color:white;
+   color:midnightblue;
+   padding:20px;
+   border-radius:5px;
+   margin-bottom:20px;
+}
+
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.reviews-heading {
+    margin: 0; 
+}
+
+.reviews-count {
+    margin: 0; 
+}
+    .reviews-count:hover{
+        color:gold;
+    }
+    .review-item {
+        background-color: lightgoldenrodyellow;
+        padding: 15px;
+        padding-bottom: 3px;
+        border-radius: 3px;
+        margin-bottom: 10px;
+    }
+
+.user-image {
+    width: 30px; 
+    height:30px; 
+    margin-left:10px;
+}
+
+.star {
+    color: gold; 
+}
+
+.average-rating {
+    margin-top: 10px; 
+}
+
+
+.createReview-group {
+    margin-bottom: 15px;
+    color:midnightblue;
+}
+
+.createReview-stars {
+    display: flex;
+}
+
+.createReview-star {
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.createReview-stars input:checked + label {
+    color: gold;
+}
+
+.addButton{
+    background-color:midnightblue;
+    border-radius:3px;
+}
+
+.betweenBanner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:20px;
+}
+
+.betweenBanner-image {
+    width: 420px; 
+    height: 250px; 
+   margin-left:15px;
+}
+
+.betweenBanner-spacing {
+    width: 20px; 
+}
+.buttonwrite:hover{
+    color:midnightblue;
+    background-color:gold;
+    transition:0.1s;
+}
+.buttonwrite {
+    border-radius: 3px;
+}
+
+.short-banner {
+    background-image: url('/images/bannerBanner.jpg'); 
+    background-size: cover;
+    height: 300px;
+    margin-top: 20px;
+    background-position: center;
+    color: midnightblue; 
+    text-align: center;
+    padding: 20px;
+}
+    .short-banner h1 {
+        margin-top: 140px;
+        font-weight: bold;
+        margin-right: 660px;
+    }
+
+.h1Promocode, .pPromocode{
+    text-align:center;
+    color:midnightblue;
+    font-weight:bold;
+    margin:20px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top:20px;
+}
+
+.navigation-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 40px;
+    width:200px;
+    text-decoration: none;
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.navigation-button:hover{
+    background-color:gold;
+    color:midnightblue;
+}
+
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius:100%;
+    cursor: pointer;
+}
+#topButton:hover{
+    background-color:gold;
+        color:midnightblue;
+        transition:0.1s;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .product-details-img {
+        width: 300px;
+        height: 300px;
+        margin-left: 0;
+    }
+
+    .product-details-col {
+        padding: 10px;
+    }
+
+    .product-details-info-container {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .order-partial-container,
+    .favorite-partial-container {
+        display: block;
+        margin-top: 20px;
+        float: none;
+    }
+
+        .favorite-partial-container:hover {
+            opacity: 1;
+        }
+
+    .technical-details-container,
+    .reviews-container {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    .createReview-group {
+        margin-bottom: 10px;
+    }
+
+    .betweenBanner-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .betweenBanner-image {
+        width: 250px;
+        height: 150px;
+        margin-left: 0;
+    }
+
+    .buttonwrite {
+        margin-top: 10px;
+    }
+
+    .short-banner h1 {
+        margin-top: 120px;
+        margin-right: 0;
+    }
+
+    .h1Promocode, .pPromocode {
+        margin: 10px;
+    }
+
+    .button-container {
+        margin-top: 10px;
+    }
+
+    .navigation-button {
+        margin-right: 20px;
+        width: 150px;
+    }
+
+    #topButton {
+        bottom: 10px;
+        right: 10px;
+    }
+}

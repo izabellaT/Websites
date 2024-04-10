@@ -1,0 +1,230 @@
+body{
+    color:midnightblue;
+    background-color:lightgoldenrodyellow;
+}
+.configurator-banner {
+    position: relative;
+    background-image: url('/images/s2076m9fw4721.jpg');
+    background-size: cover;
+    background-position: center;
+
+    height: 300px; 
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+}
+
+.configurator-h1 {
+    font-size: 3em;
+    margin: 0;
+    color: white;
+    margin-left:300px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.configurator-content {
+    text-align: center;
+    margin: 20px;
+}
+
+.configurator-h2, .configurator-p {
+    margin: 10px 0;
+}
+.configurator-h2{
+    font-weight:bold;
+}
+.configurator-horizontal-line {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.configurator-box {
+    text-align: center;
+    margin: 10px;
+    background-color:white;
+    padding:20px;
+    border-radius:10px;
+    width:200px;
+}
+
+.configurator-h3 {
+    margin: 5px 0;
+    font-weight: bold;
+    margin-bottom:10px;
+
+}
+
+.configurator-img {
+   width:120px;
+   height:auto;
+}
+    .configurator-img:hover{
+        opacity:0.8;
+    }
+    .configurator-buttons {
+        display: inline;
+        justify-content: center;
+    }
+
+.configurator-button {
+    margin: 0 20px;
+    width:250px;
+    margin-top:20px;
+}
+    .configurator-button:hover {
+        background-color: gold;
+        color: midnightblue;
+        transition: none;
+    }
+    .buttonConfiguratorReal {
+        margin-bottom: 40px;
+        margin-top: 20px;
+        width: 150px;
+    }
+.buttonConfiguratorReal:hover{
+    background-color:gold;
+    color:midnightblue;
+    transition:none;
+}
+    .underConfiguratorNav-navigation {
+    background-color: midnightblue;
+    height:50px;
+    text-align: center;
+    border-radius:5px;
+}
+
+.underConfiguratorNav-navOption {
+    display: inline-block;
+    margin: 0 40px;
+    font-size:large;
+    font-weight:bold;
+    color: lightgoldenrodyellow;
+    cursor: pointer;
+    padding-top:10px;
+}
+    .underConfiguratorNav-navOption:hover{
+        background-color:gold;
+        color:midnightblue;
+        padding:12px;
+        border-radius:5px;
+    }
+    .underConfiguratorNav-contentContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+.underConfiguratorNav-content {
+    text-align: center;
+}
+    .underConfiguratorNav-content img {
+        width: 120px;
+        height: auto;
+        margin: 10px;
+        margin-left: 30px;
+    }
+        .underConfiguratorNav-content img:hover{
+            opacity:0.8;
+        }
+        .underConfiguratorNav-content h3 {
+            margin-left: 15px;
+        }
+
+.underConfiguratorContent-container {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.underConfiguratorContent-centeredP {
+    margin: 20px;
+    font-weight:bold;
+}
+
+.underConfiguratorContent-bannerContainer {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.underConfiguratorContent-bannerPic {
+    max-width: 450px;
+    height: auto;
+    margin: 0 10px; 
+}
+.underConfiguratorContent-bannerPic:hover{
+    opacity:0.8;
+}
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+    #topButton:hover {
+        background-color: gold;
+        color: midnightblue;
+        transition: 0.1s;
+    }
+
+@media screen and (max-width: 768px) {
+    .configurator-h1 {
+        margin-left: 0;
+    }
+
+    .configurator-img {
+        width: 100px;
+    }
+
+    .configurator-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .configurator-button {
+        margin: 10px 0;
+        width: 200px;
+    }
+
+    .buttonConfiguratorReal {
+        margin-top: 10px;
+    }
+
+    .underConfiguratorNav-navigation {
+        height: auto;
+    }
+
+    .underConfiguratorNav-navOption {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .underConfiguratorNav-content img {
+        width: 100px;
+    }
+
+    .underConfiguratorContent-bannerPic {
+        max-width: 350px;
+    }
+}

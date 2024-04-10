@@ -1,0 +1,94 @@
+﻿@model SkateAppWeb.Models.Products.TruckCreateVM
+<head>
+    <link rel="stylesheet" href="~/css/createPages.css" asp-append-version="true" />
+</head>
+<div class="row" style="float:left; display:inline;">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Name" class="control-label labelName"></label>
+            <input asp-for="Name" class="form-control inputCreate" placeholder="Enter name..." />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="BrandId" class="control-label labelName"></label>
+            <select asp-for="BrandId" class="form-control text-center inputCreate">
+                @foreach (var brand in Model.Brands)
+                {
+                    <option value=" @brand.Id">@brand.Name</option>
+                }
+            </select>
+            <span asp-validation-for="BrandId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CategoryId" class="control-label labelName"></label>
+            <input class="form-control inputCreate" placeholder="Truck" readonly />
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Color" class="control-label labelName"></label>
+            <input asp-for="Color" class="form-control inputCreate" placeholder="Enter color..." />
+            <span asp-validation-for="Color" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Size" class="control-label labelName"></label>
+            <input asp-for="Size" class="form-control inputCreate" placeholder="Enter size..." />
+            <span asp-validation-for="Size" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Count" class="control-label labelName"></label>
+            <input asp-for="Count" class="form-control inputCreate" placeholder="Enter count..." />
+            <span asp-validation-for="Count" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Quantity" class="control-label labelName"></label>
+            <input asp-for="Quantity" class="form-control inputCreate" placeholder="Enter quantity..." />
+            <span asp-validation-for="Quantity" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Material" class="control-label labelName"></label>
+            <input asp-for="Material" class="form-control inputCreate" placeholder="Enter material..." />
+            <span asp-validation-for="Material" class="text-danger"></span>
+        </div>
+        <div class="form-group"> 
+            <label asp-for="Price" class="control-label labelName"></label>
+            <input asp-for="Price" class="form-control inputCreate" placeholder="Enter price..." />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Discount" class="control-label labelName"></label>
+            <input asp-for="Discount" class="form-control inputCreate" placeholder="Enter discount..." />
+            <span asp-validation-for="Discount" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="control-label labelName"></label>
+            <input asp-for="Description" class="form-control inputCreate" placeholder="Enter description..." />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Picture" class="control-label labelName"></label>
+            <input asp-for="Picture" class="form-control inputCreate" placeholder="Enter picture link..." />
+            <span asp-validation-for="Picture" class="text-danger"></span>
+        </div>
+    </div>
+</div>
+<div class="brandAndPic">
+    <img class="imageCreate" src="https://static.turbosquid.com/Preview/2014/07/10__15_03_53/044.jpgc48faed0-65e3-4863-9803-ed4d7a7d5f25Zoom.jpg" />
+    <img class="imageCreate" src="https://th.bing.com/th/id/OIP.CDdCXK0Svn84B-v80feUGwHaJ4?w=900&h=1200&rs=1&pid=ImgDetMain" />
+    <img class="imageCreate" src="https://contents.mediadecathlon.com/p1807132/k$e726c62b74bd683157b2cb7fb9535f03/cruiser-yamba-900-palm-blue.jpg?&f=800x800" />
+</div>
+<div class="brandAndPic">
+    <p class="pCreate">Skateboard trucks are the heart and soul of your board and if there’s one thing you shouldn’t save money on, it’s trucks.</p>
+    <p class="pCreate" style="margin-left:10px;">Skateboard trucks should be able to handle impacts, you need a truck made from quality materials. The kingpin needs to be strong and the axle’s shouldn’t bend at day one from impacts. Trucks shouldn’t be too heavy if you love your flick tricks and the angle should provide a wheelbase you prefer.</p>
+    <p class="pCreate">The skateboard community is divided about the best skateboard trucks, and you’ll often find never ending debates about Thunders and Independent. In the end, it comes down to personal preference and style, and there’s certainly a huge difference between cheap trucks and high-quality trucks.</p>
+</div>
+<div class="brandAndPic">
+    <img class="imageCreate" src="https://www.devaskation.com/wp-content/uploads/2021/01/Indystage11hollow2.jpg" />
+    <img class="imageCreate" src="https://cdn.shopify.com/s/files/1/0072/5152/5679/products/thunder-147-hollow-lights-ii-polished-trucks_1_720x@2x.jpg?v=1591278442" />
+    <img class="imageCreate" src="https://cdn.shopify.com/s/files/1/1979/4949/collections/trucks_home_page_6c7eb0a5-a39f-4590-9f03-35ed2e828f11_800x_crop_top.jpg?v=1635895030" />
+</div>
+<div class="brandAndPic">
+    <p class="pCreate">1. Independent Trucks Stage 11 Hollow </p>
+    <p class="pCreate" style="margin-left:10px;">2. Thunder Hollow Light II</p>
+    <p class="pCreate">3. Venture Standard Trucks</p>
+</div>

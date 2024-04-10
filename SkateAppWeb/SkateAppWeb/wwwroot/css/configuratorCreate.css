@@ -1,0 +1,77 @@
+.actualConf-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.actualConf-row {
+    justify-content: center;
+    display: flex;
+}
+
+.actualConf-col-md-4 {
+    max-width: 400px;
+    width: 100%;
+}
+
+.actualConf-form-group {
+    margin-bottom: 15px;
+}
+
+    .actualConf-form-group label {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .actualConf-form-group select,
+    .actualConf-form-group input {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 5px;
+        color:midnightblue;
+    }
+        .actualConf-form-group select:hover,
+        .actualConf-form-group input:hover {
+            background-color: midnightblue;
+            color:lightgoldenrodyellow;
+        }
+.text-danger {
+    color: midnightblue;
+}
+.createButton{
+    background-color:midnightblue;
+    color:lightgoldenrodyellow;
+    padding:7px;
+    width:80px;
+    border:none;
+    border-radius:5px;
+}
+    .createButton:hover{
+        color:midnightblue;
+        background-color:gold;
+        transition:none;
+    }
+    p {
+        font-weight: bold;
+    }
+    a:hover{
+        color:gold;
+    }
+
+@media screen and (max-width: 768px) {
+    .actualConf-col-md-4 {
+        max-width: 100%;
+    }
+
+    .actualConf-form-group select,
+    .actualConf-form-group input {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 5px;
+    }
+
+    .createButton {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

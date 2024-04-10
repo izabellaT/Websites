@@ -1,0 +1,42 @@
+﻿@model SkateAppWeb.Models.Brands.BrandDeleteVm
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/brand.css" asp-append-version="true" />
+</head>
+<h1 class="brandH">Are you sure you want to <spam style="color:dodgerblue">delete</spam> this brand?</h1>
+
+<div class="row">
+    <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="BrandName" class="control-label brandName"></label>
+                <input asp-for="BrandName" class="form-control brandInput" readonly/>
+                <span asp-validation-for="BrandName" class="text-danger"></span>
+            </div>
+    </div>
+</div>
+@if (User.IsInRole("Administrator"))
+{
+    <form asp-action="Delete" asp-controller="Brand" method="post">
+        <input type="hidden" name="id" value="@Model.Id" />
+        <button type="submit" class="nav-link btn btn-link"><img class="buttonDelete" src="https://dryhouserestoration.com/wp-content/uploads/2020/08/6.png"></button>
+    </form>
+}
+<div>
+    <img class="blogImage" src="https://logodix.com/logo/53275.jpg" />
+    <img class="blogImage" src="https://th.bing.com/th/id/R.6dd8abb4cda8d1042fb462ccb98ec8cf?rik=RSK1UYjAofflSg&riu=http%3a%2f%2fwww.ranklogos.com%2fwp-content%2fuploads%2f2014%2f07%2fBlind-Skateboard-Logo.png&ehk=u%2bLnfQ%2fJcZM3lst1htw8UHYwdjG7NYRmaPPkQNfj0jY%3d&risl=&pid=ImgRaw&r=0" />
+    <img class="blogImage" src="https://wallpapercave.com/wp/wp7448389.png" />
+    <img class="blogImage" src="https://th.bing.com/th/id/OIP.nPMgohZolXqRS4yjXCQi4gAAAA?rs=1&pid=ImgDetMain" />
+    <img class="blogImage" src="https://th.bing.com/th/id/R.9e72bee786384941736be0b3576cbf19?rik=Lv7a8MUo0got6A&riu=http%3a%2f%2fwww.nativeskatestore.co.uk%2fimages%2fthunder-sonora-toxin-skateboard-sticker-p12905-28380_zoom.jpg&ehk=Q4iLuW5xHK2N9VB%2fwn%2fT4T1gRhvSIHGN5gGQtQDdYcA%3d&risl=&pid=ImgRaw&r=0" />
+    <img class="blogImage" src="https://cdn.shopify.com/s/files/1/1195/8136/collections/VANS.jpg?v=1614189774" />
+    <img class="blogImage" src="https://th.bing.com/th/id/OIP.IQtAfvi2EPnh8jhg1shx9gHaHa?rs=1&pid=ImgDetMain" />
+
+    <a asp-action="Index" class="brandLink">Back to List</a>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

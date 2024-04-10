@@ -1,0 +1,116 @@
+﻿@{
+    ViewData["Title"] = "MostAsked";
+}
+<head>
+    <link rel="stylesheet" href="~/css/mostAsked.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <div class="banner">
+        <h1 class="centered-text">Q&A</h1>
+    </div>
+
+    <div class="content">
+        <img class="centered-image" src="~/images/c78e885282f331cebf2b06990891f2d1.png" alt="Small Image">
+        
+        <div class="specific-content">
+            <p>Welcome to our Skateboard FAQ section! Here, we've compiled answers to the most frequently asked questions to make your skateboard shopping experience seamless and enjoyable. Whether you're curious about our product range, sizing guidance, or maintenance tips, find quick and informative answers below. If your question isn't here, feel free to reach out, and our team will be happy to assist you!</p>
+        </div>
+
+        <div class="mostAsked" onclick="toggleDiv(1)">
+            <p>What types of skateboards do you offer?</p>
+            <div class="mostAsked-content" id="mostAsked1">
+                <p>We offer a diverse range of skateboards, including street, cruiser, longboard, and electric skateboards. Each type is designed to cater to different styles and preferences.</p>
+                <img class="centered-image" src="~/images/skate-clipart-skateboard-deck-4.png" alt="Small Image">
+            </div>
+        </div>
+
+        <div class="mostAsked" onclick="toggleDiv(2)">
+            <p>What size skateboard should I choose?</p>
+            <div class="mostAsked-content" id="mostAsked2">
+                <p>Selecting the right skateboard size depends on your age, height, and the style of skating you prefer. Our size guide provides helpful recommendations to ensure you find the perfect fit.</p>
+                <img class="centered-image" src="~/images/4257926.png" alt="Small Image">
+            </div>
+        </div>
+
+        <div class="mostAsked" onclick="toggleDiv(3)">
+            <p>What materials are used in your skateboard decks?</p>
+            <div class="mostAsked-content" id="mostAsked3">
+                <p>Our skateboard decks are crafted using high-quality materials such as maple wood, bamboo, and composite blends. Each material offers unique characteristics to enhance your skating experience.</p>
+                <img class="centered-image" src="~/images/7354200.png" alt="Small Image">
+            </div>
+        </div>
+        <div class="mostAsked" onclick="toggleDiv(4)">
+            <p>Do you offer complete skateboards or just individual components?</p>
+            <div class="mostAsked-content" id="mostAsked4">
+                <p>We provide both options. You can choose from our curated selection of complete skateboards, or if you prefer, customize your own by selecting individual components such as decks, trucks, wheels, and bearings.</p>
+                <img class="centered-image" src="~/images/583a6f3f556d5f658134dbb9f867eb53-roller-skate-helmet-icon-by-vexels.webp" alt="Small Image">
+            </div>
+        </div>
+        <div class="mostAsked" onclick="toggleDiv(5)">
+            <p>What brands do you carry?</p>
+            <div class="mostAsked-content" id="mostAsked5">
+                <p>We carry a variety of reputable skateboard brands known for their quality and performance. Some of our featured brands include CCS, Alien Workshop and Santa Cruz, each offering a unique range of products to suit different preferences.</p>
+                <img class="centered-image" src="~/images/5309779.png" alt="Small Image">
+            </div>
+        </div>
+        <div class="mostAsked" onclick="toggleDiv(6)">
+            <p>Can I return or exchange a skateboard if it doesn't meet my expectations?</p>
+            <div class="mostAsked-content" id="mostAsked6">
+                <p>Yes, we have a hassle-free return and exchange policy. If your skateboard doesn't meet your expectations, you can return it within 10 days for a refund or exchange. Please refer to our [Return Policy] for more details.</p>
+                <img class="centered-image" src="~/images/parcel-send-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg" alt="Small Image">
+            </div>
+        </div>
+        <div class="mostAsked" onclick="toggleDiv(7)">
+            <p>Do you ship internationally? What are the shipping costs?</p>
+            <div class="mostAsked-content" id="mostAsked7">
+                <p>Yes, we offer international shipping. Shipping costs vary based on your location and the chosen shipping method. You can view the shipping costs during the checkout process before completing your purchase.</p>
+                <img class="centered-image" src="~/images/planet-earth-pngrepo-com (1).png" alt="Small Image">
+            </div>
+        </div>
+        <div class="mostAsked" onclick="toggleDiv(8)">
+            <p>How do I maintain and care for my skateboard?</p>
+            <div class="mostAsked-content" id="mostAsked8">
+                <p>Proper skateboard maintenance is crucial for optimal performance. Check out our Skateboard Care Guide for detailed instructions on cleaning bearings, tightening trucks, replacing components, and ensuring your skateboard stays in top condition for a long-lasting ride.</p>
+				<img class="centered-image" src="~/images/icon_clean.png" alt="Small Image">
+			</div>
+        </div>
+        <p class="centered-paragraph">Thank you for exploring our Skateboard FAQ section. We hope these answers have provided the information you were seeking. Should you have any further inquiries or require personalized assistance, don't hesitate to contact our dedicated team. Skate on, and enjoy the ride!</p>
+        <img class="centered-image" src="~/images/logo.png" alt="Another Small Image">
+    </div>
+    <button onclick="scrollToTop()" id="topButton" title="Go to top">Top</button>
+   
+</body> 
+<script>
+        function toggleDiv(divNumber) {
+        for (let i = 1; i <= 10; i++) {
+            const div = document.getElementById('mostAsked' + i);
+            if (i === divNumber) {
+                div.style.display = div.style.display === 'none' ? 'block' : 'none';
+            } else {
+                div.style.display = 'none';
+            }
+        }
+    }
+</script>
+<script>
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        var topButton = document.getElementById("topButton");
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0; 
+    }
+</script>

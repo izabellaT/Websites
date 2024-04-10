@@ -1,0 +1,282 @@
+nav {
+    background-color: midnightblue;
+    font-weight: bold;
+}
+nav a{
+    color:lightgoldenrodyellow;
+
+}
+a{
+    color:midnightblue;
+    font-weight:bold;
+}
+span{
+    color:lightgoldenrodyellow;
+    font-size:20px;
+}
+span:hover {
+    color: yellow;
+}
+nav a:hover {
+    color: yellow;
+    transition: 0.6s ease;
+}
+
+button {
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    padding:8px;
+    border-radius: 8px;
+    border: none;
+}
+
+button:hover {
+        color: yellow;
+        transition: 0.6s ease;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdowns {
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+.dropdowns:hover{
+
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: lightgoldenrodyellow;
+    z-index: 1;
+}
+
+    .dropdown-menu a {
+        color: midnightblue;
+        background-color: lightgoldenrodyellow;
+        padding: 8px;
+        text-decoration: none;
+        display: block;
+    }
+
+.dropdown:hover .dropdown-menu {
+    display: block
+}
+
+.dropdown-item {
+   font-weight: bold;
+}
+
+.dropdown-item:hover {
+        border-radius: 0%;
+        color: yellow;
+        background-color:midnightblue;
+}
+
+.nav-link {
+    color: lightgoldenrodyellow;
+    padding:8px;
+}
+.nav-link:hover{
+    color:yellow;
+}
+.navElementImage{
+    width:30px;
+    height:30px;
+    display:inline;
+}
+
+.logoImage {
+    width: 60px;
+    height: 50px;
+    display: inline;
+    padding:0px;
+}
+
+.buttonsImage {
+    opacity: 100%;
+}
+.buttonsImage:hover {
+        opacity: 50%;
+        transition: 0.2s ease;
+}
+.navMyImage {
+    width: 25px;
+    height: 25px;
+}
+
+.loginLink {
+   color:midnightblue; 
+   text-align:center
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+    footer div {
+        max-width: 300px;
+        text-align: center;
+    }
+
+    footer a {
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        opacity: 80%;
+    }
+
+        footer a:hover {
+            color: yellow;
+            opacity:100%;
+        }
+    footer .app-icons {
+        display: flex;
+        gap: 10px;
+        height:10%;
+        
+    }
+footer .app-icons i {
+    font-size: 27px;
+}
+        footer .app-icons i:hover {
+            color:yellow;
+        }
+    footer form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3px;
+    }
+
+        footer form input {
+            padding: 5px;
+            margin: 5px;
+            width: 150px;
+            height: 27px;
+        }
+        footer form input:hover {
+            background-color:lightgoldenrodyellow;
+            color:midnightblue;
+        }
+
+        footer form button {
+            padding: 3px;
+            margin: 5px;
+            background-color: white;
+            color: midnightblue;
+            border: none;
+            border-radius:3px;
+            cursor: pointer;
+            height:28px;
+            width:70px;
+        }
+
+            footer form button:hover {
+                background-color: midnightblue;
+                color:yellow;
+                transition:none;
+            }
+.aFooter {
+    color: lightgoldenrodyellow;
+    padding: 5px;
+}
+    .aFooter i {
+        color: lightgoldenrodyellow;
+    }
+
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        background-color: midnightblue;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdowns {
+        font-size: 16px;
+    }
+
+    .nav-link {
+        padding: 12px;
+    }
+
+    .logoImage {
+        margin-bottom: 10px;
+    }
+
+    .navElementImage {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
+
+    .buttonsImage {
+        display: none;
+    }
+
+    .loginLink {
+        margin-top: 10px;
+    }
+
+    .aFooter {
+        padding: 2px;
+        font-size: 12px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+        footer div {
+            margin-bottom: 10px;
+        }
+
+        footer .app-icons i {
+            font-size: 20px;
+        }
+
+        footer form {
+            flex-direction: column;
+        }
+
+            footer form input {
+                width: 100%;
+            }
+
+            footer form button {
+                width: 100%;
+            }
+}

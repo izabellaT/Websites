@@ -1,0 +1,255 @@
+body {
+    background-color: lightgoldenrodyellow;
+    margin: 0;
+    padding: 0;
+    color: midnightblue;
+}
+
+.aboutUsBigBanner {
+    background-image: url('/images/wwdfyjhgfdsdf.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height:300px;
+    margin:20px;
+}
+
+.aboutUsH1 {
+    color:lightgoldenrodyellow;
+    font-weight:bold;
+    text-align:center;
+    padding:120px;
+}
+
+.aboutUsCenteredContent {
+    text-align: center;
+}
+
+    .aboutUsCenteredContent h3 {
+
+    }
+    .aboutUsCenteredContent p {
+
+        margin-bottom: 30px;
+    }
+
+    .aboutUsCenteredContent img {
+        width:100px;
+        height:100px;
+    }
+        .aboutUsCenteredContent img:hover{
+            opacity:0.8;
+        }
+        .horizontalLineImages {
+            width: 250px;
+            height: 250px;
+        }
+
+.aboutUsBigDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color:white;
+}
+
+    .aboutUsBigDiv h3{
+font-weight:bold;
+    }
+    
+    .aboutUsSlideshow {
+        width: 600px; 
+    }
+
+    .aboutUsSlideshow img {
+        width: 600px;
+        height: 350px;
+        display: none;
+    }
+        .aboutUsSlideshow img:hover{
+            opacity:0.8;
+        }
+        .aboutUsRightContent p {
+            width: 600px;
+            height: 100%;
+            float: right;
+        }
+
+.aboutUsRightContent h1{
+    text-align:center;
+}
+.additionalContent {
+    text-align: center;
+    margin: 50px 0;
+    background-color: white;
+    padding: 10px;
+}
+
+    .additionalContent h1,
+    .additionalContent h3,
+    .additionalContent p {
+        margin-bottom: 10px;
+    }
+
+        .additionalContent h1 {
+            color:midnightblue;
+            padding:10px;
+            border-radius:5px;
+            font-weight:bold;
+        }
+.horizontalLine h3{
+    text-align:center;
+    color:lightgoldenrodyellow;
+    background-color:midnightblue;
+    padding:7px;
+    border-radius:3px;
+}
+.additionalContent p {
+    margin-bottom: 30px;
+}
+        
+
+        .additionalContent img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+        }
+            .additionalContent img:hover{
+                opacity:0.8;
+            }
+            .horizontalLine {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+    .horizontalLine img,
+    .horizontalLine h3 {
+        margin: 10px;
+    }
+        .horizontalLine img:hover{
+            opacity:0.8;
+        }
+        .leftImgHorizontalLine {
+            height: 300px;
+            width: 600px;
+        }
+.textLeft,
+.textRight {
+    flex: 1;
+}
+
+
+.bannerContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+    .bannerContainer img {
+        width: 420px; 
+        height:250px;
+    }
+        .bannerContainer img:hover{
+            opacity:0.8;
+        }
+        .customDivsContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+.customDivs {
+    text-align: center;
+    margin: 10px;
+    background-color:white;
+    padding-bottom:20px;
+    font-weight:bold;
+    margin-bottom:50px;
+    flex: 1;
+}
+
+    .customDivs h3 {
+        margin-bottom: 10px;
+        background-color:midnightblue;
+        color:lightgoldenrodyellow;
+        padding:6px;
+        border-radius:3px;
+    }
+
+    .customDivs p {
+        margin-bottom: 20px;
+    }
+
+    .customDivs img {
+        width: 100px; 
+        height: 100px;
+    }
+        .customDivs img:hover{
+            opacity:0.8;
+        }
+        .centeredP {
+            text-align: center;
+            font-weight: bold;
+        }
+
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+    #topButton:hover {
+        background-color: gold;
+        color: midnightblue;
+        transition: 0.1s;
+    }
+@media screen and (max-width: 768px) {
+    .aboutUsBigBanner {
+        height: 30vh; 
+    }
+
+    .bannerContainer img {
+        width: 90%; 
+        height: auto;
+    }
+
+    .aboutUsSlideshow {
+        width: 90%; 
+    }
+
+        .aboutUsSlideshow img {
+            width: 100%;
+            height: auto;
+        }
+}
+
+@media screen and (max-width: 576px) {
+    .aboutUsBigBanner {
+        height: 20vh; 
+    }
+
+    .bannerContainer img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .aboutUsSlideshow {
+        width: 100%; 
+    }
+
+        .aboutUsSlideshow img {
+            width: 100%;
+            height: auto;
+        }
+}

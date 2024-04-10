@@ -1,0 +1,24 @@
+﻿@model SkateAppWeb.Models.Products.SkateboardCreateVM
+
+@{
+    ViewData["Title"] = "EditProduct";
+}
+<body style="background-color:lightgoldenrodyellow; color:midnightblue;">
+<h1 class="text-center" style="margin-top:50px;">Edit Skateboard</h1>
+
+<div>
+    <form asp-action="EditSkateboard" class="text-center">
+        @await Html.PartialAsync("_SkateboardPartialView", Model)
+        <div class="form-group mt-4">
+            <button type="submit" class="btn-radius btn btn-outline-primary btn-lg" style="background-color:midnightblue; color:white; height:50px;width:80px;border-color:midnightblue ">Edit</button>
+            <a asp-action="AllTable" asp-controller="Products" class="mt-1 ml-5 d-block">Back to products</a>
+        </div>
+    </form>
+</div>
+</body>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

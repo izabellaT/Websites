@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+   background-color:lightgoldenrodyellow;
+   color:midnightblue;
+   font-weight:bold;
+}
+
+.banner {
+    background: url('/images/AdobeStock_391472575.jpg') center/cover;
+    height: 300px;
+    position: relative;
+    margin-top:20px;
+}
+    .banner h1 {
+        color: white;
+    }
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.centered-image {
+    display: block;
+    margin: 0 auto;
+    height:100px;
+    width:100px;
+}
+.centered-image:hover{
+    opacity:0.8;
+}
+.specific-content {
+    margin-top: 20px;
+}
+
+.mostAsked {
+    cursor: pointer;
+    background-color:midnightblue;
+    color:lightgoldenrodyellow;
+    padding-top:7px;
+    border-radius : 5px;
+    margin-bottom:20px;
+
+}
+    .mostAsked:hover{
+        background-color:gold;
+        color:midnightblue;
+    }
+    .mostAsked-content {
+        display: none;
+        margin-top: 10px;
+        background-color: white;
+        color: midnightblue;
+        padding: 10px;
+    }
+.centered-paragraph {
+    text-align: center;
+    margin-top: 20px;
+}
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+    #topButton:hover {
+        background-color: gold;
+        color: midnightblue;
+        transition: 0.1s;
+    }
+
+
+
+@media screen and (max-width: 768px) {
+    .banner {
+        height: 200px;
+    }
+
+        .banner h1 {
+            font-size: 24px;
+        }
+
+    .centered-text {
+        font-size: 16px;
+    }
+
+    .centered-image {
+        height: 80px;
+        width: 80px;
+    }
+
+    .specific-content {
+        margin-top: 10px;
+    }
+
+    .mostAsked {
+        padding-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .mostAsked-content {
+        padding: 5px;
+    }
+
+    .centered-paragraph {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .banner {
+        height: 250px;
+    }
+
+        .banner h1 {
+            font-size: 28px;
+        }
+
+    .centered-text {
+        font-size: 18px;
+    }
+
+    .centered-image {
+        height: 90px;
+        width: 90px;
+    }
+
+    .specific-content {
+        margin-top: 15px;
+    }
+
+    .mostAsked {
+        padding-top: 6px;
+        margin-bottom: 15px;
+    }
+
+    .mostAsked-content {
+        padding: 7px;
+    }
+
+    .centered-paragraph {
+        margin-top: 15px;
+    }
+}

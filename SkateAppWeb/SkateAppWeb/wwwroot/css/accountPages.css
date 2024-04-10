@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color:lightgoldenrodyellow;
+}
+.divRight{
+    text-align:center;
+    color:lightgoldenrodyellow;
+    height:600px;
+    width:98%;
+    background-image: url('/images/patch2.jpg');
+    margin-top:10px;
+}
+.divRight h1{
+    padding-top:150px;
+    color:lightgoldenrodyellow;
+}
+.divRight h1:hover {
+color:yellow;
+}
+.divbButtonLogin {
+    display: block;
+    position: center;
+    padding: 8px;
+    margin: 10px;
+    width: 200px;
+    margin-left: 530px;
+    border-radius: 3px;
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    text-decoration:none;
+}
+.divButtonRegister {
+    display: block;
+    position: center;
+    padding: 8px;
+    margin: 10px;
+    width: 200px;
+    margin-left: 530px;
+    border-radius: 3px;
+    background-color: lightgoldenrodyellow;
+    color: midnightblue;
+    text-decoration: none;
+}
+.divbButtonLogin:hover {
+        background-color: lightgoldenrodyellow;
+        color: midnightblue;
+        transition:0.2s;
+}
+.divButtonRegister:hover {
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    transition: 0.2s;
+}
+.logoWelcome{
+    height:145px;
+    width:150px;
+}
+
+.loginH {
+    text-align: center;
+    color: midnightblue;
+    margin: 10px;
+    margin-top:70px;
+    
+}
+.loginButton{
+text-align:center;
+background-color:midnightblue;
+color:lightgoldenrodyellow;
+width:150px;
+}
+    .loginButton:hover {
+        background-color: lightgoldenrodyellow;
+        color: midnightblue;
+        transition:0.1s;
+    }
+    .loginA {
+        text-decoration: none;
+        text-align: center;
+    }
+.loginA:hover {
+    color:yellow;
+}
+.loginInput{
+    margin:20px;
+    text-align:center;
+}
+.loginInput:hover {
+    background-color: midnightblue;
+    border-color:midnightblue;
+    color: midnightblue;
+}
+.divLogin1 {
+    margin-left: 50px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px
+}
+.imageLogin{
+    height:500px;
+    width:700px;
+    display:inline;
+}
+.imageRegister {
+    height: 700px;
+    width: 430px;
+    display: inline;
+    margin-top:100px;
+}
+.divRegister1 {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 30px
+}
+
+
+@media screen and (max-width: 768px) {
+    .divRight {
+        height: 400px; 
+    }
+
+    .divRight h1 {
+        padding-top: 100px; 
+    }
+
+    .divbButtonLogin,
+    .divButtonRegister {
+        width: 150px; 
+        margin-left: 480px; 
+    }
+
+    .imageLogin {
+        width: 80%; 
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .imageRegister {
+        width: 80%; 
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .divLogin1 {
+        margin-left: 20px; 
+        margin-top: 20px; 
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .divRight {
+        height: 300px; 
+    }
+
+    .divRight h1 {
+        padding-top: 50px; 
+    }
+
+    .divbButtonLogin,
+    .divButtonRegister {
+        width: 120px; 
+        margin-left: 440px; 
+    }
+
+    .imageLogin {
+        width: 90%; 
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .imageRegister {
+        width: 90%; 
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .divLogin1 {
+        margin-left: 10px; 
+        margin-top: 10px; 
+    }
+}

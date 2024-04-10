@@ -1,0 +1,26 @@
+﻿@model SkateAppWeb.Models.Products.DeckCreateVM
+
+@{
+    ViewData["Title"] = "EditProduct";
+}
+<head>
+    <link rel="stylesheet" href="~/css/createPages.css" asp-append-version="true" />
+</head>
+<h1 class="text-center createH">Edit Deck</h1>
+
+<div>
+    <form asp-action="EditDeck" class="text-center ">
+        @await Html.PartialAsync("PartialViews/_DeckPartialView", Model)
+        <div class="form-group mt-4">
+			<button type="submit" class="buttonCreate" style="margin-top:3px;">Edit</button>
+            <a asp-action="AllTable" asp-controller="Products" class="linkCreate" >Back to products</a>
+        </div>
+    </form>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

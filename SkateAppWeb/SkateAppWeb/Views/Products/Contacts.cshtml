@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "Contacts";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/contacts.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="contacts-top-banner">
+
+    </div>
+
+
+    <div class="contacts-content-container">
+        <div class="contacts-small-div">
+            <h1>Socials</h1>
+            <p>Reach out</p>
+            <a class="aFooter" asp-area="" asp-controller="Home" asp-action="Index" style="opacity:100%"><i class="fab fa-facebook"></i></a>
+            <a class="aFooter" asp-area="" asp-controller="Home" asp-action="Index" style="opacity:100%"><i class="fab fa-twitter"></i></a>
+            <a class="aFooter" asp-area="" asp-controller="Home" asp-action="Index" style="opacity:100%"><i class="fab fa-instagram"></i></a>
+            <img src="~/images/od2.png" alt="Div 1 Image">
+        </div>
+        <div class="contacts-small-div">
+            <h1>Info</h1>
+            <p>+123 456 789</p>
+            <p>contact@example.com</p>
+            <img src="~/images/icon-info-6.png" alt="Div 2 Image">
+        </div>
+        <div class="contacts-small-div">
+            <h1>Address</h1>
+            <p>Pernik</p>
+            <p>Street 8th March</p>
+            <img src="~/images/1496676725-rounded-high-ultra-colour02-maps_84627.png" alt="Div 3 Image"> 
+        </div>
+        <div class="contacts-small-div">
+            <h1>Schedule</h1>
+            <p>Mon-Sun</p>
+            <p>8:00 - 18:00</p>
+            <img src="~/images/3637455.png" alt="Div 4 Image"> 
+        </div>
+    </div>
+
+    <div class="contacts-form-map-container">
+        <div class="contacts-form-container">
+            <form class="contacts-form">
+                <h2>Contact us</h2>
+                <label for="input1">First name: </label>
+                <input type="text" id="input1" name="input1" placeholder="Enter first name here...">
+
+                <label for="input2">Last name: </label>
+                <input type="text" id="input2" name="input2" placeholder="Enter last name here...">
+
+                <label for="input3">Email: </label>
+                <input type="text" id="input3" name="input3" placeholder="Enter email here...">
+
+                <label for="input4">Phone number: </label>
+                <input type="text" id="input4" name="input4" placeholder="Enter phone number here...">
+
+                <label for="input5">Your message: </label>
+                <input type="text" id="input5" class="message" placeholder="Enter your message here...">
+
+                <button class="contacts-btn">Submit</button>
+            </form>
+        </div>
+        <div class="contacts-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2936.550679690272!2d23.03033367604037!3d42.60727577117104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14aacac3bbc30045%3A0x1282864432d70ccb!2z0J_QnNCTICLQpdGA0LjRgdGC0L4g0KHQvNC40YDQvdC10L3RgdC60Lgi!5e0!3m2!1sbg!2sbg!4v1706887340967!5m2!1sbg!2sbg" width="700" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a href="https://localhost:7138/Products/Information" class="wide-button">&#187;Information</a>
+        <a href="https://localhost:7138/Products/Guide" class="wide-button">&#187;Guide</a>
+    </div>
+    <div class="button-container">
+        <a href="https://localhost:7138/Products/AboutUs" class="wide-button">&#187;About us</a>
+        <a href="https://localhost:7138/Products/MostAsked" class="wide-button">&#187;Most asked</a>
+    </div>
+    <button onclick="scrollToTop()" id="topButton" title="Go to top">Top</button>
+</body>
+<script>
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        var topButton = document.getElementById("topButton");
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        document.body.scrollTop = 0; /
+        document.documentElement.scrollTop = 0; 
+    }
+</script>

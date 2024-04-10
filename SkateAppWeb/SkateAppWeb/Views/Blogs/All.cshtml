@@ -1,0 +1,123 @@
+﻿@model IEnumerable<SkateAppWeb.Models.Blogs.BlogListingVM>
+@{
+    ViewData["Title"] = "Blogs";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/blogDisplay.css" asp-append-version="true" />
+
+    <script>
+        function toggleContent(blogId, event) {
+            var content = document.getElementById('content_' + blogId);
+            var readMoreBtn = document.getElementById('readMoreBtn_' + blogId);
+            var fullContent = document.getElementById('fullContent_' + blogId);
+            var videoContainer = document.getElementById('videoContainer_' + blogId);
+
+            // Convert maxHeight to a number for comparison
+            var maxHeight = parseInt(content.style.maxHeight) || 0;
+
+            if (maxHeight === 100) {
+                content.style.maxHeight = 'none';
+                fullContent.style.display = 'block';
+                videoContainer.style.display = 'block';
+                readMoreBtn.innerText = 'Read less';
+            } else {
+                content.style.maxHeight = '100px';
+                fullContent.style.display = 'none';
+                videoContainer.style.display = 'none';
+                readMoreBtn.innerText = 'Read more';
+            }
+
+            // Prevent the default behavior of the anchor element
+            event.preventDefault();
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="banner">
+        <h1>Blog</h1>
+    </div>
+
+    <div class="blogBorderDiv">
+    <h3 class="blogBorderH1">Welcome to the Fast Wheels Blog</h3>
+        <p class="blogBorderP">Welcome to Fast Wheels - the Blog – Your Hub for Skateboarding News and More! Explore the pulse of the skateboarding world, from breaking news to insider scoops on the hottest gear. Stay tuned for exciting updates about our website, features, and exclusive content. Get ready to ride the latest waves of the skate scene with us!</p>
+	</div>
+
+ 
+    <div>
+        <div class=" blog-container">
+        @foreach (var item in Model)
+        {
+            <div class="blog-item">
+                <img src="@item.Picture" alt="Blog Image" />
+
+                <div>
+                        <div style="display: flex; align-items: center;">
+                            <img src="https://th.bing.com/th/id/OIP.2c-7KBhYlip_5L4xMIUrhwHaHa?rs=1&pid=ImgDetMain" alt="Person Icon" class="person-icon" />
+                            <p> @item.User</p>
+                        </div>
+                    <p>Posted on: @item.Posted</p>
+                    <p class="contentBlog">
+                            <span id="content_@item.Id" class="contentBlog">
+                            @Html.Raw(item.Content.Substring(0, Math.Min(item.Content.Length, 100)))
+                        </span>
+                        <span id="fullContent_@item.Id" class="full-content contentBlog">
+                            @Html.Raw(item.Content)
+                        </span>
+                            <a href="#" onclick="toggleContent('@item.Id', event)" class="read-more-btn" id="readMoreBtn_@item.Id">Read more</a>
+                    </p>
+
+                </div>
+
+                @if (!string.IsNullOrEmpty(item.VideoLink))
+                {
+                    <div id="videoContainer_@item.Id" class="blog-video">
+                        <iframe width="100%" height="155" src="@item.VideoLink" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                }
+
+                <div>
+                    @if (User.IsInRole("Administrator"))
+                    {
+                            <a class="crudButton" asp-action="Edit" asp-controller="Blogs" asp-route-id="@item.Id">Edit</a>
+                        <a class="crudButton" asp-action="Delete" asp-controller="Blogs" asp-route-id="@item.Id">Delete</a>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+    </div>
+
+    <button onclick="scrollToTop()" id="topButton" title="Go to top">Top</button>
+    @if (User.IsInRole("Administrator"))
+    {
+        <button id="toggleReviewsButton" onclick="toggleReviews()" class="openingButoonBlog">Add to blog</button>
+    }
+
+    <div id="reviewsContainer" style="display: none;">
+        @await Html.PartialAsync("~/Views/Blogs/Create.cshtml", new SkateAppWeb.Models.Blogs.BlogCreateVM { })
+		</div>
+</body>
+
+<script>
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        var topButton = document.getElementById("topButton");
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    }
+</script>

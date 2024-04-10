@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+   background-color:lightgoldenrodyellow;
+   color:midnightblue;
+}
+
+.myFavoritesBanner {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-image: url('/images/xlg_Pedro_Splash025.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    background-color: dodgerblue;
+    margin-top: 20px;
+}
+    .myFavoritesBanner
+     h1{
+        margin-top:75px;
+        font-weight:bold;
+
+    }
+    .myFavoritesContainer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 1300px;
+        margin-top: 20px;
+    }
+
+.myFavoritesCard {
+    width: 190px; 
+    margin: 10px;
+    background-color:white;
+    padding:20px;
+    border-radius:3px;
+    position: relative;
+}
+
+    .myFavoritesCard img {
+        width: 100%;
+        height: auto;
+    }
+
+.myFavoritesRemoveButton {
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    width: 30px;
+    height: 30px;
+    background-image: url('https://namitoledo.org/wp-content/uploads/2018/02/icon-broken-heart-blue-01.png'); /* Replace with actual path to your image */
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    background-color:transparent;
+}
+    .myFavoritesRemoveButton:hover{
+        opacity:0.5;
+        transition:none;
+    }
+    .myFavoritesBrand {
+        font-weight: bold;
+    }
+.favoritesTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color:midnightblue;
+    margin: 10px;
+}
+
+.favoritesCount {
+    font-weight: bold;
+    color: midnightblue;
+    margin-right: 10px;
+}
+.name {
+    color: midnightblue;
+    font-weight: bold;
+    margin-left:1050px;
+}
+.favoritesCount:hover{
+    color:midnightblue;
+}
+.name:hover{
+    color:midnightblue;
+}
+.noFavs {
+    margin-top: 90px;
+    font-weight: bold;
+
+    text-align:center;
+    margin-left:50%;
+}
+.nofavoritesImage {
+    width: 300px;
+    height: 300px;
+    text-align:center;
+    margin-left:57%;
+}
+@media screen and (max-width: 1300px) {
+    .myFavoritesContainer {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .myFavoritesCard {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .myFavoritesCard {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .myFavoritesBanner h1 {
+        margin-top: 50px;
+    }
+
+    .myFavoritesCard {
+        width: calc(100% - 20px);
+    }
+
+    .name {
+        margin-left: 0;
+    }
+
+    .nofavoritesImage {
+        margin-left: 0;
+    }
+}

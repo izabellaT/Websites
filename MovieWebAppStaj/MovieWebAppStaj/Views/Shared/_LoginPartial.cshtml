@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using MovieWebAppStaj.Domain
+@inject SignInManager<MoviesUser> SignInManager
+@inject UserManager<MoviesUser> UserManager
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <li class="nav-item" style="color:goldenrod">
+            <a class="nav-link text-center" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" style="color:goldenrod">Hello @User.Identity.Name!</a>
+        </li>
+        <li class="nav-item text-center" style="color:goldenrod">
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="nav-link btn btn-link" style="color:goldenrod">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item" style="color:goldenrod">
+            <a class="nav-link" asp-area="Identity" asp-page="/Account/Register" style="color:goldenrod">Register</a>
+        </li>
+        <li class="nav-item" style="color:goldenrod">
+            <a class="nav-link" asp-area="Identity" asp-page="/Account/Login" style="color:goldenrod">Login</a>
+        </li>
+    }
+</ul>

@@ -1,0 +1,60 @@
+﻿@model SkateAppWeb.Models.Blogs.BlogDeleteVM
+@{
+    ViewData["Title"] = "BlogsDelete";
+}
+<head>
+    <link rel="stylesheet" href="~/css/deletePages.css" asp-append-version="true" />
+</head>
+<h1 class="deleteH">Are you sure you want to <spam style="color:dodgerblue">delete</spam> this post?</h1>
+<div style="float:left; display:inline; margin-left:30px;">
+    <dl class="row">
+        <dd class="col-sm-10">
+            <img class="deleteImg" src="@Html.DisplayFor(model => model.Picture)" alt="Image" />
+        </dd>
+    </dl>
+</div>
+<div>
+    <div class="infoDiv">
+        <dl class="row">
+            <dt class="col-sm-2 deleteLabels">
+                @Html.DisplayNameFor(model => model.User)
+            </dt>
+            <dd class="col-sm-10 deleteInfo">
+                @Html.DisplayFor(model => model.User)
+            </dd>
+
+            <dt class="col-sm-2 deleteLabels">
+                @Html.DisplayNameFor(model => model.Content)
+            </dt>
+            <dd class="col-sm-10 deleteInfo">
+                @Html.DisplayFor(model => model.Content)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <dl class="row">
+            <dd class="col-sm-10">
+                @if(Model.VideoLink != null)
+                {
+                    <iframe class="deleteImg" src="@Html.DisplayFor(model => model.VideoLink)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                }
+                else
+                {
+                    <img class="deleteImg" src="@Html.DisplayFor(model => model.Picture)" alt="Image" />
+                }
+                
+            </dd>
+        </dl>
+    </div>
+    @if (User.IsInRole("Administrator"))
+    {
+        <form asp-action="Delete" asp-controller="Blogs" method="post">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <button type="submit" class="nav-link btn btn-link"><img class="buttonDelete" src="https://dryhouserestoration.com/wp-content/uploads/2020/08/6.png"></button>
+        </form>
+    }
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }

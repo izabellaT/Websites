@@ -1,0 +1,381 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color:lightgoldenrodyellow;
+}
+
+#banner {
+    background-image: url('/images/5332105834_5fe217def9_b.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+    #banner h1 {
+        margin-bottom: 10px;
+        color:lightgoldenrodyellow;
+        font-weight:bold;
+    }
+    #banner h3 {
+        margin-bottom: 20px;
+        color: lightgoldenrodyellow;
+        font-weight: bold;
+    }
+
+#contentContainer {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.bigDivLeft {
+    flex: 2; 
+    padding: 20px;
+    margin: 10px;
+    padding-top:0;
+    background-color: white; 
+    border-radius:8px;
+}
+.bigDivLeft h1{
+ color: lightgoldenrodyellow;
+ background-color:midnightblue;
+ margin-top:10px;
+ padding:15px;
+}
+.bigDivRight {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+.imagesDiv {
+    margin-left: 50px;
+}
+.smallDiv {
+    margin-bottom: 10px;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 8px;
+    padding-bottom: 15px;
+    margin-top: 30px;
+}
+    .smallDiv h3 {
+        color: lightgoldenrodyellow;
+        background-color: midnightblue;
+        padding:7px;
+    }
+    .smallDiv img{
+        height:150px;
+        width:150px;
+        text-align:center;
+        display:block;
+        margin-left:30%;
+    }
+.socialIcons a  {
+    display: inline;
+    font-size:30px;
+    margin-top:20px;
+    color:midnightblue;
+    text-decoration:none;
+}
+    .socialIcons a:hover{
+        color:yellow;
+    }
+    .linksContainer a {
+        display: block;
+        font-size: 20px;
+        color: midnightblue;
+        text-decoration: none;
+    }
+        .linksContainer a:hover {
+            color: yellow;
+        }
+.smallDiv a{
+    text-decoration:none;
+    font-weight:bold;
+}
+    .smallDiv a:hover {
+        color: yellow;
+    }
+    .bigDivLeft {
+    flex: 2;
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .list h2 {
+        font-size: 18px;
+        color: midnightblue;
+    }
+
+    .list li {
+        margin-bottom: 5px;
+        color: midnightblue;
+    }
+
+.smallPicture {
+    width: 100px; 
+    height: auto;
+    margin: 5px;
+}
+
+.horizontalLists {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px; 
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .list h2 {
+        font-size: 18px;
+        color: midnightblue;
+    }
+
+    .list li {
+        margin-bottom: 5px;
+        color: midnightblue;
+    }
+
+.paragraph {
+    margin-top: 20px; 
+    color:midnightblue;
+}
+
+
+.recommendedContainer {
+    text-align: center;
+    padding: 20px;
+    background-color:white;
+    border-radius:5px;
+    margin-top:20px;
+   color:midnightblue;
+}
+
+.recommendedHeading {
+   color:lightgoldenrodyellow;
+   background-color:midnightblue;   
+   padding:5px;
+}
+
+.recommendedParagraph {
+    display: inline-block;
+    width:500px;
+    margin: 10px;
+}
+
+.recommendedButton {
+    display: inline-block;
+    width: 48%;
+    padding: 10px;
+    margin: 10px;
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.instructionsLeft {
+    flex: 1;
+    padding: 20px;
+    color:midnightblue;
+    font-weight:bold;
+}
+    .instructionsLeft h1 {
+        background-color: midnightblue;
+        color: lightgoldenrodyellow;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+    .instructionsSlideshow {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+.instructionsImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.instructionsCaption {
+    text-align: center;
+    color:midnightblue;
+    font-weight:bold;
+}
+.contentContainerInstructions {
+    display: flex;
+    background-color:white;
+    border-radius:5px;
+    padding:0;
+}
+.instructionsNestedList{
+    margin-bottom:20px;
+}
+.whatIsPartContainer {
+    display: flex;
+}
+
+.whatIsPart {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background-color:white;
+    margin-left:20px;
+    border-radius:5px;
+    margin-top:15px;
+}
+
+    .whatIsPart h3 {
+        margin-bottom: 10px;
+        color:lightgoldenrodyellow;
+        background-color:midnightblue;
+        padding:10px;
+    }
+
+.whatIsPartSlideshow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whatIsPartImage {
+    max-width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.whatIsPartCaption {
+    text-align: center;
+    color:midnightblue;
+    font-weight:bold;
+    font-size:large;
+}
+.whatIsPartDescription{
+    color:midnightblue;
+}
+.smallDiv h1{
+    background-color:midnightblue;
+    color:lightgoldenrodyellow;
+    padding:3px;
+}
+.horizontalLists h2{
+    font-weight:bold;
+}
+.recommendedContainer img{
+    width:100px;
+    height:100px;
+    display:block;
+    margin-top:10px;
+    margin-left:40%;
+}
+.recommendedButton:hover{
+    background-color:gold;
+    color:midnightblue;
+    transition:0.1s;
+}
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+    #topButton:hover {
+        background-color: gold;
+        color: midnightblue;
+        transition: 0.1s;
+    }
+.aFooter i{
+    color:midnightblue;
+}
+.aFooter i:hover{
+    color:yellow;
+}
+@media screen and (max-width: 768px) {
+
+    .bigDivLeft {
+        flex: 1;
+    }
+
+    .bigDivRight {
+        flex: 1;
+        margin-top: 20px;
+    }
+
+    .imagesDiv {
+        margin-left: 0;
+    }
+
+    .smallDiv {
+        margin-top: 20px;
+    }
+
+    .recommendedButton {
+        width: 100%;
+    }
+
+    .whatIsPartContainer {
+        flex-direction: column;
+    }
+
+    .whatIsPart {
+        margin-left: 0;
+    }
+
+    .whatIsPartImage {
+        max-width: 250px;
+        height: 250px;
+    }
+
+    .contentContainerInstructions {
+        flex-direction: column;
+    }
+
+    .instructionsLeft {
+        margin-top: 20px;
+    }
+
+    .instructionsSlideshow {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,37 @@
+﻿@model MovieWebAppStaj.Domain.Genre
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class=" text-center " style="color:goldenrod">Create new genre</h1>
+
+<hr />
+<div class="row text-center font-weight-bold" style="color:maroon; margin: auto; width: 100%; padding-left: 450px;">
+    <div class="col-md-4">
+        <form asp-action="Create" style="background-color:wheat; border-radius:20px; padding:10px;">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" placeholder="Name..." />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" placeholder="Image..." />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" style="color:maroon; background-color:goldenrod; border-color:goldenrod"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div  class="text-center">
+    <a asp-action="Index" style="color:goldenrod">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

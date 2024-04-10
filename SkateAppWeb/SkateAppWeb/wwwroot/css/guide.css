@@ -1,0 +1,341 @@
+body{
+    background-color:lightgoldenrodyellow;
+    color:midnightblue;
+}
+.banner-section {
+    text-align: center;
+    background-image: url('/images/ohihih.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: midnightblue;
+    padding: 20px;
+    height: 250px;
+    margin-top: 20px;
+}
+
+    .banner-section h1 {
+        margin: 0;
+        font-size: 36px;
+        color:midnightblue;
+        margin-top:100px;
+        font-weight:bold;
+    }
+
+.banner-content-section {
+    text-align: center;
+
+}
+
+.small-image {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    height:150px;
+    height: auto;
+}
+    .small-image:hover{
+        opacity:0.8;
+    }
+    .banner-content-section p {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+.big-div-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.small-div {
+    flex: 0 0 30%;
+    text-align: center;
+    padding: 10px;
+    padding:0;
+    background-color : white;
+}
+
+    .small-div img {
+        max-width: 300px;
+        height: 300px;
+    }
+        .small-div img:hover {
+            opacity: 0.8;
+        }
+        .small-div h3 {
+            margin: 10px 0;
+            background-color: midnightblue;
+            color: lightgoldenrodyellow;
+            padding: 10px;
+            border-radius: 3px;
+            margin-top: 0;
+        }
+
+    .small-div p {
+        margin-bottom: 20px;
+        font-weight:bold;
+    }
+
+    .small-div ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .small-div li {
+        margin-bottom: 5px;
+    }
+
+.eight-divs-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.individual-div {
+    text-align: center;
+    height:350px;
+    width:200px;
+}
+
+    .individual-div img {
+        width:120px;
+        height:250px;
+        margin-bottom:10px;
+    }
+        .individual-div img:hover{
+            opacity:0.8;
+        }
+        .page-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+            .page-button:hover{
+                background-color:gold;
+                color:midnightblue;
+                transition:0.1s;
+            }
+            .chapter-heading, .chapter-subtitle {
+                text-align: center;
+                margin-top: 20px;
+            }
+.chapter-heading{
+    font-weight:bold;
+}
+.centered-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+    .centered-section img {
+        width:400px;
+        height:200px;
+    }
+        .centered-section img:hover{
+            opacity:0.8;
+        }
+        .centered-paragraph {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+.nav-section {
+    background-color: midnightblue;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 20px;
+}
+
+    .nav-section button {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+        .nav-section button:hover{
+            background-color:lightgoldenrodyellow;
+            color:midnightblue;
+            transition:0.2s;
+            border-radius:0;
+        }
+        .content-section {
+            display: none;
+            padding: 20px;
+            color: midnightblue;
+            background-color: white;
+        }
+
+    .content-section h1 {
+        color: midnightblue;
+    }
+
+    .content-section p {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .content-section img {
+        display: inline-block;
+        width: 500px;
+        height: 300px;
+    }
+        .content-section img:hover{
+            opacity:0.8;
+        }
+        .between-banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            padding: 20px;
+        }
+
+    .between-banner img {
+       width:400px;
+       height:300px;
+       margin-right: 10px; 
+    }
+            .between-banner img:hover{
+                opacity:0.8;
+            }
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+    #topButton:hover {
+        background-color: gold;
+        color: midnightblue;
+        transition: 0.1s;
+    }
+
+
+@media screen and (max-width: 768px) {
+    .banner-section {
+        height: auto;
+        padding: 10px;
+    }
+
+        .banner-section h1 {
+            font-size: 24px;
+            margin-top: 50px;
+        }
+
+    .small-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .big-div-section {
+        flex-direction: column;
+    }
+
+    .small-div {
+        flex: 1 1 auto;
+        margin: 10px;
+    }
+
+    .individual-div img {
+        width: 100px;
+        height: 200px;
+    }
+
+    .centered-section img {
+        width: 300px;
+        height: 150px;
+    }
+
+    .between-banner img {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .banner-section h1 {
+        font-size: 28px;
+        margin-top: 80px;
+    }
+
+    .small-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .big-div-section {
+        flex-direction: column;
+    }
+
+    .small-div {
+        flex: 1 1 auto;
+        margin: 10px;
+    }
+
+    .individual-div img {
+        width: 120px;
+        height: 250px;
+    }
+
+    .centered-section img {
+        width: 350px;
+        height: 175px;
+    }
+
+    .between-banner img {
+        width: 350px;
+        height: 250px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .banner-section h1 {
+        font-size: 36px;
+        margin-top: 100px;
+    }
+
+    .small-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .big-div-section {
+        flex-direction: row;
+    }
+
+    .small-div {
+        flex: 0 0 30%;
+        margin: 0 10px;
+    }
+
+    .individual-div img {
+        width: 120px;
+        height: 250px;
+    }
+
+    .centered-section img {
+        width: 400px;
+        height: 200px;
+    }
+
+    .between-banner img {
+        width: 400px;
+        height: 300px;
+    }
+}

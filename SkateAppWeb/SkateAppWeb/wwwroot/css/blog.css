@@ -1,0 +1,124 @@
+body{
+    background-color:lightgoldenrodyellow;
+}
+.inputCreate
+{
+    margin:5px;
+}
+    .inputCreate:hover{
+        background-color:midnightblue;
+        color:lightgoldenrodyellow;
+    }
+    .labelName {
+        color: midnightblue;
+        font-weight: bold;
+    }
+.blogButton {
+    float: left;
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    border-radius: 3px;
+    margin-top:10px;
+}
+.divBlogCreate{
+   height:220px;
+}
+.blogbutton:hover{
+    color:midnightblue;
+    background-color:lightgoldenrodyellow;
+}
+.openingButoonBlog{
+    margin-top:30px;
+    border-radius:3px;
+}
+.editBlogButton {
+    width: 100px;
+    float: left;
+    margin-left: 170px;
+    margin-top: 20px;
+}
+.editBlogButton:hover{
+    background-color:lightgoldenrodyellow;
+    color:midnightblue;
+    transition:0.1s;
+}
+.blogH {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: midnightblue;
+}
+.editLabelName{
+    color:midnightblue;
+    padding:8px;
+    margin:15px;
+    background-color:midnightblue;
+    color:lightgoldenrodyellow;
+    width:420px;
+    border-radius:3px;
+}
+.editInputCreate {
+    width: 400px;
+    margin-left: 20px;
+}
+.editInputCreate:hover{
+    background-color:midnightblue;
+    color:lightgoldenrodyellow;
+}
+.editImage {
+ display:inline; 
+ width:400px;
+ height:400px; 
+ margin-left: 20px;
+ margin-bottom:10px;
+}
+.editImage:hover {
+    opacity:0.8;
+}
+.crudButton{
+    text-decoration:none;
+    background-color:midnightblue;
+    color:lightgoldenrodyellow;
+    padding:10px;
+    border-radius:3px;
+}
+.crudButton:hover{
+    background-color:yellow;
+    color:midnightblue;
+}
+
+
+@media screen and (max-width: 768px) {
+    .editLabelName {
+        width: 300px; 
+    }
+
+    .editInputCreate {
+        width: 280px; 
+    }
+
+    .editImage {
+        width: 300px; 
+        height: 300px; 
+        margin-left: 0; 
+        margin-bottom: 20px; 
+    }
+
+    .crudButton {
+        padding: 8px; 
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .editLabelName {
+        width: 250px; 
+    }
+
+    .editInputCreate {
+        width: 220px; 
+    }
+
+    .editImage {
+        width: 250px; 
+        height: 250px; 
+    }
+}

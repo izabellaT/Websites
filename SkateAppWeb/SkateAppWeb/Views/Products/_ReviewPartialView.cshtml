@@ -1,0 +1,79 @@
+﻿@model SkateAppWeb.Models.Reviews.ReviewCreateVM
+
+<head>
+    <link rel="stylesheet" href="~/css/productsDetails.css" asp-append-version="true" />
+</head>
+
+<form asp-controller="Reviews" asp-action="Create" method="post">
+    <div>
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="form-group">
+                <label asp-for="Rating" class="control-label">Rating:</label>
+                <div class="createReview-stars" onclick="updateRating(event)">
+                    @for (int i = 1; i <= 5; i++)
+                    {
+                        <input type="radio" id="createReview-star@i" name="userRating" value="@i" style="display: none;" />
+                        <label for="createReview-star@i" class="createReview-star" title="@i">&#9733;</label>
+                    }
+                </div>
+                <input type="hidden" id="Rating" name="Rating" value="1" /> 
+                <span asp-validation-for="Rating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Content" class="control-label">Content:</label>
+                <input asp-for="Content" class="form-control" placeholder="Enter Content..." />
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+            <button type="submit" class="addButton">Publish</button>
+        }
+        else
+        {
+            <button type="submit" asp-area="Identity" asp-page="/Account/Login" class="addButton">Add a review</button>
+        }
+
+    </div>
+    <input type="hidden" asp-for="ProductId" value="@Model.ProductId" />
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const hiddenInput = document.getElementById('Rating');
+            hiddenInput.value = '1';
+            highlightStars(0);
+        });
+
+        function updateRating(event) {
+            const stars = document.querySelectorAll('.createReview-star');
+            const hiddenInput = document.getElementById('Rating');
+
+            stars.forEach((star, index) => {
+                star.addEventListener('mouseover', () => highlightStars(index));
+                star.addEventListener('mouseout', () => unhighlightStars());
+                star.addEventListener('click', () => {
+                    hiddenInput.value = index + 1;
+                    unhighlightStars();
+                });
+            });
+
+            function highlightStars(index) {
+                for (let i = 0; i <= index; i++) {
+                    stars[i].style.color = 'gold';
+                }
+            }
+
+            function unhighlightStars() {
+                const ratingValue = hiddenInput.value;
+                stars.forEach((star, index) => {
+                    star.style.color = index < ratingValue ? 'gold' : '';
+                });
+            }
+        }
+    </script>
+</form>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

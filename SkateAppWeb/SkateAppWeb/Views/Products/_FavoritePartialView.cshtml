@@ -1,0 +1,24 @@
+﻿@model SkateAppWeb.Models.Favorites.FavoriteCreateVM
+
+<form asp-controller="Favorites" asp-action="Create" method="post">
+    <div style="justify-content: space-evenly">
+        @if (User.Identity.IsAuthenticated)
+        {
+            <button type="submit" class="nav-link btn btn-link"><img style="width:35px; height:35px;" src="https://149512949.v2.pressablecdn.com/wp-content/uploads/2021/03/cropped-rccf-favicon.png"></button>
+        }
+        else
+        {
+            <a asp-area="Identity" asp-page="/Account/Login"><img style="width:35px; height:35px;" src="https://149512949.v2.pressablecdn.com/wp-content/uploads/2021/03/cropped-rccf-favicon.png"></a>
+        }
+
+    </div>
+    <input type="hidden" asp-for="ProductId" value="@Model.ProductId" />
+    <input type="hidden" asp-for="Price" value="@Model.Price" />
+</form>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

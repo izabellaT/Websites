@@ -1,0 +1,25 @@
+﻿﻿@{
+    ViewData["Title"] = "Denied";
+}
+<head>
+    <link rel="stylesheet" href="~/css/deniedPages.css" asp-append-version="true" />
+</head>
+
+		<h1>Product currently does not have enough avalability</h1>
+        <section>
+    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/sad-heartbroken-emoji-6462243-5350277.png" alt="Image 1" class="imgSad">
+
+		<p>We are so sorry for the inconvenience! A problem occured while proccessing your order request. This issue's cause is that the product you tried ordering currently has lower quantity in stock than you intened buying! </p>
+        <p>Please check the "in stock" value and try placing an order in it's range or you could come back later to check if the product has been restocked and place the order you firstly intened. </p>
+        <p style="color:dodgerblue; font-size:larger">Check out the pictures below to know what to do!</p>
+
+    <img src="~/images/what not to do.jpg" alt="Not dos" class="imgInstructions">
+    <img src="~/images/what to do.jpg" alt="Dos" class="imgInstructions" >
+    <img src="~/images/proceeded.jpg" alt="Order made" class="imgInstructions">
+	<p class="instructions" style="margin-left:20px">What not to do</p>
+    <p class="instructions" style="margin-right: 150px;">What to do</p>
+    <p class="instructions" style="margin-right: 40px;">Procceeded</p>
+    </section>
+    <div>
+        <a asp-controller="Products" asp-action="All" class="aDenied">Back to list of products</a>
+    </div>

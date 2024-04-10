@@ -1,0 +1,37 @@
+﻿@model SkateAppWeb.Models.Blogs.BlogCreateVM
+<head>
+    <link rel="stylesheet" href="~/css/blog.css" asp-append-version="true" />
+</head>
+<div>
+    <form asp-action="Create" class="text-center">
+        <div class="row divBlogCreate">
+            <div class="col-md-4">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Content" class="control-label labelName"></label>
+                    <input asp-for="Content" class="form-control inputCreate" placeholder="Enter content...." />
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Picture" class="control-label labelName"></label>
+                    <input asp-for="Picture" class="form-control inputCreate" placeholder="Enter picture..." />
+                    <span asp-validation-for="Picture" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VideoLink" class="control-label labelName"></label>
+                    <input asp-for="VideoLink" class="form-control inputCreate" placeholder="Enter video link..." />
+                    <span asp-validation-for="VideoLink" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="blogButton">Publish</button>
+        <br />
+        <br />
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

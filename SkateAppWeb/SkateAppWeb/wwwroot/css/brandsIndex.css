@@ -1,0 +1,108 @@
+body{
+    color:midnightblue;
+    background-color:lightgoldenrodyellow;
+}
+.brand-banner {
+    background-image: url('https://wallpapercave.com/wp/wp2214687.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    text-align: center;
+    color: midnightblue;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.brand-banner h1{
+    margin-top:70px;
+    font-weight:bold;
+}
+.brand-title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.brand-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1000px;
+    font-size:20px;
+    padding: 0 20px;
+}
+
+    .brand-info p {
+        margin: 0;
+        font-weight: bold;
+    }
+
+.brand-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.brand-div {
+    padding: 50px;
+    margin: 20px;
+    font-weight: bold;
+    background-image: url('https://th.bing.com/th/id/R.446a1fe707c5bec58dcac72c68baefa4?rik=z8GtbG7zevZ1Qw&pid=ImgRaw&r=0');
+    background-size: cover;
+    color: midnightblue;
+   margin-top:0px;
+    font-size:20px;
+    width: 300px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+    text-align: center;
+}
+    .brand-div p {
+        background-color: white;
+        padding:10px;
+        border-radius:5px;
+    }
+    .brand-div:hover {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+        .brand-div:hover .brand-buttons {
+            display: flex;
+        }
+
+.brand-buttons {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.buttonBrands {
+    padding: 20px;
+    font-weight: bold;
+    background-color:white;
+    margin:10px;
+}
+.buttonBrands:hover{
+    opacity:0.5;
+}
+
+@media screen and (max-width: 768px) {
+    .brand-banner h1 {
+        margin-top: 30px;
+    }
+
+    .brand-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brand-div {
+        width: 100%;
+    }
+}

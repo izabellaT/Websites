@@ -1,0 +1,81 @@
+﻿@model SkateAppWeb.Models.Reviews.ReviewDeleteVM
+@{
+    ViewData["Title"] = "ReviewsDelete";
+}
+@functions {
+    public string DisplayStars(int rating)
+    {
+        string starHtml = "";
+        for (int i = 0; i < rating; i++)
+        {
+            starHtml += "<span>&#9733;</span>";
+        }
+        return starHtml;
+    }
+}
+<head>
+    <link rel="stylesheet" href="~/css/deletePages.css" asp-append-version="true" />
+</head>
+<h1 class="deleteH">Are you sure you want to <spam style="color:dodgerblue">delete</spam> this review?</h1>
+<div style="float:left; display:inline; margin-left:30px;">
+    <dl class="row">
+        <dd class="col-sm-10">
+            <img class="deleteImg" src="@Html.DisplayFor(model => model.Picture)" alt="Image" />
+        </dd>
+    </dl>
+</div>
+<div class="infoDiv">
+    <dl class="row">
+        <dt class="col-sm-2 deleteLabels">
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+        <dd class="col-sm-10 deleteInfo">
+            @Html.DisplayFor(model => model.User)
+        </dd>
+
+        <dt class="col-sm-2 deleteLabels">
+            @Html.DisplayNameFor(model => model.Posted)
+        </dt>
+        <dd class="col-sm-10 deleteInfo">
+            @Html.DisplayFor(model => model.Posted)
+        </dd>
+
+        <dt class="col-sm-2 deleteLabels">
+            @Html.DisplayNameFor(model => model.Product)
+        </dt>
+        <dd class="col-sm-10 deleteInfo">
+            @Html.DisplayFor(model => model.Product)
+        </dd>
+        <dt class="col-sm-2 deleteLabels">
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd class="col-sm-10 deleteInfo">
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+        <dt class="col-sm-2 deleteLabels">
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+        <dd class="col-sm-10 deleteInfo">
+            @Html.Raw(DisplayStars(Model.Rating))
+        </dd>
+    </dl>
+</div>
+<div>
+    <dl class="row">
+        <dd class="col-sm-10">
+            <img class="deleteImg" src="@Html.DisplayFor(model => model.Picture)" alt="Image" />
+        </dd>
+    </dl>
+</div>
+
+    <form asp-action="Delete" asp-controller="Reviews" method="post">
+        <input type="hidden" name="id" value="@Model.Id" />
+        <button type="submit" class="nav-link btn btn-link"><img class="buttonDelete" src="https://dryhouserestoration.com/wp-content/uploads/2020/08/6.png"></button>
+    </form>
+
+<p class="linkProductText">See product <a class="linkProduct" asp-action="Details" asp-controller="Products" asp-route-id="@Model.Id">here</a>.</p>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

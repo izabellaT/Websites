@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title style="color:goldenrod">@ViewData["Title"] - Assure movies</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/Screenshot 2023-06-30 105318.jpg" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3" style="background-color:maroon">
+            <div class="container">
+                <img src="~/images/Screenshot 2023-06-30 105318.jpg" alt="logo" style="width:50px; height:50px;" />
+                <br/>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color:goldenrod">Assure movies</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (this.User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item active">
+                                <div class="dropdown show">
+                                    <a class="nav-link active dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:goldenrod">
+                                        Movies
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <img src="~/images/330f48b99c48ab8f2a29033f8adff735.jpg" alt="boards" style="width:100%; height:100%;" />
+                                        <a class="dropdown-item text-center" href="/Movies/Index" style="color: maroon">Movies</a>
+                                        <a class="dropdown-item text-center" href="/Genres/Index" style="color: maroon">Genres</a>
+                                        <a class="dropdown-item text-center" href="/Actors/Index" style="color: maroon">Actors</a>
+                                        <a class="dropdown-item text-center" href="/MovieActors/Index" style="color: maroon">Movie-Actor</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link " style="color:goldenrod" asp-controller="Movies" asp-action="AboutUs">About us</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("Administrator"))
+                        {
+                            <li class="nav-item active">
+                                <div class="dropdown show">
+                                    <a class="nav-link active dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:goldenrod">
+                                        Actions
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <img src="~/images/bigstock-Cinema-tickets-48888788.jpg" alt="boards" style="width:100%; height:100%;" />
+                                        <a class="dropdown-item text-center" href="/Movies/Create" style="color:maroon">Create a movie</a>
+                                        <a class="dropdown-item text-center" href="/Genres/Create" style="color: maroon">Create genre</a>
+                                        <a class="dropdown-item text-center" href="/Actors/Create" style="color: maroon">Create an actor</a>
+                                        <a class="dropdown-item text-center" href="/MovieActors/Create" style="color: maroon">Create a movie-actor</a>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                        <partial name="_LoginPartial" />
+</div>
+            </div>
+</nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

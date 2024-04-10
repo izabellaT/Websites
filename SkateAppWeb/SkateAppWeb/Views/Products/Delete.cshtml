@@ -1,0 +1,71 @@
+﻿@model SkateAppWeb.Models.Products.ProductDeleteVM
+@{
+    ViewData["Title"] = "Delete";
+}
+<head>
+    <link rel="stylesheet" href="~/css/deletePages.css" asp-append-version="true" />
+</head>
+<h1 class="deleteH">Are you sure you want to <spam style="color:dodgerblue">delete</spam> this product?</h1>
+<div style="float:left; display:inline; margin-left:30px;">
+    <dl class="row">
+        <dd class="col-sm-10">
+            <img class="deleteImg" src="@Html.DisplayFor(model => model.Picture)" alt="Image"/>
+        </dd>
+    </dl>
+</div>
+<div class="infoDiv">
+    <dl class="row">
+        <dt class="col-sm-2 deleteLabels">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10 deleteInfo">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt class="col-sm-2 deleteLabels">
+            @Html.DisplayNameFor(model => model.BrandName)
+        </dt> 
+        <dd class="col-sm-10 deleteInfo">
+            @Html.DisplayFor(model => model.BrandName)
+        </dd>
+
+        <dt class="col-sm-2 deleteLabels">
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </dt>
+        <dd class="col-sm-10 deleteInfo">
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+<dt class="col-sm-2 deleteLabels">
+    @Html.DisplayNameFor(model => model.Price)
+</dt>
+        <dd class="col-sm-10 deleteInfo">
+    @Html.DisplayFor(model => model.Price)
+</dd>
+        <dt class="col-sm-2 deleteLabels">
+    @Html.DisplayNameFor(model => model.Discount)
+</dt>
+        <dd class="col-sm-10 deleteInfo">
+    @Html.DisplayFor(model => model.Discount)
+</dd>
+</dl>
+</div>
+<div>
+    <dl class="row">
+        <dd class="col-sm-10">
+            <img class="deleteImg" src="@Html.DisplayFor(model => model.Picture)" alt="Image" />
+        </dd>
+    </dl>
+</div>
+@if (User.IsInRole("Administrator"))
+{
+    <form asp-action="Delete" asp-controller="Products" method="post">
+        <input type="hidden" name="id" value="@Model.Id" />
+        <button type="submit" class="nav-link btn btn-link"><img class="buttonDelete" src="https://dryhouserestoration.com/wp-content/uploads/2020/08/6.png"></button>
+    </form>
+}
+<p class="linkProductText">See product <a class="linkProduct" asp-action="Details" asp-controller="Products" asp-route-id="@Model.Id">here</a>.</p>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

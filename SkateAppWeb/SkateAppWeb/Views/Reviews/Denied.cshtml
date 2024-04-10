@@ -1,0 +1,78 @@
+﻿﻿@{
+    ViewData["Title"] = "Denied";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/deniedPages.css" asp-append-version="true" />
+</head>
+
+<h1>No curse words ussage allowed</h1>
+<section>
+    <img src="https://cdn.pixabay.com/photo/2020/02/09/09/41/smiley-4832504_1280.png" alt="Image 1" class="imgSad">
+
+    <p>Sorry you didn't like our product! Although the use of profanity is not allowed on the website and therefore your review has not been and will not be published.</p>
+    <p>To repost your review, you'll need to use another more appropriate language</p>
+    <p style="color:dodgerblue; font-size:larger">Let us help you find the best product for you!</p>
+
+    <div class="container">
+        <h4 class="h1Review">Products</h4>
+
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="https://shop.ccs.com/cdn/shop/files/810121101384-c_1280x.jpg?v=1689035852" alt="Slide 1" class="imgReview">
+            </div>
+            <div class="mySlides">
+                <img src="https://shop.ccs.com/cdn/shop/files/193172446339-c_1280x.jpg?v=1691623274" alt="Slide 2" class="imgReview">
+            </div>
+            <div class="mySlides">
+                <img src="https://shop.ccs.com/cdn/shop/products/BQ6998A-c_1280x.jpg?v=1686094773" alt="Slide 1" class="imgReview">
+            </div>
+            <div class="mySlides">
+                <img src="https://shop.ccs.com/cdn/shop/products/193172413560-c_1280x.jpg?v=1680306436" alt="Slide 2" class="imgReview">
+            </div>
+            <div class="mySlides">
+                <img src="https://shop.ccs.com/cdn/shop/products/BQ5F635-c_1280x.jpg?v=1677895606" alt="Slide 2" class="imgReview">
+            </div>
+            <div class="mySlides">
+                <img src="https://shop.ccs.com/cdn/shop/products/193172380923-c_1280x.jpg?v=1668824120" alt="Slide 1" class="imgReview">
+            </div>
+            <div class="mySlides">
+                <img src="https://shop.ccs.com/cdn/shop/products/BQ4F155-c_1280x.jpg?v=1653525980" alt="Slide 2" class="imgReview">
+            </div>
+            
+		</div>
+        <a class="pageButton" asp-controller="Products" asp-action="All" id="checkoutBtn">Check out</a>
+		<div class="smallImages">
+            <img class="smallImage" src="https://shop.ccs.com/cdn/shop/products/5056336638658-c_1280x.jpg?v=1645231590" alt="Small Image 2">
+            <img class="smallImage" src="https://shop.ccs.com/cdn/shop/products/888560253728-c_1280x.jpg?v=1636158114" alt="Small Image 3">
+            <img class="smallImage" src="https://shop.ccs.com/cdn/shop/products/5056336653743-c_1280x.jpg?v=1664816747" alt="Small Image 5">
+            <img class="smallImage" src="https://shop.ccs.com/cdn/shop/products/BQ521B1-c_1280x.jpg?v=1657218408" alt="Small Image 6">
+            <img class="smallImage" src="https://shop.ccs.com/cdn/shop/products/BQ55EFE-c_1280x.jpg?v=1666322724" alt="Small Image 5">
+            <img class="smallImage" src="https://shop.ccs.com/cdn/shop/products/BQ56F3B-c_1280x.jpg?v=1663267862" alt="Small Image 6">
+		</div>
+        <div class="pageButtons">
+            <a class="pageButton" asp-controller="Products" asp-action="Guide">Guide</a>
+            <a class="pageButton" asp-controller="Products" asp-action="Information">Information</a>
+            <a class="pageButton" asp-controller="Products" asp-action="All">To Products</a>
+        </div>  
+    </div>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+          let i;
+          const slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) { slideIndex = 1 }
+          slides[slideIndex - 1].style.display = "block";
+          setTimeout(showSlides, 1000);
+        }
+
+        showSlides();
+    </script>
+</section>
+

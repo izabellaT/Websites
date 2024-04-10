@@ -1,0 +1,212 @@
+﻿@model SkateAppWeb.Models.Products.SkateboardCreateVM
+
+@{
+    ViewData["Title"] = "Configurator";
+}
+<head>
+    <link rel="stylesheet" href="~/css/configurator.css" asp-append-version="true" />
+</head>
+
+<div class="configurator-banner">
+    <h1 class="configurator-h1">Configurator</h1>
+</div>
+
+<div class="configurator-content">
+    <h2 class="configurator-h2">Welcome to the Fast Wheels Configurator</h2>
+    <p class="configurator-p">Welcome to Fast Wheels Skate Shop Configurator! Craft your unique ride with our premium selection of decks, griptapes, wheels, trucks, 
+        and bearings. Create the skateboard of your dreams and ride with style. Let the customization begin!</p>
+
+    <div class="configurator-horizontal-line">
+        <div class="configurator-box">
+            <h3 class="configurator-h3">Trucks</h3>
+            <img class="configurator-img" src="~/images/11132321.png" alt="Image 1">
+        </div>
+
+        <div class="configurator-box">
+            <h3 class="configurator-h3">Wheels</h3>
+            <img class="configurator-img" src="~/images/3365024.png" alt="Image 2">
+        </div>
+
+        <div class="configurator-box">
+            <h3 class="configurator-h3">Bearings</h3>
+            <img class="configurator-img" src="~/images/5064628.png" alt="Image 3">
+        </div>
+
+        <div class="configurator-box">
+            <h3 class="configurator-h3">Deck</h3>
+            <img class="configurator-img" src="~/images/3824501.png" alt="Image 4">
+        </div>
+
+        <div class="configurator-box">
+            <h3 class="configurator-h3">Griptape</h3>
+            <img class="configurator-img" src="~/images/6740596.png" alt="Image 5">
+        </div>
+    </div>
+
+    <h3 class="configurator-h3">Get informed</h3>
+
+    <div class="configurator-buttons">
+        <button class="configurator-button" onclick="location.href='https://localhost:7138/Products/Information'">&#187Information</button>
+        <button class="configurator-button" onclick="location.href='https://localhost:7138/Products/Guide'">&#187Guide</button>
+        <button class="configurator-button" onclick="location.href='https://localhost:7138/Products/MostAsked'">&#187Most asked</button>
+        <button class="configurator-button" onclick="location.href='https://localhost:7138/Products/All'">&#187Products</button>
+    </div>
+</div>
+
+<div>
+	<h3 class="configurator-h3" style="text-align:center">Custom build your dream skateboard</h3>
+    <form asp-action="CreateSkateboard" class="text-center">
+        <div id="partialViewContainer">
+            @await Html.PartialAsync("_SkateboardPartialView", Model)
+            <div class="form-group">
+                <input type="submit" value="Create" class="createButton" />
+            </div>
+            <a asp-action="All" asp-controller="Products" class="mt-1 ml-5 d-block">Back to products</a>
+        </div>
+        <div class="form-group mt-4">
+            <button type="button" id="togglePartialViewBtn" class="buttonConfiguratorReal">Configurator</button>
+
+        </div>
+    </form>
+</div>
+
+<div class="underConfiguratorNav-navigation">
+    <div class="underConfiguratorNav-navOption" onclick="toggleContent('underConfiguratorNav-brands')">Top Brands</div>
+    <div class="underConfiguratorNav-navOption" onclick="toggleContent('underConfiguratorNav-ideas')">Style Ideas</div>
+</div>
+
+<div id="underConfiguratorNav-brands" class="underConfiguratorNav-contentContainer">
+    <div class="underConfiguratorNav-content">
+        <div>
+            <img src="~/images/CCS-Logo-TWITTER-SKATE.jpg" alt="Brand 1">
+            <h3>CCS</h3>
+        </div>
+        <div>
+            <img src="~/images/dwd.jpg" alt="Brand 2">
+            <h3>Santa Cruz</h3>
+        </div>
+        <div>
+            <img src="~/images/2DALI0BELI00000.jpg" alt="Brand 3">
+            <h3>Alien Workshop</h3>
+        </div>
+        <div>
+            <img src="~/images/baker.jpg" alt="Brand 4">
+            <h3>Baker</h3>
+        </div>
+        <div>
+            <img src="~/images/1f02f278a25dbf8c69abf33bab65932a--zero-skateboards-stability.jpg" alt="Brand 5">
+            <h3>Zero</h3>
+        </div>
+        <div>
+            <img src="~/images/b2806c2cd783006c6d0c8fa2108fdb2c.jpg" alt="Brand 6">
+            <h3>Girl</h3>
+        </div>
+        <div>
+            <img src="~/images/ddd.jpg" alt="Brand 7">
+            <h3>Almost</h3>
+        </div>
+        <div>
+            <img src="~/images/plan-b-skateboards-slant-b-logo-skateboard-sticker-3-5-p53667-127011_medium.jpg" alt="Brand 8">
+            <h3>Plan B</h3>
+        </div>
+    </div>
+</div>
+
+<div id="underConfiguratorNav-ideas" class="underConfiguratorNav-contentContainer">
+    <div class="underConfiguratorNav-content" style="display: none;">
+        <div>
+            <img src="~/images/ccs-flames-skateboard-deck-black-red-c_b5e02e40-bfa9-4aa4-a30a-0a1df00a7ecd_1280x.webp" alt="Idea 1">
+            <h3>Flames</h3>
+        </div>
+        <div>
+            <img src="~/images/8855635.png" alt="Idea 2">
+            <h3>Patch work</h3>
+        </div>
+        <div>
+            <img src="~/images/5056336673253-c_1280x.webp" alt="Idea 3">
+            <h3>Abstract</h3>
+        </div>
+        <div>
+            <img src="~/images/810121101384-c_1280x.webp" alt="Idea 4">
+            <h3>Line art</h3>
+        </div>
+        <div>
+            <img src="~/images/yusukes-picks-complete_eb20ab18-1b6a-4fdf-8253-990f3f084502_1280x.webp" alt="Idea 5">
+            <h3>Hobbies</h3>
+        </div>
+        <div>
+            <img src="~/images/BQ69B96-c_1280x.webp" alt="Idea 6">
+            <h3>Sticker</h3>
+        </div>
+        <div>
+            <img src="~/images/gorilla-deck-mini.webp" alt="Idea 7">
+            <h3>Cut outs</h3>
+        </div>
+        <div>
+            <img src="~/images/888560320079-c_1280x.webp" alt="Idea 8">
+            <h3>Dark</h3>
+        </div>
+    </div>
+</div>
+
+<div class="underConfiguratorContent-container">
+
+    <p class="underConfiguratorContent-centeredP">Thank you for designing your perfect skateboard with Fast Wheels Skate Shop Configurator. Cruise with confidence and style on your one-of-a-kind ride. Skate on, and we look forward to seeing you again soon!</p>
+
+    <div class="underConfiguratorContent-bannerContainer">
+        <img class="underConfiguratorContent-bannerPic" src="~/images/enee.jpg" alt="Banner Image 1">
+        <img class="underConfiguratorContent-bannerPic" src="~/images/0629_NWS_LPT-L-DEWTOUR-495_26303029_610915.webp" alt="Banner Image 2">
+        <img class="underConfiguratorContent-bannerPic" src="~/images/ca-times.brightspotcdn.jpg" alt="Banner Image 3">
+    </div>
+</div>
+<button onclick="scrollToTop()" id="topButton" title="Go to top">Top</button>
+<script>
+    function toggleContent(id) {
+        var elements = document.querySelectorAll('.underConfiguratorNav-contentContainer');
+        elements.forEach(function (element) {
+            if (element.id === id) {
+                element.querySelector('.underConfiguratorNav-content').style.display = 'flex';
+            } else {
+                element.querySelector('.underConfiguratorNav-content').style.display = 'none';
+            }
+        });
+    }
+    toggleContent('underConfiguratorNav-brands');
+</script>
+
+<script>
+    $(document).ready(function () {
+
+        $("#partialViewContainer").hide();
+
+
+        $("#togglePartialViewBtn").click(function () {
+            $("#partialViewContainer").slideToggle();
+        });
+    });
+</script>
+<script>
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        var topButton = document.getElementById("topButton");
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0; 
+    }
+</script>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

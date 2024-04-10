@@ -1,0 +1,65 @@
+﻿@model SkateAppWeb.Models.Orders.OrderCreateVM
+
+@{
+    ViewData["Title"] = "EditOrder";
+}
+<head>
+    <link rel="stylesheet" href="~/css/createPages.css" asp-append-version="true" />
+</head>
+<h1 class="text-center createH">Edit Order</h1>
+
+    <div>
+    <form asp-action="Edit" asp-controller="Orders" class="text-center">
+    <div class="row" style="float:left; display:inline;">
+        <div class="col-md-4">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="User" class="control-label labelName"></label>
+                    <input asp-for="User" class="form-control inputCreate" readonly />
+                    <span asp-validation-for="User" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Quantity" class="control-label labelName"></label>
+                    <input asp-for="Quantity" class="form-control inputCreate" readonly />
+                    <span asp-validation-for="Quantity" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Discount" class="control-label labelName"></label>
+                    <input asp-for="Discount" class="form-control inputCreate" readonly />
+                    <span asp-validation-for="Discount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TotalPrice" class="control-label labelName"></label>
+                    <input asp-for="TotalPrice" class="form-control inputCreate" readonly />
+                    <span asp-validation-for="TotalPrice" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Picture" class="control-label labelName"></label>
+                    <input asp-for="Picture" class="form-control inputCreate" readonly />
+                    <span asp-validation-for="Picture" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label labelName"></label>
+                    <input asp-for="Price" class="form-control inputCreate" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+        </div>
+    </div>
+		<div class="brandAndPic">
+            <img class="imageCreate" src="https://lum-studio.com/wp-content/uploads/2023/08/Tienda-online-estandar-lum-studio.jpg" />
+            <img class="imageCreate" src="https://www.dostaviam.com/images/slideshow/porachka.jpg" />
+            <img class="imageCreate" src="https://img.freepik.com/premium-vector/shopping-cart-website-with-icon-set_24877-72146.jpg" />
+		</div>
+		<div class="brandAndPic">
+            <p class="pCreate">The online ordering definition is the ability of the client to make an order through the web platform, website or application. When ordering online, there is an opportunity to familiarize with the menu, see a photo of the goods, as well as a description.</p>
+            <p class="pCreate" style="margin-left:10px;">It is very fast and convenient in our time, allowing to increase the number of buyers. Since many of us are now living at a fast pace, often do not have time to go to the store for shopping, and online ordering is a great solution.</p>
+            <p class="pCreate">The main function is simply to make sure your customer has the opportunity to open an e-menu or your product’s catalog and place an order. </p>
+		</div>     
+        <div class="form-group mt-4">
+            <button type="submit" class="buttonCreate">Edit</button>
+        </div>
+    </form>
+</div>
+
+    
+

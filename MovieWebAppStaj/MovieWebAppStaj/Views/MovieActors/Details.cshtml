@@ -1,0 +1,28 @@
+﻿@model MovieWebAppStaj.Domain.MovieActor
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class=" text-center " style="color:goldenrod">@Html.DisplayFor(model => model.Movie.Title)</h1>
+
+<div class="text-center">
+    <hr />
+    <dl class="row" style="color:maroon">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Movie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movie.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Actor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Actor.FirstName)
+        </dd>
+    </dl>
+</div>
+<div class="text-center" style="color:maroon"> 
+    <a asp-action="Index"style="color:goldenrod">Back to List</a>
+</div>

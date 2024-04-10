@@ -1,0 +1,81 @@
+.clientsDelete-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.clientsDelete-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.clientsDelete-picture {
+    margin-bottom: 20px;
+}
+
+    .clientsDelete-picture img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        border: 5px solid dodgerblue;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+.clientsDelete-info-container {
+    display: flex;
+    justify-content: center;
+}
+
+.clientsDelete-info {
+    text-align: center;
+    margin-top: 20px;
+    margin-left:70px;
+    max-width: 400px; 
+    font-size:20px;
+}
+
+    .clientsDelete-info dl {
+        margin: 0;
+    }
+
+    .clientsDelete-info dt {
+        font-weight: bold;
+    }
+
+    .clientsDelete-info dd {
+        margin-left: 0;
+    }
+
+.clientsDelete-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+body{
+    background-color:lightgoldenrodyellow;
+    color:midnightblue;
+}
+.buttonDelete {
+    background-color:lightgoldenrodyellow;
+    width:70px;
+    height:70px;
+    margin-bottom:10px;
+}
+.buttonBack{
+    margin-left:10px;
+}
+
+@media screen and (max-width: 768px) {
+    .clientsDelete-info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clientsDelete-info {
+        margin-left: 0;
+    }
+
+    .buttonBack {
+        margin-left: 0;
+    }
+}

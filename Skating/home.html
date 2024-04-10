@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home</title>
+        <link rel="stylesheet" type="text/css" href="css.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <script>
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+        }
+        function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+        </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+     const menu = document.getElementById("menu");
+     const links = menu.getElementsByTagName("a");
+     
+     // Get the current page URL
+     const currentUrl = window.location.href;
+ 
+     // Loop through the links and check if the link's href matches the current URL
+     for (const link of links) {
+         if (link.href === currentUrl) {
+             link.classList.add("active");
+             break; // Stop after the first match
+         }
+     }
+ });
+</script>
+
+    </head>
+    <body>
+    <header>
+        <nav>
+            <div style="display: inline-block;">
+              
+                <a href="home.html"><strong>Fast Wheels</strong></a> 
+                 </div>
+
+                <div style="display: inline-block;">
+                    <div id="menu" class="navigation">
+                            <a href="home.html"><strong>Начало</strong></a>
+                            <a href="products.html"><strong>Продукти</strong></a>
+                            <a href="information.html"><strong>Информация</strong></a>
+                            <a href="contacts.html"><strong>Контакти</strong></a>
+                        <script src="script.js"></script>
+                    </div>
+
+                    <div style="display: inline-block; ">
+                        <form action="working.html">
+                          <input type="text" placeholder="Search.." name="search" class="searchNav">
+                          <button type="submit" class="searchNav">Submit</button>
+                        </form>
+                    </div>
+                  </div>
+                  </div>
+    </nav> 
+     <br>  
+
+     <div class="slideshow-container">
+        <div class="mySlides1">
+          <img src="images/slideshow.jpg" style="width:100%">
+        </div>
+        <div class="mySlides1">
+          <img src="images/slideshow2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides1">
+            <img src="images/slideshow4.jpg" style="width:100%">
+          </div>
+        
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+      </div>
+    </header>
+
+      <script>
+        let slideIndex = [1,1];
+        let slideId = ["mySlides1"]
+        showSlides(1, 0);
+        showSlides(1, 1);
+        
+        function plusSlides(n, no) {
+          showSlides(slideIndex[no] += n, no);
+        }
+        
+        function showSlides(n, no) {
+          let i;
+          let x = document.getElementsByClassName(slideId[no]);
+          if (n > x.length) {slideIndex[no] = 1}    
+          if (n < 1) {slideIndex[no] = x.length}
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+          }
+          x[slideIndex[no]-1].style.display = "block";  
+        }
+        </script>
+        
+        <main>
+        <br>
+        <div class="divInfo"> 
+            <h2 >Попуряни</h2>
+            <div>
+                <div class="homeProd">
+               <a href="#"><img src="https://shop.ccs.com/cdn/shop/files/193172446254-c.jpg?v=1688597851" alt="product" class="image"></a>
+               <div><strong>rfgtht</strong></div>
+               <div class="divCena">cena</div>   
+            </div>
+                    <div class="homeProd">
+                        <a href="#">  <img src="https://shop.ccs.com/cdn/shop/files/888560310520-c.jpg?v=1694558054" alt="product" class="image"></a>
+                   <div><strong>rfgtht</strong></div>
+                   <div class="divCena">cena</div>   
+                </div>
+                    <div class="homeProd">
+                        <a href="#">   <img src="https://shop.ccs.com/cdn/shop/files/842357182769-c.jpg?v=1692226181" alt="product" class="image"></a>
+                       <div><strong>rfgtht</strong></div> 
+                       <div class="divCena">cena</div>   
+                    </div>
+                    <div class="homeProd">
+                        <a href="#">   <img src="https://shop.ccs.com/cdn/shop/files/193172446339-c.jpg?v=1691623274" alt="product" class="image"></a>
+                        <div><strong>rfgtht</strong></div>
+                        <div class="divCena">cena</div>   
+                    </div>
+                     <div class="homeProd">
+                        <a href="#">    <img src="https://shop.ccs.com/cdn/shop/files/5056336673093-c.jpg?v=1692226171" alt="product" class="image"></a>
+                        <div><strong>rfgtht</strong></div>
+                        <div class="divCena">cena</div>   
+                    </div>
+                        </div>
+                        <br>
+                        <div>
+                    <div class="homeProd">
+                        <a href="#">   <img src="https://shop.ccs.com/cdn/shop/files/BQ69D66-c.jpg?v=1689891740" alt="product" class="image"></a>
+                        <div><strong>rfgtht</strong></div>
+                        <div class="divCena">cena</div>   
+                    </div>
+                    <div class="homeProd">
+                        <a href="#">  <img src="https://shop.ccs.com/cdn/shop/products/LUCAS-BEAUFORT-COMPLETE_0ecf20c6-8cd8-4cc5-9b66-26bc99d5c257.jpg?v=1638405925" alt="product" class="image"> </a>
+                        <div><strong>rfgtht</strong></div>   
+                        <div class="divCena">cena</div>      
+                    </div>
+                    <div class="homeProd">
+                        <a href="#">   <img src="https://shop.ccs.com/cdn/shop/files/BQ69711-c.jpg?v=1688774204" alt="product" class="image"> </a>
+                        <div><strong>rfgtht</strong></div>  
+                        <div class="divCena">cena</div>       
+                    </div>
+                    <div class="homeProd">
+                        <a href="#">    <img src="https://shop.ccs.com/cdn/shop/products/827059427394-c.jpg?v=1685748689" alt="product" class="image">  </a>
+                        <div><strong>rfgtht</strong></div>    
+                        <div class="divCena">cena</div>     
+                    </div>
+                    <div class="homeProd">
+                        <a href="#">   <img src="https://shop.ccs.com/cdn/shop/products/193172413348-c.jpg?v=1680306425" alt="product" class="image"> </a>
+                        <div><strong>rfgtht</strong></div>
+                        <div class="divCena">cena</div>        
+                    </div>
+                        </div>
+                        <br>
+    </div>
+    </div>
+<br>
+<br>
+<div class="divInfo"> 
+    <div class="storyDiv">
+        <h2 style="color: navy; text-align: center;">История</h2>
+        <p class="storyP">Всичко започна, когато група приятели решихме да превърнем манията си по скейтборд в нещо повече.
+         През 2023 година, ние отворихме вратите си за колеги скейтбордисти и ентусиасти, 
+         нетърпеливи да предложим един онлайн магазин за всички неща скейтборд. От скромно начало в малък гараж,
+         ние се превърнахме в процъфтяващ магазин за скейт, разположен в сърцето на Перник.</p> 
+        </div>
+  <div>
+<br>
+<br>
+<div>
+    <div class="homeProd3">
+   <a href="#"><img src="https://shop.ccs.com/cdn/shop/files/193172446254-c.jpg?v=1688597851" alt="product" class="image"></a>
+   <div><strong>rfgtht</strong></div>
+   <div class="divCena">cena</div>   
+</div>
+        <div class="homeProd3">
+            <a href="#">  <img src="https://shop.ccs.com/cdn/shop/files/888560310520-c.jpg?v=1694558054" alt="product" class="image"></a>
+       <div><strong>rfgtht</strong></div>
+       <div class="divCena">cena</div>   
+    </div>
+        <div class="homeProd3">
+            <a href="#">   <img src="https://shop.ccs.com/cdn/shop/files/842357182769-c.jpg?v=1692226181" alt="product" class="image"></a>
+           <div><strong>rfgtht</strong></div> 
+           <div class="divCena">cena</div>   
+        </div>
+        <div class="homeProd3">
+            <a href="#">   <img src="https://shop.ccs.com/cdn/shop/files/193172446339-c.jpg?v=1691623274" alt="product" class="image"></a>
+            <div><strong>rfgtht</strong></div>
+            <div class="divCena">cena</div>   
+        </div>
+         <div class="homeProd3">
+            <a href="#">    <img src="https://shop.ccs.com/cdn/shop/files/5056336673093-c.jpg?v=1692226171" alt="product" class="image"></a>
+            <div><strong>rfgtht</strong></div>
+            <div class="divCena">cena</div>   
+        </div>
+        <div class="homeProd3">
+            <a href="#">    <img src="https://shop.ccs.com/cdn/shop/files/5056336673093-c.jpg?v=1692226171" alt="product" class="image"></a>
+            <div><strong>rfgtht</strong></div>
+            <div class="divCena">cena</div>   
+        </div>
+        <div class="homeProd3">
+            <a href="#">    <img src="https://shop.ccs.com/cdn/shop/files/5056336673093-c.jpg?v=1692226171" alt="product" class="image"></a>
+            <div><strong>rfgtht</strong></div>
+            <div class="divCena">cena</div>   
+        </div>
+        <div class="homeProd3">
+            <a href="#">    <img src="https://shop.ccs.com/cdn/shop/files/5056336673093-c.jpg?v=1692226171" alt="product" class="image"></a>
+            <div><strong>rfgtht</strong></div>
+            <div class="divCena">cena</div>   
+        </div>
+    </div>
+    <br>
+        <div class="text-center" >
+            <a class="button" style="color: white;" href="products.html">Посети</a>
+        </div>
+            
+            <br>
+  </main>
+<hr style="color: navy;">
+        <footer>
+            <div>
+            <div class="footerDiv"> 
+                <h3>Относно</h3>
+                <p>+08888888888</p>
+                <p>test@test.com</p>
+                <p>fast_wheels.com</p>
+                <p>10:00-18:30</p>
+                <p><a href="https://maps.app.goo.gl/VYyWuPKzJgtVRXef7"> „8-ми март“ 232, 2306 Монте Карло, Перник, България</a></p>  
+            </div>
+            <div class="footerDiv"> 
+                <h3>Страници</h3>
+                <p ><a href="home.html" >Fast Wheels</a></p>
+                <p ><a href="products.html" >Продукти</a></p>
+                <p ><a href="information.html">Информация</a></p>
+                <p ><a href="contacts.html">Конкакти</a></p>
+                <br>
+                <br>
+            </div>
+            <div class="footerDiv2"> 
+                <h3>Свържете се с нас</h3>
+                <form action="working.html">
+                    <label for="fname" >Име</label><br>
+                    <input type="text" id="fname" name="fname" class="formEnter" placeholder="Име..."><br>
+                    <label for="lname">Фамилия</label><br>
+                    <input type="text" id="lname" name="lname" class="formEnter" placeholder="Фамилия..."><br><br>
+                    <input type="submit" value="Предай" class="formHome">
+                  </form> 
+                  <br>
+                  <br>
+            </div>
+        </div>
+        <br>
+        </footer>
+    </body>
+</html>

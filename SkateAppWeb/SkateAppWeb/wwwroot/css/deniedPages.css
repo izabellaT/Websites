@@ -1,0 +1,231 @@
+body {
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+}
+h1 {
+    color: lightgoldenrodyellow;
+    background-color: midnightblue;
+    padding:8px;
+}
+
+section {
+    margin: 10px;
+    font-size:large;
+    color:midnightblue;
+    font-weight:bold;
+    margin-bottom:40px;
+}
+
+.imgInstructions {
+    max-width: 350px;
+    height: 320px;
+    margin:30px;
+}
+.imgSad {
+    max-width: 280px;
+    height: 250px;
+    margin: 3px;
+}
+    .imgSad:hover{
+        opacity:0.8;
+    }
+    .imgInstructions:hover {
+        opacity: 0.8;
+    }
+.aDenied{
+    text-decoration:none;
+    font-weight:bold;
+    font-size:large;
+    font-size:large;
+}
+.aDenied:hover {
+        color: yellow;
+    }
+.instructions {
+    display: inline;
+    width: 300px;
+    height: auto;
+    margin-right: 150px;
+    margin-left:160px;
+}
+.imgBrands {
+    max-width: 180px;
+    height: 180px;
+    margin: 10px;
+} 
+.imgBrands:hover{
+        opacity:0.8;
+    }
+.imgContainer {
+    display: inline-block;
+    text-align: center;
+    margin: 10px; 
+}
+
+.imgShapes {
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin: 0 auto;
+}
+    .imgShapes:hover {
+        opacity: 0.8;
+    }
+.imgText {
+    margin-top: 5px; 
+}
+   
+    .deniedH3 {
+        color: midnightblue;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding: 5px;
+        text-decoration: underline;
+        font-weight: bold;
+        width: 1250px;
+        text-align: center;
+    }
+.imgContainerSizes {
+    display: inline-block;
+    text-align: center;
+    margin: 15px; 
+}
+    .imgContainerSizes:hover {
+        opacity: 0.8;
+    }
+.imgInstructionsSizes {
+    width: 350px;
+    height:350px;
+    display: block;
+    margin: 0 auto; 
+}
+imgInstructionsSizes:hover{
+    opacity:0.8;
+}
+.instructionsContainerSizes {
+    text-align: center;
+}
+
+.instructionsSizes {
+    display: inline-block;
+    margin-top:10px;
+    margin-left: 20px;
+    margin-right: 40px; 
+    margin-bottom:0px;
+}
+
+
+
+.h1Review {
+    margin-bottom: 20px;
+    background-color:lightgoldenrodyellow;
+    color:midnightblue;
+    font-weight:bold;
+}
+
+.slideshow-container {
+    width: 300px; 
+    height: 600px; 
+    margin: 0 auto; 
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.imgReview {
+    width: 100%;
+    height: auto;
+}
+
+#checkoutBtn {
+    padding: 8px 15px;
+    font-size: 18px;
+    background-color: midnightblue;
+    color: lightgoldenrodyellow;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+    #checkoutBtn:hover {
+        background-color: lightgoldenrodyellow;
+        color: midnightblue;
+        transition: 0.1s;
+    }
+    .pageButtons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+.pageButton {
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: dodgerblue;
+    color: lightgoldenrodyellow;
+    border: none;
+    border-radius: 3px;
+    text-decoration:none;
+    cursor: pointer;
+}
+    .pageButton:hover{
+        background-color:lightgoldenrodyellow;
+        color:midnightblue;
+        transition:0.1s;
+    }
+    .smallImages {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        margin-top:20px;
+    }
+
+.smallImage {
+    width:120px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.smallImage:hover{
+    opacity:0.8;
+}
+.stars-container {
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px; 
+    color:midnightblue;
+}
+
+@media screen and (max-width: 768px) {
+    .instructions {
+        width: 250px;
+        margin-right: 100px;
+        margin-left: 120px;
+    }
+
+    .imgInstructionsSizes {
+        width: 250px;
+        height: 250px;
+    }
+
+    .instructionsSizes {
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+
+    .slideshow-container {
+        width: 250px;
+        height: 500px;
+    }
+
+    .pageButtons {
+        flex-direction: column;
+    }
+
+    .smallImages {
+        flex-direction: column;
+    }
+}

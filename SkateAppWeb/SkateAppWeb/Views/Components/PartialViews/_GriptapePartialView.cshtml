@@ -1,0 +1,84 @@
+﻿@model SkateAppWeb.Models.Products.GriptapeCreateVM
+<head>
+    <link rel="stylesheet" href="~/css/createPages.css" asp-append-version="true" />
+</head>
+<div class="row" style="float:left; display:inline;">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger "></div>
+        <div class="form-group">
+            <label asp-for="Name" class="control-label labelName"></label>
+            <input asp-for="Name" class="form-control inputCreate" placeholder="Enter name..." />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="BrandId" class="control-label labelName"></label>
+            <select asp-for="BrandId" class="form-control text-center inputCreate">
+                @foreach (var brand in Model.Brands)
+                {
+                    <option value=" @brand.Id">@brand.Name</option>
+                }
+            </select>
+            <span asp-validation-for="BrandId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CategoryId" class="control-label labelName"></label>
+            <input class="form-control inputCreate" placeholder="Griptape" readonly />
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Color" class="control-label labelName"></label>
+            <input asp-for="Color" class="form-control inputCreate" placeholder="Enter color..." />
+            <span asp-validation-for="Color" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Quantity" class="control-label labelName"></label>
+            <input asp-for="Quantity" class="form-control inputCreate" placeholder="Enter quantity..." />
+            <span asp-validation-for="Quantity" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Material" class="control-label labelName"></label>
+            <input asp-for="Material" class="form-control inputCreate" placeholder="Enter material..." />
+            <span asp-validation-for="Material" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Price" class="control-label labelName"></label>
+            <input asp-for="Price" class="form-control inputCreate" placeholder="Enter price..." />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Discount" class="control-label labelName"></label>
+            <input asp-for="Discount" class="form-control inputCreate" placeholder="Enter discount..." />
+            <span asp-validation-for="Discount" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="control-label labelName"></label>
+            <input asp-for="Description" class="form-control inputCreate" placeholder="Enter description..." />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Picture" class="control-label labelName"></label>
+            <input asp-for="Picture" class="form-control inputCreate" placeholder="Enter picture link..." />
+            <span asp-validation-for="Picture" class="text-danger"></span>
+        </div>
+    </div>
+</div>
+<div class="brandAndPic">
+    <img class="imageCreate" src="https://th.bing.com/th/id/OIP.iK7hF9G9TSYqwRijOYJfKwHaHa?rs=1&pid=ImgDetMain" />
+    <img class="imageCreate" src="https://th.bing.com/th/id/OIP.UdndoG2O61FVnm91sr4O4QHaHa?w=1500&h=1500&rs=1&pid=ImgDetMain" />
+    <img class="imageCreate" src="https://s-media-cache-ak0.pinimg.com/originals/ff/bd/89/ffbd893ed7bdc22cfcd0c5f23a50c645.jpg" />
+</div>
+<div class="brandAndPic">
+    <p class="pCreate">If you don’t want to go flying off of your skateboard, you will need to invest in quality grip tape.</p>
+    <p class="pCreate" style="margin-left:10px;">Grip tape is essential for skateboards, and not all grip tape is created equal. </p>
+    <p class="pCreate">With so many different grip tape brands, it can be hard to pick the best one.</p>
+</div>
+<div class="brandAndPic">
+    <img class="imageCreate" src="https://logodix.com/logo/320916.jpg" />
+    <img class="imageCreate" src="https://149433248.v2.pressablecdn.com/wp-content/uploads/2020/04/Mob-blackgrip.jpg" />
+    <img class="imageCreate" src="https://th.bing.com/th/id/R.973e81308470b90b934e2783b9dd8ac6?rik=3WmJfZs2JIy%2bDg&riu=http%3a%2f%2fcustomskateboards.info%2fwp-content%2fuploads%2f2016%2f06%2fGriptape-Colors.jpg&ehk=BorsqS4zKsR0gnlcMpoazEgC%2fw6fZeaha8T5ilzs0q4%3d&risl=&pid=ImgRaw&r=0" />
+</div>
+<div class="brandAndPic">
+    <p class="pCreate">1. Grizzly Grip Tape </p>
+    <p class="pCreate" style="margin-left:10px;">2. Mob Skateboard Grip Tape</p>
+    <p class="pCreate">3. Jessup</p>
+</div>

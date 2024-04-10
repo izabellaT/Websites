@@ -1,0 +1,70 @@
+﻿@model IEnumerable<SkateAppWeb.Models.Orders.OrderListingVM>
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/myOrders.css" asp-append-version="true" />
+</head>
+
+
+<body>
+    <div class="myOrdersBanner">
+        <h1 class="myOrdersH1">Orders</h1>
+    </div>
+    @if(Model.Count()>=5)
+    {
+        <h1 class="myOrdersPromocode">Promocode: <spam class="myOrdersP">"Bella15"</spam> for 15% more!</h1>
+    }
+
+    @if (Model.Count() == 0)
+    {
+        <h4 class="myOrdersH4">No Orders</h4>
+        <img src="https://freepngimg.com/save/101930-emoji-with-hand-cool-free-transparent-image-hq/1920x1920" alt="noOrders" class="noOrdersImage">
+    }
+
+    @if (Model.Count() > 0)
+    {
+        <div class="myOrdersHeader">
+            <p class="myOrdersHeaderText">Orders</p>
+            <p class="myOrdersHeaderText">Count: @Model.Count()</p>
+        </div>
+
+        <table class="myOrdersTable">
+            <thead>
+                <tr>
+                    <th class="myOrdersTh">User</th>
+                    <th class="myOrdersTh">Price</th>
+                    <th class="myOrdersTh">Image</th>
+                    <th class="myOrdersTh">Count</th>
+                    <th class="myOrdersTh">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="myOrdersTd">@item.User</td>
+                        <td class="myOrdersTd">@string.Format($"{item.TotalPrice:f2}") lv</td>
+                        <td class="myOrdersTd"><img src="@item.Picture" width="70" height="70" /></td>
+                        <td class="myOrdersTd">@item.Quantity</td>
+                        @if (User.IsInRole("Administrator"))
+                        {
+                            <td class="myOrdersTd">
+                                <a class="buttonOrders" asp-action="Edit" asp-controller="Orders" asp-route-id="@item.Id">Edit</a>
+                                <a class="buttonOrders" asp-action="Delete" asp-controller="Orders" asp-route-id="@item.Id">Delete</a>
+                            </td>
+                        }
+                        else
+                        {
+                            <td class="myOrdersTd">
+                                <a class="buttonOrders" asp-action="Details" asp-controller="Products" asp-route-id="@item.ProductId">Check product out</a>
+                            </td>
+                        }
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    }
+</body>

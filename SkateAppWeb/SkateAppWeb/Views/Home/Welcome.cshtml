@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+<head>
+    <link rel="stylesheet" href="~/css/accountPages.css" asp-append-version="true" />
+</head>
+
+<body>
+    <div class="divRight">
+        <h1>Welcome to Fast Wheels</h1>
+        <img class="logoWelcome" src="~/images/logo.png"/>
+        <a asp-area="Identity" asp-page="/Account/Login" class="divbButtonLogin">Log in</a>
+        <a asp-area="Identity" asp-page="/Account/Register" class="divButtonRegister">Create account</a>
+    </div>
+</body>

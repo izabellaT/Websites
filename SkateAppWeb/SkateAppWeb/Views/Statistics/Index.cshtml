@@ -1,0 +1,65 @@
+﻿﻿@using SkateAppWeb.Models.Statistic
+@model StatisticVM
+@{
+	ViewData["Title"] = "Statistics";
+}
+
+<head>
+	<link rel="stylesheet" href="~/css/statistics.css" asp-append-version="true" />
+</head>
+<body>
+
+    <div class="statistics-banner">
+        <h1 class="statistics-h1">Statistics</h1>
+    </div>
+
+    <div class="statistics-container text-center">
+        <div class="col-xl-8">
+            <div class="card-group pb-0">
+                <div class="card-columns text-center">
+                </div>
+            </div>
+            <table class="statistics-table table table-striped" style="width:150%">
+                <thead>
+                    <tr>
+                        <th>
+                           Count Clients
+                        </th>
+                        <th>
+                            Count Products
+                        </th>
+                        <th>
+                            Count Orders
+                        </th>
+                        <th>
+                            Count Favorites
+                        </th>
+                        <th>
+                           Sum Orders
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(model => model.CountClients)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.CountProducts)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.CountOrders)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.CountFavorites)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.SumOrders)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>

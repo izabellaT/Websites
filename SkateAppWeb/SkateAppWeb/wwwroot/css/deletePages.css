@@ -1,0 +1,97 @@
+body{
+    background-color:lightgoldenrodyellow;
+}
+.deleteH
+{
+    text-align:center;
+    color:midnightblue;
+    font-weight:bold;
+    padding:15px;
+    margin-top:10px;
+    margin-bottom:25px;
+}
+.deleteImg {
+    height: 350px;
+    width: 350px;
+    border-radius: 5px;
+    border: 0.1px solid dodgerblue;
+}
+.deleteImg:hover{
+    opacity: 0.8;
+}
+.deleteLabels {
+    padding: 5px;
+    margin: 3px;
+    color: lightgoldenrodyellow;
+    font-size: large;
+    background-color:midnightblue;
+    width:350px;
+    border-radius:6px;
+}
+.deleteInfo {
+    color: midnightblue;
+    margin-bottom: 7px;
+    font-size: large;
+    text-align: center;
+}
+.buttonDelete {
+    margin-top:10px;
+    height:60px;
+    width:60px;
+    margin-left:600px
+}
+.buttonDelete:hover {
+    opacity:0.8;
+    transition: 0.1s;
+}
+.infoDiv{
+    height:300px;
+    width:400px;
+    float:left;
+    text-align:center;
+    margin-left:90px;
+}
+.linkProductText{
+    color:midnightblue;
+    font-size:large;
+    text-align:center;
+
+}
+.linkProduct {
+    color: dodgerblue;
+    font-size: large;
+}
+.linkProduct:hover{
+    color:midnightblue;
+}
+.deleteInfo span {
+    font-size: 30px; 
+    color: midnightblue; 
+}
+    .deleteInfo span:hover {
+        color: yellow;
+    }
+
+@media screen and (max-width: 768px) {
+    .deleteH {
+        font-size: 24px;
+    }
+
+    .deleteImg {
+        height: 250px;
+        width: 250px;
+    }
+
+    .deleteLabels {
+        width: 250px;
+    }
+
+    .buttonDelete {
+        margin-left: 300px;
+    }
+
+    .infoDiv {
+        width: 300px;
+        margin-left: 20px;
+    }
+}

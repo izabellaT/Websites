@@ -1,0 +1,144 @@
+﻿@model SkateAppWeb.Models.Products.CompleteSkateboardCreateVM
+<head>
+    <link rel="stylesheet" href="~/css/createPages.css" asp-append-version="true" />
+</head>
+<div class="row" style="float:left; display:inline;">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Name" class="control-label labelName"></label>
+            <input asp-for="Name" class="form-control inputCreate" placeholder="Enter name..." />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="BrandId" class="control-label labelName"></label>
+            <select asp-for="BrandId" class="form-control text-center inputCreate">
+                @foreach (var brand in Model.Brands)
+                {
+                    <option value=" @brand.Id">@brand.Name</option>
+                }
+            </select>
+            <span asp-validation-for="BrandId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CategoryId" class="control-label labelName"></label>
+            <input class="form-control inputCreate" placeholder="Complete Skateboard" readonly />
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Color" class="control-label labelName"></label>
+            <input asp-for="Color" class="form-control inputCreate" placeholder="Enter color..." />
+            <span asp-validation-for="Color" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Shape" class="control-label labelName"></label>
+            <input asp-for="Shape" class="form-control inputCreate" placeholder="Enter shape..." />
+            <span asp-validation-for="Shape" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Size" class="control-label labelName"></label>
+            <input asp-for="Size" class="form-control inputCreate" placeholder="Enter size..." />
+            <span asp-validation-for="Size" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Quantity" class="control-label labelName"></label>
+            <input asp-for="Quantity" class="form-control inputCreate" placeholder="Enter quantity..." />
+            <span asp-validation-for="Quantity" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Material" class="control-label labelName"></label>
+            <input asp-for="Material" class="form-control inputCreate" placeholder="Enter material..." />
+            <span asp-validation-for="Material" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="Discount" class="control-label labelName"></label>
+            <input asp-for="Discount" class="form-control inputCreate" placeholder="Enter discount..." />
+            <span asp-validation-for="Discount" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="control-label labelName"></label>
+            <input asp-for="Description" class="form-control inputCreate" placeholder="Enter description..." />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Picture" class="control-label labelName"></label>
+            <input asp-for="Picture" class="form-control inputCreate" placeholder="Enter picture link..." />
+            <span asp-validation-for="Picture" class="text-danger"></span>
+        </div>
+        <div>
+            <div class="d-inline-block w-130">
+                <label asp-for="GriptapeId" class="control-label labelName"></label>
+            </div>
+            <div class="d-inline-block w-200">
+                <select asp-for="GriptapeId" class="form-control inputCreate" asp-items="ViewBag.GriptapeId"></select>
+            </div>
+            <p><span asp-validation-for="GriptapeId" class="text-danger"></span></p>
+        </div>
+        <div>
+        <div class="d-inline-block w-130">
+            <label asp-for="WheelId" class="control-label labelName"></label>
+        </div>
+        <div class="d-inline-block w-200">
+            <select asp-for="WheelId" class="form-control inputCreate" asp-items="ViewBag.WheelId"></select>
+        </div>
+        <p><span asp-validation-for="WheelId" class="text-danger"></span></p>
+    </div>
+    <div>
+        <div class="d-inline-block w-130">
+            <label asp-for="TruckId" class="control-label labelName"></label>
+        </div>
+        <div class="d-inline-block w-200">
+            <select asp-for="TruckId" class="form-control inputCreate" asp-items="ViewBag.TruckId"></select>
+        </div>
+        <p><span asp-validation-for="TruckId" class="text-danger"></span></p>
+    </div>
+    <div>
+        <div class="d-inline-block w-130">
+            <label asp-for="BearingId" class="control-label labelName"></label>
+        </div>
+        <div class="d-inline-block w-200">
+            <select asp-for="BearingId" class="form-control inputCreate" asp-items="ViewBag.BearingId"></select>
+        </div>
+        <p><span asp-validation-for="BearingId" class="text-danger"></span></p>
+    </div>
+    </div>
+    </div>
+<div class="brandAndPic">
+    <img class="imageCreate" src="https://64.media.tumblr.com/7dfbfc625c1b82cd3b45e95303cd5978/tumblr_nyujtqgc431tvcroho1_1280.jpg" />
+    <img class="imageCreate" src="https://cdn.shopify.com/s/files/1/1000/1920/collections/IMG_20200715_141105_411.jpg?v=1595687101" />
+    <img class="imageCreate" src="https://yt3.googleusercontent.com/ytc/AOPolaTbnt7XVC7xscZWRcw76Wg4pWDw0UaS4hqRLtEb=s900-c-k-c0x00ffffff-no-rj" />
+</div>
+<div class="brandAndPic">
+    <p class="pCreate">If you don’t want to assemble a skateboard yourself there are a few decent options out there. Buying a pre-assembled skateboard might seem easy, but a quality skateboard is hard to distinguish.</p>
+    <p class="pCreate" style="margin-left:10px;">A complete skateboard is fine when you want to learn skateboarding, but only if you pick the right one.</p>
+    <p class="pCreate">You don’t have to pay a lot of money for top-quality components when you’re a beginner. Once you improve your skills and parts start to wear, it’s easy to replace parts with better quality wheels, decks, trucks, and bearings.</p>
+</div>
+<div class="brandAndPic">
+    <img class="imageCreate" src="https://th.bing.com/th/id/OIP.LRc87WcmY5fGHNPFuveG9gHaJQ?rs=1&pid=ImgDetMain" />
+    <img class="imageCreate" src="https://www.companybe.com/WestsideSkateshop/product_photos/rd_images/rd_Santa_Cruz_Classic_Dot_Mid_Complete.jpg" />
+    <img class="imageCreate" src="https://skatingplay.com/wp-content/uploads/2022/11/CCS-skateboard-complete-1-1009x1024.jpg" />
+</div>
+<div class="brandAndPic">
+    <p class="pCreate">1.Birdhouse Complete: Best Under $120</p>
+    <p class="pCreate" style="margin-left:10px;">2.Santa Cruz Classic Dot</p>
+    <p class="pCreate">3.CCS Complete</p>
+</div>
+<div class="brandAndPic">
+    <img class="imageCreate" src="https://m.media-amazon.com/images/I/815WmXy6uEL.jpg" />
+    <img class="imageCreate" src="https://m.media-amazon.com/images/I/81HsmXJpAGL._AC_SX425_.jpg" />
+    <img class="imageCreate" src="https://target.scene7.com/is/image/Target/GUEST_3cdc62b0-9fdd-46dc-b1af-2bb6a4cccad5" />
+</div>
+<div class="brandAndPic">
+    <p class="pCreate">Performance and durability are the most important factors. A good skateboard should be able to withstand impacts, roll smoothly, offer enough balance when riding, and fit your style.</p>
+    <p class="pCreate" style="margin-left:10px;">A decent skateboard consists of a stiff 7-ply hard rock maple deck, bearings that spin well, wheels that don’t wear fast, and skate trucks that can handle abuse.</p>
+    <p class="pCreate">Many complete skateboards offered online tick a few of the boxes but some only consist of a quality deck with lower quality parts which impacts overall performance.</p>
+</div>
+<script>
+    let allWheels = @Html.Raw(Json.Serialize(ViewBag.Wheels));
+    let allTrucks = @Html.Raw(Json.Serialize(ViewBag.Trucks));
+    let allDecks = @Html.Raw(Json.Serialize(ViewBag.Decks));
+
+    SelectWheels(allTrucks, allWheels)
+    SelectTrucks(allDecks, allTrucks)
+</script>
