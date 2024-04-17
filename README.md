@@ -12,7 +12,7 @@ seeding data in advance, deleting and adding them again when seeding, selling a 
 In the end, after these 2 templates from which I took an example and guided me and after a lot of accumulated knowledge and skills, we come to my biggest project - SkateAppWeb.
 It combines perfectly all my knowledge of both frontend and backend web development. With it's awesome optimal design and great unique functionality the project is an excellent software product that fully meets the requirements
 I had assigned to it and becomes the perfect web product for the sale of skateboarding goods and accessories. In essence, it is an online web store selling skateboarding goods and accessories.
-That project was creaated on Visual Studio 2022, .NET 6.0.
+That project was created on Visual Studio 2022, .NET 6.0.
 
 Some of these functionalities are the availability of 2 configurators - one available to all customers and the second only to the administrator, availability of creating reviews, as well as deleting and editing them, 
 adding and removing a product from favorites, availability of a promo code when purchasing a product, adding, removing and editing of brands that are pre-seeded,  currency change from BGN to EUR, top button, avalability of sorting and filtering, ect.
