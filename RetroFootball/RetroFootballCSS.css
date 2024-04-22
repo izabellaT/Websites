@@ -1,0 +1,620 @@
+ body{
+    color:black;
+    padding:0;
+    margin:0;
+    background-image: url('https://cdn.claretandhugh.info/wp-content/uploads/Gordon-Banks-1.jpg');
+  }
+ 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    background-color: black;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.dropbtn:hover{
+    opacity: 0.8;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 230px;
+    z-index: 1;
+    padding:15px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    position: relative; 
+    z-index: 1; 
+}
+
+nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px; 
+    background: linear-gradient(to bottom, transparent, white); 
+    z-index: -1; 
+}
+
+nav a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: larger;
+
+}
+.nav-link:hover{
+color:lightpink;
+}
+
+.dropdown-subcontent {
+    position: relative;
+    display: block;
+    vertical-align: top;
+}
+
+.dropdown-subcontent .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #f9f9f9;
+    width: 260px;
+    z-index: 1;
+}
+
+.dropdown-subcontent:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a:hover{
+    opacity: 0.8;
+}
+.iconClubs{
+    height: 30px;
+    width: 30px;
+    display:inline;
+    padding-top:8px;
+    padding-left:8px;
+    margin-right: 5px;
+}
+
+.iconTeams{
+    height: 40px;
+    width: 40px;
+    display:inline;
+    float:right;
+}
+.logoImage{
+    height: 50px;
+    width: 50px;
+    display:inline;
+}
+
+.slideshow {
+    position: relative;
+    height: 400px;
+    width: 1300px;
+    margin-left: 80px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.slideshow img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.bigDivClub {
+    text-align: center;
+    margin-top: 20px;
+    width: max-content;
+    display: block;
+    margin-left: 60px;
+    color: black;
+}
+
+.bigDivClub h2 {
+    text-align: center;
+}
+
+.smallerDivTeam {
+    display: inline-block;
+    width: 400px;
+    position: relative;
+    color: white;
+    height: 300px;
+    margin-right: 20px;
+    background-size: cover; 
+    background-position: center; 
+    overflow: hidden; 
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+.smallerDivTeam h3,
+.smallerDivTeam a {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    z-index: 2; 
+}
+.smallerDivTeam h3{
+    background-color:black;
+    padding:15px;
+    color:white;
+    width: 200px;
+    border-radius: 8px;
+    opacity: 0.8;
+}
+.smallerDivTeam a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top:70px;
+}
+
+.smallerDivTeam a:hover {
+    opacity: 0.8;
+    background-color:black;
+}
+.bigDivClub h2{
+    background-color:white;
+    padding:15px;
+    color:black;
+}
+.bigDivClub{
+    background-color:black;
+    padding:20px;
+}
+.smallerDivTeam:hover {
+    transform: scale(1.05); 
+}
+
+.smallerDivTeam:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+    transition: background-color 0.3s ease; 
+}
+
+.imageJersey {
+    display: inline;
+    width: 200px;
+    height: 200px;
+    padding: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.imageJersey:hover {
+    transform: scale(1.1); 
+    cursor: pointer; 
+}
+
+.smallImahesOfJerseys{
+margin-left:95px;
+margin-top:20px;
+}
+
+#topBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; 
+    border: none;
+    background-color:transparent;
+    border-radius: 50%; 
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+  
+  #topBtn:hover {
+    opacity: 0.6;
+  }
+
+  
+  footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative; 
+}
+
+footer::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to bottom, transparent, white); 
+    z-index: 1;
+}
+    footer div {
+        max-width: 300px;
+        text-align: center;
+    }
+
+    footer a {
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        opacity: 80%;
+    }
+
+        footer a:hover {
+            color: white;
+            opacity:100%;
+        }
+    footer .app-icons {
+        display: flex;
+        gap: 10px;
+        height:10%;
+        
+    }
+footer .app-icons i {
+    font-size: 27px;
+}
+        footer .app-icons i:hover {
+            color:purple;
+        }
+    footer form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3px;
+    }
+
+        footer form input {
+            padding: 5px;
+            margin: 5px;
+            width: 150px;
+        }
+        footer form input:hover {
+            background-color:lightpink;
+            color:black;
+        }
+
+        footer form button {
+            padding: 3px;
+            margin: 5px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius:3px;
+            cursor: pointer;
+            height:28px;
+            width:70px;
+        }
+
+            footer form button:hover {
+                background-color: black;
+                color:purple;
+                transition:none;
+            }
+.aFooter {
+    color: white;
+    padding: 5px;
+}
+    .aFooter i {
+        color: white;
+    }
+
+.slideshow,
+.bigDivClub,
+.smallerDivTeam {
+    border: 2px solid #ddd; 
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.iconClubs,
+.iconTeams {
+    filter: grayscale(100%);
+}
+
+h1, h2, h3, nav a {
+    font-family: 'Times New Roman', Times, serif;
+}
+.smallerDivTeam {
+    display: inline-block;
+    width: 400px;
+    position: relative;
+    color: white;
+    height: 300px;
+    margin-right: 20px;
+    background-size: cover; 
+    background-position: center; 
+    overflow: hidden; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    filter: grayscale(100%); 
+}
+
+.smallerDivTeam:hover {
+    transform: scale(1.05); 
+    filter: grayscale(0%); 
+}
+
+.smallerDivTeam:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+    transition: background-color 0.3s ease; 
+}
+
+.teamsInfoShopNow {
+    background-color: black;
+    overflow: hidden;
+    width: 1300px;
+    margin-left: 80px;
+    height: 350px;
+    margin-top:20px;
+    border: 2px solid #ddd; 
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .teamsSlideshow-container {
+    position: relative;
+    float: left;
+  }
+
+  .teamsSlideshow-container img {
+    width: 250px;
+    height: 320px;
+    margin-left:10px;
+    margin-right: 30px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    padding: 10px;
+  }
+
+  .teamsText-container {
+    width:900px;
+    float: left;
+    margin-left:30px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    height: 350px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    padding: 10px;
+  }
+
+  .teamsText {
+    display: none;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .shopNowbtn{
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    background-color:white;
+    display: block;
+    text-align: center;
+    width: 100px;
+    margin:auto;
+    margin-top:20px;
+    text-decoration: line;
+  }
+
+
+ /* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Navigation Styles */
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 10px 0;
+    }
+
+    /* Dropdown Styles */
+    .dropdown-content {
+        min-width: 180px;
+    }
+
+    /* Slideshow Styles */
+    .slideshow {
+        margin: 10px auto;
+    }
+
+    /* Club Section Styles */
+    .bigDivClub {
+        padding: 10px;
+    }
+
+    .smallerDivTeam {
+        max-width: 90%;
+    }
+
+    /* Footer Styles */
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer div {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Navigation Styles */
+    nav a {
+        font-size: medium;
+    }
+
+    /* Dropdown Styles */
+    .dropdown-content {
+        min-width: 150px;
+    }
+
+    /* Club Section Styles */
+    .bigDivClub {
+        margin: 10px auto;
+    }
+
+    .smallerDivTeam {
+        max-width: 80%;
+    }
+
+    /* Footer Styles */
+    footer div {
+        max-width: 90%;
+    }
+}
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Slideshows Styles */
+    .slideshow {
+        margin: 10px auto;
+        width: 90%;
+    }
+
+    .teamsSlideshow-container img {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    /* Team Section Styles */
+    .teamsInfoShopNow {
+        width: 90%;
+    }
+
+    .teamsText-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Slideshows Styles */
+    .slideshow {
+        margin: 10px auto;
+        width: 95%;
+    }
+
+    .teamsSlideshow-container img {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    /* Team Section Styles */
+    .teamsInfoShopNow {
+        width: 95%;
+    }
+
+    .teamsText-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Teams Info Shop Now Section */
+    .teamsInfoShopNow {
+        width: 90%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .teamsSlideshow-container {
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    .teamsSlideshow-container img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .teamsText-container {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+    /* Smaller Div Team Section */
+    .smallerDivTeam {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+
+    .smallerDivTeam:hover {
+        transform: none;
+        filter: none;
+    }
+
+    .smallerDivTeam:hover::before {
+        content: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Teams Info Shop Now Section */
+    .teamsInfoShopNow {
+        width: 95%;
+    }
+
+    /* Smaller Div Team Section */
+    .smallerDivTeam {
+        width: 95%;
+    }
+}

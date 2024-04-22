@@ -1,0 +1,549 @@
+body {
+    margin: 0;
+    color:purple;
+    background-image: url('https://cdn.claretandhugh.info/wp-content/uploads/Gordon-Banks-1.jpg');
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.banner {
+    
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    margin:20px;
+    margin-left:70px;
+    margin-right: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.left-panel, .right-panel {
+    width: 45%;
+}
+
+.filters, .sort-by {
+    margin-left: 100px;
+    color: white; 
+}
+
+.shop-container h2, .sort-by h2 {
+    margin-right: 10px;
+}
+
+.sort-by h2 {
+    margin-left: 190px;
+}
+
+.filter-options, .sort-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter-options select, .sort-options select {
+    padding: 10px;
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+    margin-right: 10px;
+    color: white;
+}
+
+.filter-options select::-ms-expand {
+    display: none;
+}
+
+.filter-options select option {
+    color: white;
+}
+
+
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width:1400px;
+    margin-left:80px;
+}
+
+.image-wrapper {
+    margin: 10px;
+    position: relative; 
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.main-image, .hover-image {
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.image-container:hover .main-image {
+    transform: scale(0); 
+}
+
+.image-container:hover .hover-image {
+    opacity: 1; /
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay,
+.image-container:hover .hover-text {
+    opacity: 1; 
+}
+
+.overlay-text {
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.overlay-subtext {
+    color: goldenrod;
+    font-weight: bold;
+}
+
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color:white;
+    background-color:rgba(0, 0, 0, 0.5);
+    padding:10px;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.image-wrapper:hover .hover-text {
+    opacity: 1; 
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    background-color: white;
+    color: black;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.dropbtn:hover{
+    opacity: 0.8;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 230px;
+    z-index: 1;
+    padding:15px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    position: relative; 
+    z-index: 1; 
+}
+
+nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px; 
+    background: linear-gradient(to bottom, transparent, white); 
+    z-index: -1; 
+}
+
+nav a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: larger;
+
+}
+.nav-link:hover{
+color:black;
+}
+nav a:hover{
+    opacity: 0.8;
+}
+
+.dropdown-subcontent {
+    position: relative;
+    display: block;
+    vertical-align: top;
+}
+
+.dropdown-subcontent .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #f9f9f9;
+    width: 260px;
+    z-index: 1;
+}
+
+.dropdown-subcontent:hover .dropdown-content {
+    display: block;
+}
+
+.iconClubs{
+    height: 30px;
+    width: 30px;
+    display:inline;
+    padding-top:8px;
+    padding-left:8px;
+    margin-right: 5px;
+}
+
+.iconTeams{
+    height: 40px;
+    width: 40px;
+    display:inline;
+    float:right;
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative; 
+}
+
+footer::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 10px; 
+    background: linear-gradient(to bottom, transparent, white); 
+    z-index: 1; 
+}
+    footer div {
+        max-width: 300px;
+        text-align: center;
+    }
+
+    footer a {
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        opacity: 80%;
+    }
+
+        footer a:hover {
+            color: white;
+            opacity:100%;
+        }
+    footer .app-icons {
+        display: flex;
+        gap: 10px;
+        height:10%;
+        
+    }
+footer .app-icons i {
+    font-size: 27px;
+}
+        footer .app-icons i:hover {
+            color:purple;
+        }
+    footer form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3px;
+    }
+
+        footer form input {
+            padding: 5px;
+            margin: 5px;
+            width: 150px;
+        }
+        footer form input:hover {
+            background-color:lightpink;
+            color:black;
+        }
+
+        footer form button {
+            padding: 3px;
+            margin: 5px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius:3px;
+            cursor: pointer;
+            height:28px;
+            width:70px;
+        }
+
+            footer form button:hover {
+                background-color: black;
+                color:purple;
+                transition:none;
+            }
+.aFooter {
+    color: white;
+    padding: 5px;
+}
+    .aFooter i {
+        color: white;
+    }
+    #topBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99; 
+        border: none;
+        background-color:transparent;
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 10px 15px;
+      }
+      
+      #topBtn:hover {
+        opacity: 0.6;
+      }
+    
+h1, h2, h3, nav a {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.iconClubs,
+.iconTeams {
+    filter: grayscale(100%);
+}
+.banner{
+    border: 2px solid #ddd; 
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.image-wrapper {
+    width: 20%; 
+    margin: 10px; 
+    position: relative;
+    border: 2px solid #ddd; 
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.main-image, .hover-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+    border-radius: 10px; 
+    padding: 3px; 
+}
+.image-grid{
+    margin-right:150px;
+}
+
+.ribbon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: black; 
+    color: #ffffff; 
+    padding: 5px 10px; 
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    animation: pulse 0.5s infinite alternate; 
+    font-family: 'Times New Roman', Times, serif;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+    .banner {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .image-grid {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .shop-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .filters, .sort-by {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .sort-by h2 {
+        margin-left: 0;
+    }
+
+    .filter-options, .sort-options {
+        justify-content: center;
+    }
+
+    .image-wrapper {
+        width: 45%;
+    }
+
+    .image-grid {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .ribbon {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .image-wrapper {
+        width: 100%;
+    }
+}
+
+ /* Media Queries for Responsiveness */
+ @media screen and (max-width: 768px) {
+    /* Navigation Styles */
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 10px 0;
+    }
+
+    /* Dropdown Styles */
+    .dropdown-content {
+        min-width: 180px;
+    }
+
+    /* Slideshow Styles */
+    .slideshow {
+        margin: 10px auto;
+    }
+
+    /* Club Section Styles */
+    .bigDivClub {
+        padding: 10px;
+    }
+
+    .smallerDivTeam {
+        max-width: 90%;
+    }
+
+    /* Footer Styles */
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer div {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Navigation Styles */
+    nav a {
+        font-size: medium;
+    }
+
+    /* Dropdown Styles */
+    .dropdown-content {
+        min-width: 150px;
+    }
+
+    /* Club Section Styles */
+    .bigDivClub {
+        margin: 10px auto;
+    }
+
+    .smallerDivTeam {
+        max-width: 80%;
+    }
+
+    /* Footer Styles */
+    footer div {
+        max-width: 90%;
+    }
+}
